@@ -56,8 +56,8 @@ class TBM:
       self.gradient_descent(X, n_iter, stepsize)
     elif solver == "coor":
       self.coordinate_descent(X, n_iter, absd)
-    elif solver == "coor2":
-      self.coordinate_descent2(X, n_iter)
+    elif solver == "coor3":
+      self.coordinate_descent3(X, n_iter)
     else:
       print("Solver Option Error")
 
@@ -327,16 +327,25 @@ class TBM:
       for iter in range(len(self.B_) -1):
         phi = self.B_[index[iter] +1 ] 
         etahat_phi = self.etahat_[phi] 
+        
         eta_phi = 0.0
         for x in self.Ssub_[phi]:
             eta_phi += u[x]
         eta_phi /= Z
+        if self.etahat_[phi] == 1.0:
+          continue
+        sigma = eta_phi * Z
+        tau = (1-eta_phi) * Z
+        delta = np.log(tau/sigma * etahat_phi/(1-etahat_phi))
         
+
         step_base = step_init 
         new_eta_phi = eta_phi
  
         while np.abs(etahat_phi - new_eta_phi) > 10 ** (-absd):      
           step = step_base * ( self.etahat_[phi] - new_eta_phi )
+          
+          step = delta
           u_new, Z_new = self.update_uZ(u, Z, step, phi)
           
           eta_phi_step  = 0.0
@@ -382,27 +391,82 @@ class TBM:
     """
     self.init_theta()
     start = time.time()
-    self.compute_P()
-    self.compute_eta()
     for epoch in range(max_epoch):
-      
+      self.compute_P()
+      self.compute_eta()
+
       print(epoch ,":",  "KL divergence:",f'{self.compute_KL():.8f}' ," time : %4.2f"% (time.time()-start),"Squared Gradient:",f'{self.compute_squared_gradient():.10f}')
       index = np.random.RandomState(seed=2019).permutation(range(len(self.B_)-1)) #exclude the bottom
       #index = range(len(self.B_)-1)
+      
+
       for iter in range(len(self.B_) -1):
         phi = self.B_[index[iter] +1 ]
         
-        S, T = self.compute_ST(phi)
-        d = np.log(T / S * self.etahat_[phi] / (1 - self.etahat_[phi]) )
+        if self.etahat_[phi] == 1.0:
+          continue
+        
+        sigma, tau = self.compute_st(phi)
+        d = np.log(tau / sigma * self.etahat_[phi] / (1 - self.etahat_[phi]) )
         new_theta_phi = self.get_theta(phi) + d
         self.set_theta(phi, new_theta_phi)
-        self.theta_[self.invB_[()]] = -np.log(S * np.exp(d) + T)
-        self.compute_P()
-        self.compute_eta()
+        self.set_theta((), -np.log(sigma * np.exp(d) + tau))
   
-  def compute_ST(self,phi):
-    S = self.eta_[phi] * np.exp(-self.theta_[self.invB_[()]])
-    T = (1 - self.eta_[phi]) * np.exp(-self.theta_[self.invB_[()]])
+  def compute_st(self,phi):
+    s = self.eta_[phi] * np.exp(-self.theta_[self.invB_[()]])
+    t = (1 - self.eta_[phi]) * np.exp(-self.theta_[self.invB_[()]])
     
-    return S,T
+    return s,t
   
+  def coordinate_descent3(self, X, max_epoch):
+    """
+    Actual implementation coodinate_descent
+    Parameters 
+    -----
+    X : array-like, shape (n_samples,)
+            Training vectors, where n_samples is the number of samples and 
+            each element is a tuple of indices of 1s.
+    max_epoch
+    -----
+    
+    """
+    u = {}
+    for x in self.S_:
+      u[x] = 1.0
+    self.theta_ = np.zeros(len(self.B_))
+    self.theta_[self.invB_[()]] = -np.log(len(self.S_))
+    start = time.time()
+    for epoch in range(max_epoch):
+      self.compute_P()
+      self.compute_eta()
+
+      kl = self.compute_KL()
+      sg = self.compute_squared_gradient()
+      print(epoch ,":",  "KL divergence:",f'{kl:.8f}' ," time : %4.2f"% (time.time()-start), "Squared Gradient:",f'{sg:.10f}')
+      index = np.random.RandomState(seed=2019).permutation(range(len(self.B_)-1)) 
+
+      for iter in range(len(self.B_) -1):
+        phi = self.B_[index[iter] +1 ] 
+        etahat_phi = self.etahat_[phi] 
+        if etahat_phi == 1.0:
+          continue
+        eta_phi = 0.0
+        for x in self.Ssub_[phi]:
+            eta_phi += u[x]
+        eta_phi *= np.exp(self.theta_[self.invB_[()]])
+        
+        sigma = eta_phi / np.exp(self.theta_[self.invB_[()]])
+        tau = (1-eta_phi) / np.exp(self.theta_[self.invB_[()]])
+        
+        delta = np.log(tau/sigma * etahat_phi/(1-etahat_phi))
+        #print(delta)
+        
+        self.theta_[self.invB_[phi]] += delta
+
+        for x in self.Ssub_[phi]:
+          u[x] *= np.exp(delta)
+
+        Z = np.exp(-self.theta_[self.invB_[()]])
+        for x in self.Ssub_[phi]:
+          Z += u[x] * (1 - np.exp(-delta))
+        self.set_theta( (), -np.log(Z) )
