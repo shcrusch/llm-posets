@@ -33,8 +33,6 @@ tbm = tbm.TBM(n,B,S,X)
 
 if args[3] == "grad":
     tbm.fit(X,1000, stepsize = float(args[4]) , solver = "grad")
-elif args[3] == "coor":
-    tbm.fit(X,1000, absd = int(args[4]) , solver = "coor")
 elif args[3] == "coor3":
     tbm.fit(X, 1000, solver = "coor3")
 else:
