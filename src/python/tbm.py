@@ -54,8 +54,6 @@ class TBM:
     self.set_etahat(X)
     if solver == "grad":
       self.gradient_descent(X, n_iter, stepsize)
-    elif solver == "coor":
-      self.coordinate_descent(X, n_iter, absd)
     elif solver == "coor3":
       self.coordinate_descent3(X, n_iter)
     else:
@@ -101,8 +99,7 @@ class TBM:
     
 
   def set_etahat(self, X):
-    """
-        
+    """        
         Parameters
         ----------
         X : array-like, shape (n_samples,)
@@ -266,8 +263,8 @@ class TBM:
   def compute_squared_gradient(self):
     ret = 0.0
     for phi in self.B_:
-#      if phi: # is not empty
-      ret += (self.etahat_[phi] - self.eta_[phi] ) ** 2
+      if phi: # is not empty
+        ret += (self.etahat_[phi] - self.eta_[phi] ) ** 2
     return ret
 
   def gradient_descent(self, X, max_epoch, step):  
@@ -328,7 +325,7 @@ class TBM:
       for iter in range(len(self.B_) -1):
         phi = self.B_[index[iter] +1 ] 
         etahat_phi = self.etahat_[phi] 
-        if etahat_phi == 1.0:
+        if etahat_phi == 1.0 or etahat_phi == 0.0:
           continue
         eta_phi = 0.0
         for x in self.Ssub_[phi]:

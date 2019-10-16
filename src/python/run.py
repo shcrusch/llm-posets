@@ -32,8 +32,8 @@ S = list(dict.fromkeys(B+X))
 tbm = tbm.TBM(n,B,S,X)
 
 if args[3] == "grad":
-    tbm.fit(X,1000, stepsize = float(args[4]) , solver = "grad")
+    tbm.fit(X, 1000, stepsize = float(args[4]) , solver = "grad")
 elif args[3] == "coor3":
-    tbm.fit(X, 1000, solver = "coor3")
+    tbm.fit(X, 1, solver = "coor3")
 else:
     print("Error")
