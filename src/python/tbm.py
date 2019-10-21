@@ -37,6 +37,7 @@ class TBM:
     self.set_Phi(self.S_, self.B_)
     self.set_Ssub(self.S_, self.B_)
     self.set_Xsub(X)
+    
   def fit(self, X, n_iter, stepsize=-1,  absd = -1, solver="grad"):
     """Actual implementation of TBM fitting.
         Parameters
@@ -50,6 +51,7 @@ class TBM:
         -------
         self : object
     """
+#    print("fit started", flush=True)    
     self.compute_Phat(X)
     self.set_etahat(X)
     if solver == "grad":
@@ -59,7 +61,7 @@ class TBM:
     else:
       print("Solver Option Error")
 
-    
+#    print("fit finished", flush=True)    
     return self 
   
   def set_Phi(self, S, B):
@@ -314,12 +316,13 @@ class TBM:
     self.theta_[self.invB_[()]] = -np.log(len(self.S_))
     start = time.time()
     for epoch in range(max_epoch):
+#      print("epoch ", epoch,  " started", flush=True)
       self.compute_P()
       self.compute_eta()
 
       kl = self.compute_KL()
       sg = self.compute_squared_gradient()
-      print(epoch ,":",  "KL divergence:",f'{kl:.8f}' ," time : %4.2f"% (time.time()-start), "Squared Gradient:",f'{sg:.10f}')
+      print(epoch ,":",  "KL divergence:",f'{kl:.8f}' ," time : %4.2f"% (time.time()-start), "Squared Gradient:",f'{sg:.10f}', flush=True)
       index = np.random.RandomState(seed=2019).permutation(range(len(self.B_)-1)) 
 
       for iter in range(len(self.B_) -1):
@@ -347,3 +350,6 @@ class TBM:
         for x in self.Ssub_[phi]:
           Z += u[x] * (1 - np.exp(-delta))
         self.set_theta( (), -np.log(Z) )
+        
+
+#      print("epoch ", epoch,  " finished", flush=True)
