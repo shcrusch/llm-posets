@@ -28,5 +28,5 @@ t.compute_P()
 t.compute_eta()
 #print(tbm.eta_)
 
-t.fit(X,10,0.01)
+t.fit(X,10,solver=="coor")
 
