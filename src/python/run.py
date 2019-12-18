@@ -68,9 +68,11 @@ tbm = tbm.TBM(n,B,S,X)
 #print("TBM init done")
 
 if args[3] == "grad":
-    tbm.fit(X, 1001, stepsize = float(args[4]) , solver = "grad")
+    tbm.fit(X, int(args[5]), stepsize = float(args[4]) , solver = "grad")
 elif args[3] == "coor":
-    tbm.fit(X, 401, solver = "coor")
+    tbm.fit(X, int(args[4]), solver = "coor")
+elif args[3] == "stoc":
+    tbm.fit(X, int(args[5]), stepsize = float(args[4]) , solver = "stoc")
 else:
     print("Error")
 

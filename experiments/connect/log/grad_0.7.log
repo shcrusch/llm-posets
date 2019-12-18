@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/home/hayashi/workspace/tbm-python/src/python/run.py", line 1, in <module>
+    import tbm
+  File "/home/hayashi/workspace/tbm-python/src/python/tbm.py", line 365
+    self.compute_theta_perp()
+       ^
+SyntaxError: invalid syntax

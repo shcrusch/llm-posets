@@ -38,6 +38,8 @@ class TBM:
       self.gradient_descent(X, n_iter, stepsize)
     elif solver == "coor":
       self.coordinate_descent(X, n_iter)
+    elif solver == "stoc":
+      self.stochastic_gradient_descent(X, n_iter, stepsize)
     else:
       print("Solver Option Error", file = sys.stderr)
 
@@ -197,7 +199,29 @@ class TBM:
       self.eta_[phi] = 0.0
       for x in self.Ssub_[phi] :
         self.eta_[phi] += self.P_[self.invS_[x]]
-  
+
+  def compute_eta_pP(self):
+    self.eta_pP = {}
+    for phi in self.B_:
+      for Phi in self.B_:
+        self.eta_pP[phi,Phi] = 0.0
+        for x in list(dict.fromkeys(self.Ssub_[phi]+self.Ssub_[Phi])):
+          self.eta_pP[phi,Phi] += self.P_[self.invS_[x]]
+
+  def compute_Hess(self):
+    Hess = []
+    L =[]
+    for phi in self.B_:
+      if phi != ():
+        hess = []
+        for Phi in self.B_:
+          if Phi != ():
+            hess.append(self.eta_pP[phi,Phi] - self.eta_[phi]*self.eta_[Phi])
+            L.append(self.eta_pP[phi,Phi] - self.eta_[phi]*self.eta_[Phi]) if phi == Phi
+        Hess.append(hess)
+
+    return Hess,L
+
   def compute_prox_KL(self):
     """
     Assuming support of P to be D,
@@ -237,7 +261,7 @@ class TBM:
         ret += (self.etahat_[phi] - self.eta_[phi] ) ** 2
     return ret
 
-  def gradient_descent(self, X, max_epoch, step):  
+  def gradient_descent(self, X, n_iter, step):  
     """
     Actual implementation gradient_descent
     Parameters 
@@ -245,19 +269,24 @@ class TBM:
     X : array-like, shape (n_samples,)
             Training vectors, where n_samples is the number of samples and 
             each element is a tuple of indices of 1s. 
-    max_epoch
+    n_iter
     step 
     """
-    
+#    print(len(self.B_))
     start = time.time()
-    for epoch in range(max_epoch):
+    for iter in range(n_iter):
       self.compute_P()
       self.compute_eta()
+      self.compute_eta_pP()
+      Hess,L = self.compute_Hess()
+      print("L_max="+str(max(L)))
+      a,v =np.linalg.eig(Hess)
+      print(min(a))
       kl=self.compute_KL()
 #      prox_kl=self.compute_prox_KL()
       sg=self.compute_squared_gradient()      
 
-      print(epoch ,":", "KL divergence: ", f'{kl:.8f}' ," time : %4.2f"% (time.time()-start), "Squared Gradient:",f'{sg:.10f}')
+      print(iter ,":", "KL divergence: ", f'{kl:.8f}' ," time : %4.2f"% (time.time()-start), "Squared Gradient:",f'{sg:.10f}')
       for phi in self.B_:
         if phi: # is not empty
           new_theta_phi = self.get_theta(phi) + step * (self.etahat_[phi] - self.eta_[phi] )
@@ -287,6 +316,12 @@ class TBM:
     for epoch in range(max_epoch):
       self.compute_P()
       self.compute_eta()      
+      self.compute_eta_pP()
+      Hess,L = self.compute_Hess()
+      print("L_max="+str(max(L)))
+      #print( np.linalg.det(Hess))
+      a,v = np.linalg.eig(Hess)
+      print(min(a))
       print("epoch ", epoch,  " compute_KL", flush=True, file = sys.stderr)
       kl = self.compute_KL()
       print("epoch ", epoch,  " compute_SG", flush=True, file = sys.stderr)
@@ -295,7 +330,7 @@ class TBM:
       prev_kl = kl
 
       print(epoch ,":",  "KL divergence:",f'{kl:.8f}' ," time : %4.2f"% (time.time()-start), "Squared Gradient:",f'{sg:.10f}', flush=True)
-      index = np.random.RandomState(seed=2019).permutation(range(len(self.B_)-1)) 
+      index = np.random.RandomState().permutation(range(len(self.B_)-1)) 
       print("epoch ", epoch,  " iteration start", flush=True, file = sys.stderr)
       for iter in range(len(self.B_) - 1):
         phi = self.B_[ index[iter] + 1 ] # all phi excluding perp
@@ -307,17 +342,7 @@ class TBM:
         for x in self.Ssub_[phi]:
             eta_phi += u[x]
         eta_phi /= Z
-
-        if(epoch>200):
-          self.compute_P()
-          self.compute_eta()      
-
-          kl = self.compute_KL()
-          if(kl > prev_kl):
-            print("ERROR")
-            prev_kl = kl
-        
-        
+                
         exp_delta = (1-eta_phi)/eta_phi * etahat_phi/(1-etahat_phi)
 
         self.theta_[self.invB_[phi]] += np.log(exp_delta)
@@ -331,7 +356,47 @@ class TBM:
 
         self.set_theta( (), -np.log(Z) )
       print("epoch ", epoch,  " iteration end", flush=True, file = sys.stderr)  
-  
+
+"""
+  def stochastic_gradient_descent(self, X, n_iter, step):
+                                                                                                                                                                                                     
+    Actual implementation gradient_descent                                                                                                                                                              
+    Parameters                                                                                                                                                                                          
+    -----                                                                                                                                                                                               
+    X : array-like, shape (n_samples,)                                                                                                                                                                  
+            Training vectors, where n_samples is the number of samples and                                                                                                                              
+            each element is a tuple of indices of 1s.                                                                                                                                                   
+    max_epoch                                                                                                                                                                                           
+    step                                                                                                                                                                                                
+    
+    Phi_x = []    
+    for phi in self.B_:
+      if phi:
+        phi_x = []
+        for xi in X:
+          if includes(phi,xi):
+            phi_x.append(1)
+          else:
+            phi_x.append(0)
+        Phi_x.append(phi_x)
+
+    start = time.time()
+    for iter in range(n_iter):
+      self.compute_P()
+      self.compute_eta()
+      kl=self.compute_KL()
+#      prox_kl=self.compute_prox_KL()                                               
+      sg=self.compute_squared_gradient()
+
+      print(iter ,":", "KL divergence: ", f'{kl:.8f}' ," time : %4.2f"% (time.time()-start), "Squared Gradient:",f'{sg:.10f}')
+      index = np.random.RandomState().permutation(range(len(X)))
+      for i in range(len(X)):
+        for phi in self.B_:
+          if phi: # is not empty                                                  
+            new_theta_phi = self.get_theta(phi) + step * (Phi_x[### - self.eta_[phi] )
+            self.set_theta(phi, new_theta_phi)
+        self.compute_theta_perp()
+
 
 
   def grad_check(self, g):    
@@ -357,3 +422,4 @@ class TBM:
     kl_approx = compute_KL + e * inner
 
     print(...)
+"""
