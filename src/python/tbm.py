@@ -200,27 +200,29 @@ class TBM:
       for x in self.Ssub_[phi] :
         self.eta_[phi] += self.P_[self.invS_[x]]
 
-  def compute_eta_pP(self):
-    self.eta_pP = {}
-    for phi in self.B_:
-      for Phi in self.B_:
-        self.eta_pP[phi,Phi] = 0.0
-        for x in list(dict.fromkeys(self.Ssub_[phi]+self.Ssub_[Phi])):
-          self.eta_pP[phi,Phi] += self.P_[self.invS_[x]]
+  def compute_eta_p1p2(self):
+    self.eta_p1p2 = {}
+    for p1 in self.B_:
+      for p2 in self.B_:
+        self.eta_p1p2[p1,p2] = 0.0
+        for x in set(self.Ssub_[p1]) & set(self.Ssub_[p2]): 
+          self.eta_p1p2[p1,p2] += self.P_[self.invS_[x]]
 
   def compute_Hess(self):
+    self.compute_eta_p1p2()
     Hess = []
     L =[]
-    for phi in self.B_:
-      if phi != ():
+    for p1 in self.B_:
+      if p1 != ():
         hess = []
-        for Phi in self.B_:
-          if Phi != ():
-            hess.append(self.eta_pP[phi,Phi] - self.eta_[phi]*self.eta_[Phi])
-            L.append(self.eta_pP[phi,Phi] - self.eta_[phi]*self.eta_[Phi]) if phi == Phi
+        for p2 in self.B_:
+          if p2 != ():
+            hess.append(self.eta_p1p2[p1,p2] - self.eta_[p1]*self.eta_[p2])
+            if p1==p2:
+              L.append(self.eta_p1p2[p1,p2] - self.eta_[p1]*self.eta_[p2])
         Hess.append(hess)
-
-    return Hess,L
+    a,v = np.linalg.eig(Hess)
+    return max(L),max(a)
 
   def compute_prox_KL(self):
     """
@@ -277,11 +279,9 @@ class TBM:
     for iter in range(n_iter):
       self.compute_P()
       self.compute_eta()
-      self.compute_eta_pP()
-      Hess,L = self.compute_Hess()
-      print("L_max="+str(max(L)))
-      a,v =np.linalg.eig(Hess)
-      print(min(a))
+#      L_max,L = self.compute_Hess()
+#      print(L_max)
+#      print(L)
       kl=self.compute_KL()
 #      prox_kl=self.compute_prox_KL()
       sg=self.compute_squared_gradient()      
@@ -316,12 +316,12 @@ class TBM:
     for epoch in range(max_epoch):
       self.compute_P()
       self.compute_eta()      
-      self.compute_eta_pP()
-      Hess,L = self.compute_Hess()
-      print("L_max="+str(max(L)))
+#      self.compute_eta_pP()
+#      Hess,L = self.compute_Hess()
+#      print("L_max="+str(max(L)))
       #print( np.linalg.det(Hess))
-      a,v = np.linalg.eig(Hess)
-      print(min(a))
+#      a,v = np.linalg.eig(Hess)
+#      print(min(a))
       print("epoch ", epoch,  " compute_KL", flush=True, file = sys.stderr)
       kl = self.compute_KL()
       print("epoch ", epoch,  " compute_SG", flush=True, file = sys.stderr)
