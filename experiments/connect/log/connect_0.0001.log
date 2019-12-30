@@ -1,4 +1,0 @@
-Traceback (most recent call last):
-  File "run.py", line 28, in <module>
-    if args[3] == "grad":
-IndexError: list index out of range
