@@ -1,5 +1,5 @@
 import tbm
-import cd_posets
+import llm_posets
 import sys
 import os
 import pandas as pd
@@ -52,14 +52,14 @@ B = get_B_from(args[2])
 
 S = list(dict.fromkeys(B+X+[()]))
 
-tbm = cd_posets.TBM(n,B,S,X)
+llm = llm_posets.LLM(n,B,S,X)
 
 if args[3] == "grad":
-    tbm.fit(X, int(args[5]), stepsize = float(args[4]) , solver = "grad")
+    llm.fit(X, int(args[5]), stepsize = float(args[4]) , solver = "grad")
 elif args[3] == "coor":
-    tbm.fit(X, int(args[4]), solver = "coor")
+    llm.fit(X, int(args[4]), solver = "coor")
 elif args[3] == "acc_grad":
-    tbm.fit(X, int(args[5]), stepsize = float(args[4]) , mu = float(args[6]), solver = "acc_grad")
+    llm.fit(X, int(args[5]), stepsize = float(args[4]) , mu = float(args[6]), solver = "acc_grad")
 else:
     print("Error")
 

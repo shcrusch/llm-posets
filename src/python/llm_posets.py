@@ -5,7 +5,7 @@ import sys
 def includes(phi,x):
   return set(phi).issubset(x)
 
-class TBM:
+class LLM:
   def __init__ (self, n, B, S, X):
     
     self.set_B(B) # list of tuples
@@ -21,7 +21,7 @@ class TBM:
     self.compute_etahat(X) # dict (key: list, val: double)
     
   def fit(self, X, n_iter, stepsize=-1, mu = 0, solver="grad"):
-    """Actual implementation of TBM fitting.
+    """Actual implementation of LLM on posets fitting.
         Parameters
         ----------
         X : array-like, shape (n_samples,)
@@ -230,9 +230,8 @@ class TBM:
     start = time.time()
     for iter in range(n_iter):
       self.compute_P()
-#      print(self.P_)
       self.compute_eta()
-#      print(self.eta_)
+
       kl=self.compute_KL()
       print(iter ,":", "KL divergence: ", f'{kl:.16f}' ," time : %4.2f"% (time.time()-start),flush=True)
       
@@ -242,11 +241,11 @@ class TBM:
         self.set_theta(phi, new_theta_phi)
 
       self.compute_theta_perp()
-#      print(self.theta_)
+
 
   def update_accelerated_theta(self, iter, step, mu):      
-    new_theta_phi = 0.0
-    grad_new_theta = 0.0
+#    new_theta_phi = 0.0
+#    grad_new_theta = 0.0
     if iter == 0:
       self.grad_theta_ = np.zeros(len(self.B_))
       self.pre_grad_theta_ = np.zeros(len(self.B_))    
@@ -255,8 +254,6 @@ class TBM:
 
         self.pre_grad_theta_[self.invB_[phi]] = grad_new_theta_phi
         self.set_theta(phi, grad_new_theta_phi)
-          
-#      print(self.theta_)  
 
     elif iter == 1:
       for phi in self.B_:
@@ -299,9 +296,9 @@ class TBM:
       kl=self.compute_KL()
       print(iter ,":", "KL divergence: ", f'{kl:.16f}' ," time : %4.2f"% (time.time()-start),flush=True)
       self.update_accelerated_theta(iter, step ,mu)
-#      print(self.theta_)
+
       self.compute_theta_perp()
-#      print(self.theta_)
+
   
   def coordinate_descent(self, X, max_epoch):
     """
