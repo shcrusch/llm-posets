@@ -4,15 +4,14 @@ import re
 import sys
 import os
 
-#plt.rcParams['font.family'] = "IPAexGothic"
 args =sys.argv
 datasetname = args[1]
 
 save_dir = '/home/hayashi/workspace/tbm-python/experiments/figure/'+datasetname+'/'
 
-gradlist = glob.glob('/home/hayashi/workspace/tbm-python/experiments/'+datasetname+'/grad_*')
+gradlist = glob.glob('/home/hayashi/workspace/tbm-python/experiments/'+datasetname+'/Grad_*') #update
 
-coorfilename = '/home/hayashi/workspace/tbm-python/experiments/'+datasetname+'/coor.txt'
+coorfilename = '/home/hayashi/workspace/tbm-python/experiments/'+datasetname+'/Coor.txt' #update
 
 if args[2]=='kl' and args[3]=='epoch':
     savefilename = save_dir + datasetname + '_kl_epoch.png'
@@ -45,7 +44,7 @@ if args[2]=="kl":
 
     for gradfilename in gradlist:
         with open(gradfilename) as f:
-            step = re.search('grad_(.*).txt',gradfilename).group(1)
+            step = re.search('Grad_(.*).txt',gradfilename).group(1) #update
             grad_steps.append(step)
             y_grad=[]
             for line in f:
@@ -79,12 +78,12 @@ if args[3]=="time":
     
     for gradfilename in gradlist:
         with open(gradfilename) as f:
-            step = re.search('grad_(.*).txt',gradfilename).group(1)
+            step = re.search('Grad_(.*).txt',gradfilename).group(1) #update
             grad_steps.append(step)
             time_grad=[]
             for line in f:
-                lin = line.split(' Squared Gradient: ')
-                lin = lin[0].split('  time : ')
+#                lin = line.split(' Squared Gradient: ')
+                lin = line.split('  time : ') #update lin[0] ->line
                 time_grad.append(float(lin[-1]))
             times_grads.append(time_grad)
 
@@ -92,8 +91,8 @@ if args[3]=="time":
     with open(coorfilename) as f:
         time_coor=[]
         for line in f:
-            lin = line.split(' Squared Gradient: ')
-            lin = lin[0].split('  time : ')
+#            lin = line.split(' Squared Gradient: ')
+            lin = line.split('  time : ') #update lin[0] -> line
             time_coor.append(float(lin[-1]))
 
 #figure

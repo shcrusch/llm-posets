@@ -11,8 +11,8 @@ class TBM:
     self.set_B(B) # list of tuples
     self.set_S(S) # list of tuples
     self.n_= n
-    self.set_Phi(self.S_, self.B_) # dict of lists
-    self.set_Ssub(self.S_, self.B_) # dict of lists
+    self.set_Phi(self.S_, self.B_) #dict (key: tuple, val: list of tuples)
+    self.set_Ssub(self.S_, self.B_)  # dict (key: tuple, val: list of tuples)
 
 
     self.init_theta() # dict (key: list, val: double)
@@ -20,7 +20,7 @@ class TBM:
     self.compute_Phat(X) # dict (key: list, val: double)
     self.compute_etahat(X) # dict (key: list, val: double)
     
-  def fit(self, X, n_iter, stepsize=-1, solver="grad"):
+  def fit(self, X, n_iter, stepsize=-1, mu = 0, solver="grad"):
     """Actual implementation of TBM fitting.
         Parameters
         ----------
@@ -38,8 +38,8 @@ class TBM:
       self.gradient_descent(X, n_iter, stepsize)
     elif solver == "coor":
       self.coordinate_descent(X, n_iter)
-    elif solver == "stoc":
-      self.stochastic_gradient_descent(X, n_iter, stepsize)
+    elif solver == "acc_grad":
+      self.accelerated_gradient_descent(X, n_iter, stepsize, mu)
     else:
       print("Solver Option Error", file = sys.stderr)
 
@@ -153,13 +153,14 @@ class TBM:
     ret : theta
     """
     return self.theta_[self.invB_[phi]]
+
   def set_theta(self, phi, value):    
     self.theta_[self.invB_[phi]] = value
 
   def init_theta(self):    
     self.theta_ = np.zeros(len(self.B_))
     self.compute_theta_perp()    
-  
+
   def compute_theta_perp(self):
     """
     Computing theta_perp and set it to self.theta_[invS_[()]]    
@@ -200,48 +201,6 @@ class TBM:
       for x in self.Ssub_[phi] :
         self.eta_[phi] += self.P_[self.invS_[x]]
 
-  def compute_eta_p1p2(self):
-    self.eta_p1p2 = {}
-    for p1 in self.B_:
-      for p2 in self.B_:
-        self.eta_p1p2[p1,p2] = 0.0
-        for x in set(self.Ssub_[p1]) & set(self.Ssub_[p2]): 
-          self.eta_p1p2[p1,p2] += self.P_[self.invS_[x]]
-
-  def compute_Hess(self):
-    self.compute_eta_p1p2()
-    Hess = []
-    L =[]
-    for p1 in self.B_:
-      if p1 != ():
-        hess = []
-        for p2 in self.B_:
-          if p2 != ():
-            hess.append(self.eta_p1p2[p1,p2] - self.eta_[p1]*self.eta_[p2])
-            if p1==p2:
-              L.append(self.eta_p1p2[p1,p2] - self.eta_[p1]*self.eta_[p2])
-        Hess.append(hess)
-    a,v = np.linalg.eig(Hess)
-    return max(L),max(a)
-
-  def compute_prox_KL(self):
-    """
-    Assuming support of P to be D,
-    Compute prox KL_divergence normalized by sum_{x in D} exp(-E(x)) 
-    
-    """
-    noramlized_constant = 0.0
-    for x in list(dict.fromkeys(X)):
-      Px = self.P_[self.invS_[x]]
-      normalized_constant += Px
-
-    ret = 0.0
-    for x in self.D:
-      Phatx = self.Phat_[self.invS_[x]]
-      normalized_Px = self.P_[self.invS_[x]] / normalized_constant 
-      ret += Phatx * ( np.log(Phatx) - np.log(normalized_Px) ) 
-
-    return ret
   def compute_KL(self):
     """
     Computing KL_divergence sum_{x in S} Phat(x) ( ln Phat(x)  - ln P(x) )
@@ -253,15 +212,8 @@ class TBM:
       if Phatx != 0.0:
         ret += Phatx * (np.log(Phatx) - np.log(self.P_[self.invS_[x]]))
 
-        
     return ret
 
-  def compute_squared_gradient(self):
-    ret = 0.0
-    for phi in self.B_:
-      if phi: # is not empty
-        ret += (self.etahat_[phi] - self.eta_[phi] ) ** 2
-    return ret
 
   def gradient_descent(self, X, n_iter, step):  
     """
@@ -274,25 +226,85 @@ class TBM:
     n_iter
     step 
     """
-#    print(len(self.B_))
+
     start = time.time()
     for iter in range(n_iter):
       self.compute_P()
       self.compute_eta()
-#      L_max,L = self.compute_Hess()
-#      print(L_max)
-#      print(L)
+      print(self.P_)
+      print(self.eta_)
       kl=self.compute_KL()
-#      prox_kl=self.compute_prox_KL()
-      sg=self.compute_squared_gradient()      
-
-      print(iter ,":", "KL divergence: ", f'{kl:.8f}' ," time : %4.2f"% (time.time()-start), "Squared Gradient:",f'{sg:.10f}')
+      print(iter ,":", "KL divergence: ", f'{kl:.16f}' ," time : %4.2f"% (time.time()-start),flush=True)
+      
       for phi in self.B_:
         if phi: # is not empty
           new_theta_phi = self.get_theta(phi) + step * (self.etahat_[phi] - self.eta_[phi] )
+          
           self.set_theta(phi, new_theta_phi)
+
       self.compute_theta_perp()
-      
+
+
+  def update_accelerated_theta(self, iter, step, mu):      
+    new_theta_phi = 0.0
+    grad_new_theta = 0.0
+    if iter == 0:
+      self.grad_theta_ = np.zeros(len(self.B_))
+      self.grad_theta_[self.invB_[()]] = self.theta_[self.invB_[()]]
+      self.pre_grad_theta_ = np.zeros(len(self.B_))    
+      self.pre_grad_theta_[self.invB_[()]] = self.theta_[self.invB_[()]]
+      for phi in self.B_:
+        if phi: # is not empty                                                                                
+          grad_new_theta_phi = self.get_theta(phi) + step * (self.etahat_[phi] - self.eta_[phi] )
+
+          self.pre_grad_theta_[self.invB_[phi]] = grad_new_theta_phi
+          self.set_theta(phi, grad_new_theta_phi)
+          
+      print(self.pre_grad_theta_)
+      print(self.theta_)  
+    if iter == 1:
+      for phi in self.B_:
+        if phi: # is not empty                                                                                                                       
+          grad_new_theta_phi = self.get_theta(phi) + step * (self.etahat_[phi] - self.eta_[phi] )
+          self.grad_theta_[self.invB_[phi]] = grad_new_theta_phi
+
+          new_theta_phi = (1+mu) * grad_new_theta_phi - mu *  self.pre_grad_theta_[self.invB_[phi]]
+          self.set_theta(phi, new_theta_phi)
+
+    else:
+      self.pre_grad_theta_ = self.grad_theta_
+      for phi in self.B_:
+        if phi: # is not empty
+          grad_new_theta_phi = self.get_theta(phi) + step * (self.etahat_[phi] - self.eta_[phi])
+          self.grad_theta_[self.invB_[phi]] = grad_new_theta_phi
+            
+          new_theta_phi = (1+mu) * grad_new_theta_phi - mu * self.pre_grad_theta_[self.invB_[phi]]
+          self.set_theta(phi, new_theta_phi)
+
+
+  def accelerated_gradient_descent(self, X, n_iter, step, mu):
+    """                                                                                                     
+    Actual implementation accelerated_gradient_descent                                                          
+    Parameters                                                                                             
+    -----                                                                                                   
+    X : array-like, shape (n_samples,)                                                                       
+            Training vectors, where n_samples is the number of samples and                                   
+            each element is a tuple of indices of 1s.                                                       
+    n_iter                                                                                                   
+    step                                                                                                      
+    mu : momentum
+    """
+
+    start = time.time()
+    for iter in range(n_iter):
+      self.compute_P()
+      self.compute_eta()
+
+      kl=self.compute_KL()
+      print(iter ,":", "KL divergence: ", f'{kl:.16f}' ," time : %4.2f"% (time.time()-start),flush=True)
+      self.update_accelerated_theta(iter, step ,mu)
+      self.compute_theta_perp()
+      print(self.theta_)
   
   def coordinate_descent(self, X, max_epoch):
     """
@@ -316,22 +328,11 @@ class TBM:
     for epoch in range(max_epoch):
       self.compute_P()
       self.compute_eta()      
-#      self.compute_eta_pP()
-#      Hess,L = self.compute_Hess()
-#      print("L_max="+str(max(L)))
-      #print( np.linalg.det(Hess))
-#      a,v = np.linalg.eig(Hess)
-#      print(min(a))
-      print("epoch ", epoch,  " compute_KL", flush=True, file = sys.stderr)
       kl = self.compute_KL()
-      print("epoch ", epoch,  " compute_SG", flush=True, file = sys.stderr)
-      sg = self.compute_squared_gradient()
 
-      prev_kl = kl
-
-      print(epoch ,":",  "KL divergence:",f'{kl:.8f}' ," time : %4.2f"% (time.time()-start), "Squared Gradient:",f'{sg:.10f}', flush=True)
+      print(epoch ,":",  "KL divergence:",f'{kl:.16f}' ," time : %4.2f"% (time.time()-start),  flush=True)
       index = np.random.RandomState().permutation(range(len(self.B_)-1)) 
-      print("epoch ", epoch,  " iteration start", flush=True, file = sys.stderr)
+#      index = np.random.randint(0,len(self.B_)-1,len(self.B_)-1)
       for iter in range(len(self.B_) - 1):
         phi = self.B_[ index[iter] + 1 ] # all phi excluding perp
 
@@ -355,71 +356,7 @@ class TBM:
           Z += u[x] * (1 - 1/exp_delta)
 
         self.set_theta( (), -np.log(Z) )
-      print("epoch ", epoch,  " iteration end", flush=True, file = sys.stderr)  
-
-"""
-  def stochastic_gradient_descent(self, X, n_iter, step):
-                                                                                                                                                                                                     
-    Actual implementation gradient_descent                                                                                                                                                              
-    Parameters                                                                                                                                                                                          
-    -----                                                                                                                                                                                               
-    X : array-like, shape (n_samples,)                                                                                                                                                                  
-            Training vectors, where n_samples is the number of samples and                                                                                                                              
-            each element is a tuple of indices of 1s.                                                                                                                                                   
-    max_epoch                                                                                                                                                                                           
-    step                                                                                                                                                                                                
-    
-    Phi_x = []    
-    for phi in self.B_:
-      if phi:
-        phi_x = []
-        for xi in X:
-          if includes(phi,xi):
-            phi_x.append(1)
-          else:
-            phi_x.append(0)
-        Phi_x.append(phi_x)
-
-    start = time.time()
-    for iter in range(n_iter):
-      self.compute_P()
-      self.compute_eta()
-      kl=self.compute_KL()
-#      prox_kl=self.compute_prox_KL()                                               
-      sg=self.compute_squared_gradient()
-
-      print(iter ,":", "KL divergence: ", f'{kl:.8f}' ," time : %4.2f"% (time.time()-start), "Squared Gradient:",f'{sg:.10f}')
-      index = np.random.RandomState().permutation(range(len(X)))
-      for i in range(len(X)):
-        for phi in self.B_:
-          if phi: # is not empty                                                  
-            new_theta_phi = self.get_theta(phi) + step * (Phi_x[### - self.eta_[phi] )
-            self.set_theta(phi, new_theta_phi)
-        self.compute_theta_perp()
 
 
 
-  def grad_check(self, g):    
 
-    # generate_z
-    z =np.rand((1,num_theta))
-    
-    i = 0
-    for phi in range():
-      set_theta(phi, get_theta(phi) + e* z[i])
-    
-    kl_perturbed = compute_KL()
-
-
-    for phi in range():
-      set_theta(phi, get_theta(phi) - e* z[i])
-
-
-    inner =0.0
-    for i in range():
-      inner += g[i] * z[i]
-
-    kl_approx = compute_KL + e * inner
-
-    print(...)
-"""

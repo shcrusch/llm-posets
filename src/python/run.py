@@ -1,4 +1,5 @@
 import tbm
+import cd_posets
 import sys
 import os
 import pandas as pd
@@ -24,15 +25,8 @@ X =[]
 for xi in X_arr:   
     X.append(tuple([xij - xij_min for xij in xi]))
 
-#with open(args[1]) as f:
-#    for line in f:
-#        xi = line.split()
-#        xi_int = [ int(xij) - xij_min for xij in xi ]
-#        X.append(tuple(xi_int))
-
 n = xij_max-xij_min+1
-#print("X")
-#print(X)
+
 
 def get_B_from(filename):
   # file format:                                                             
@@ -40,7 +34,7 @@ def get_B_from(filename):
   # ignore the first line that represents "bottom"                             
   Bfile = pd.read_csv(filename, header=None, sep=' ',names=[0,1])
 
-  B1=[(),]
+  B1=[]
   B2=[]
   for i in range(len(Bfile)):
     if pd.isnull(Bfile.at[i,1]):
@@ -54,25 +48,18 @@ def get_B_from(filename):
 
   return B
 
-
-#print("file ", args[2] , "opened", flush=True)
 B = get_B_from(args[2])
-#print("B")
-#print(B)
-#print("file ", args[2] , "closed", flush=True)
-S = list(dict.fromkeys(B+X))
-#print("S")
-#print(S)
-#print("S done")
-tbm = tbm.TBM(n,B,S,X)
-#print("TBM init done")
+
+S = list(dict.fromkeys(B+X+[()]))
+
+tbm = cd_posets.TBM(n,B,S,X)
 
 if args[3] == "grad":
     tbm.fit(X, int(args[5]), stepsize = float(args[4]) , solver = "grad")
 elif args[3] == "coor":
     tbm.fit(X, int(args[4]), solver = "coor")
-elif args[3] == "stoc":
-    tbm.fit(X, int(args[5]), stepsize = float(args[4]) , solver = "stoc")
+elif args[3] == "acc_grad":
+    tbm.fit(X, int(args[5]), stepsize = float(args[4]) , mu = float(args[6]), solver = "acc_grad")
 else:
     print("Error")
 
