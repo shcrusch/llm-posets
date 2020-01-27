@@ -9,9 +9,9 @@ datasetname = args[1]
 
 save_dir = '/home/hayashi/workspace/tbm-python/experiments/figure/'+datasetname+'/'
 
-gradlist = glob.glob('/home/hayashi/workspace/tbm-python/experiments/'+datasetname+'/Grad_*') #update
+gradlist = glob.glob('/home/hayashi/workspace/tbm-python/experiments/'+datasetname+'/grad_*') #update
 
-coorfilename = '/home/hayashi/workspace/tbm-python/experiments/'+datasetname+'/Coor.txt' #update
+coorfilename = '/home/hayashi/workspace/tbm-python/experiments/'+datasetname+'/goor.txt' #update
 
 if args[2]=='kl' and args[3]=='epoch':
     savefilename = save_dir + datasetname + '_kl_epoch.png'

@@ -1,1001 +1,1001 @@
-0 : KL divergence:  1.97046027  time : 109.51 Squared Gradient: 0.0696811998
-1 : KL divergence:  1.96389367  time : 222.04 Squared Gradient: 0.0546557995
-2 : KL divergence:  1.95873013  time : 336.24 Squared Gradient: 0.0433175630
-3 : KL divergence:  1.95462890  time : 450.81 Squared Gradient: 0.0346410178
-4 : KL divergence:  1.95134288  time : 563.80 Squared Gradient: 0.0279235575
-5 : KL divergence:  1.94868950  time : 676.78 Squared Gradient: 0.0226714562
-6 : KL divergence:  1.94653175  time : 789.06 Squared Gradient: 0.0185303612
-7 : KL divergence:  1.94476548  time : 901.94 Squared Gradient: 0.0152413667
-8 : KL divergence:  1.94331061  time : 1014.68 Squared Gradient: 0.0126123977
-9 : KL divergence:  1.94210498  time : 1127.35 Squared Gradient: 0.0104990755
-10 : KL divergence:  1.94109996  time : 1240.01 Squared Gradient: 0.0087916294
-11 : KL divergence:  1.94025720  time : 1352.15 Squared Gradient: 0.0074057657
-12 : KL divergence:  1.93954627  time : 1464.81 Squared Gradient: 0.0062761857
-13 : KL divergence:  1.93894288  time : 1576.84 Squared Gradient: 0.0053519124
-14 : KL divergence:  1.93842758  time : 1689.36 Squared Gradient: 0.0045928751
-15 : KL divergence:  1.93798467  time : 1801.84 Squared Gradient: 0.0039673829
-16 : KL divergence:  1.93760146  time : 1914.53 Squared Gradient: 0.0034502340
-17 : KL divergence:  1.93726765  time : 2027.26 Squared Gradient: 0.0030212884
-18 : KL divergence:  1.93697485  time : 2139.56 Squared Gradient: 0.0026643794
-19 : KL divergence:  1.93671619  time : 2251.81 Squared Gradient: 0.0023664771
-20 : KL divergence:  1.93648605  time : 2364.54 Squared Gradient: 0.0021170420
-21 : KL divergence:  1.93627980  time : 2477.44 Squared Gradient: 0.0019075197
-22 : KL divergence:  1.93609365  time : 2590.05 Squared Gradient: 0.0017309465
-23 : KL divergence:  1.93592444  time : 2702.02 Squared Gradient: 0.0015816372
-24 : KL divergence:  1.93576958  time : 2814.52 Squared Gradient: 0.0014549384
-25 : KL divergence:  1.93562689  time : 2927.13 Squared Gradient: 0.0013470324
-26 : KL divergence:  1.93549458  time : 3039.53 Squared Gradient: 0.0012547797
-27 : KL divergence:  1.93537115  time : 3152.35 Squared Gradient: 0.0011755931
-28 : KL divergence:  1.93525536  time : 3265.02 Squared Gradient: 0.0011073367
-29 : KL divergence:  1.93514616  time : 3377.88 Squared Gradient: 0.0010482433
-30 : KL divergence:  1.93504266  time : 3489.99 Squared Gradient: 0.0009968485
-31 : KL divergence:  1.93494414  time : 3602.10 Squared Gradient: 0.0009519367
-32 : KL divergence:  1.93484996  time : 3714.37 Squared Gradient: 0.0009124967
-33 : KL divergence:  1.93475961  time : 3827.48 Squared Gradient: 0.0008776866
-34 : KL divergence:  1.93467263  time : 3940.03 Squared Gradient: 0.0008468035
-35 : KL divergence:  1.93458866  time : 4051.96 Squared Gradient: 0.0008192605
-36 : KL divergence:  1.93450737  time : 4163.66 Squared Gradient: 0.0007945659
-37 : KL divergence:  1.93442848  time : 4276.00 Squared Gradient: 0.0007723076
-38 : KL divergence:  1.93435177  time : 4388.19 Squared Gradient: 0.0007521395
-39 : KL divergence:  1.93427702  time : 4500.20 Squared Gradient: 0.0007337705
-40 : KL divergence:  1.93420408  time : 4612.75 Squared Gradient: 0.0007169549
-41 : KL divergence:  1.93413277  time : 4724.40 Squared Gradient: 0.0007014856
-42 : KL divergence:  1.93406299  time : 4836.58 Squared Gradient: 0.0006871872
-43 : KL divergence:  1.93399461  time : 4948.65 Squared Gradient: 0.0006739109
-44 : KL divergence:  1.93392753  time : 5060.90 Squared Gradient: 0.0006615305
-45 : KL divergence:  1.93386167  time : 5172.85 Squared Gradient: 0.0006499385
-46 : KL divergence:  1.93379696  time : 5285.32 Squared Gradient: 0.0006390429
-47 : KL divergence:  1.93373331  time : 5397.61 Squared Gradient: 0.0006287654
-48 : KL divergence:  1.93367068  time : 5509.47 Squared Gradient: 0.0006190385
-49 : KL divergence:  1.93360901  time : 5621.62 Squared Gradient: 0.0006098042
-50 : KL divergence:  1.93354826  time : 5733.30 Squared Gradient: 0.0006010127
-51 : KL divergence:  1.93348837  time : 5845.82 Squared Gradient: 0.0005926206
-52 : KL divergence:  1.93342931  time : 5957.93 Squared Gradient: 0.0005845906
-53 : KL divergence:  1.93337104  time : 6069.55 Squared Gradient: 0.0005768898
-54 : KL divergence:  1.93331354  time : 6181.77 Squared Gradient: 0.0005694898
-55 : KL divergence:  1.93325677  time : 6293.64 Squared Gradient: 0.0005623657
-56 : KL divergence:  1.93320071  time : 6405.80 Squared Gradient: 0.0005554955
-57 : KL divergence:  1.93314533  time : 6517.95 Squared Gradient: 0.0005488598
-58 : KL divergence:  1.93309060  time : 6630.30 Squared Gradient: 0.0005424414
-59 : KL divergence:  1.93303651  time : 6742.51 Squared Gradient: 0.0005362252
-60 : KL divergence:  1.93298304  time : 6854.50 Squared Gradient: 0.0005301975
-61 : KL divergence:  1.93293017  time : 6966.40 Squared Gradient: 0.0005243461
-62 : KL divergence:  1.93287788  time : 7078.53 Squared Gradient: 0.0005186602
-63 : KL divergence:  1.93282615  time : 7191.55 Squared Gradient: 0.0005131299
-64 : KL divergence:  1.93277497  time : 7303.98 Squared Gradient: 0.0005077463
-65 : KL divergence:  1.93272433  time : 7416.38 Squared Gradient: 0.0005025014
-66 : KL divergence:  1.93267421  time : 7528.38 Squared Gradient: 0.0004973878
-67 : KL divergence:  1.93262460  time : 7640.86 Squared Gradient: 0.0004923987
-68 : KL divergence:  1.93257548  time : 7753.20 Squared Gradient: 0.0004875281
-69 : KL divergence:  1.93252685  time : 7865.67 Squared Gradient: 0.0004827703
-70 : KL divergence:  1.93247869  time : 7978.20 Squared Gradient: 0.0004781200
-71 : KL divergence:  1.93243099  time : 8090.12 Squared Gradient: 0.0004735726
-72 : KL divergence:  1.93238374  time : 8202.24 Squared Gradient: 0.0004691235
-73 : KL divergence:  1.93233694  time : 8313.98 Squared Gradient: 0.0004647686
-74 : KL divergence:  1.93229057  time : 8426.24 Squared Gradient: 0.0004605041
-75 : KL divergence:  1.93224463  time : 8538.72 Squared Gradient: 0.0004563263
-76 : KL divergence:  1.93219910  time : 8651.40 Squared Gradient: 0.0004522320
-77 : KL divergence:  1.93215397  time : 8764.06 Squared Gradient: 0.0004482180
-78 : KL divergence:  1.93210925  time : 8875.92 Squared Gradient: 0.0004442813
-79 : KL divergence:  1.93206492  time : 8988.77 Squared Gradient: 0.0004404192
-80 : KL divergence:  1.93202097  time : 9100.95 Squared Gradient: 0.0004366291
-81 : KL divergence:  1.93197740  time : 9213.33 Squared Gradient: 0.0004329084
-82 : KL divergence:  1.93193420  time : 9325.83 Squared Gradient: 0.0004292550
-83 : KL divergence:  1.93189137  time : 9437.73 Squared Gradient: 0.0004256665
-84 : KL divergence:  1.93184889  time : 9550.03 Squared Gradient: 0.0004221409
-85 : KL divergence:  1.93180676  time : 9662.41 Squared Gradient: 0.0004186762
-86 : KL divergence:  1.93176498  time : 9774.62 Squared Gradient: 0.0004152706
-87 : KL divergence:  1.93172354  time : 9886.77 Squared Gradient: 0.0004119223
-88 : KL divergence:  1.93168243  time : 9999.25 Squared Gradient: 0.0004086295
-89 : KL divergence:  1.93164165  time : 10111.35 Squared Gradient: 0.0004053906
-90 : KL divergence:  1.93160119  time : 10223.76 Squared Gradient: 0.0004022042
-91 : KL divergence:  1.93156105  time : 10336.12 Squared Gradient: 0.0003990686
-92 : KL divergence:  1.93152122  time : 10448.15 Squared Gradient: 0.0003959826
-93 : KL divergence:  1.93148169  time : 10561.15 Squared Gradient: 0.0003929448
-94 : KL divergence:  1.93144248  time : 10673.82 Squared Gradient: 0.0003899538
-95 : KL divergence:  1.93140355  time : 10786.15 Squared Gradient: 0.0003870084
-96 : KL divergence:  1.93136493  time : 10898.15 Squared Gradient: 0.0003841075
-97 : KL divergence:  1.93132659  time : 11010.26 Squared Gradient: 0.0003812499
-98 : KL divergence:  1.93128853  time : 11122.35 Squared Gradient: 0.0003784345
-99 : KL divergence:  1.93125076  time : 11234.35 Squared Gradient: 0.0003756602
-100 : KL divergence:  1.93121326  time : 11346.71 Squared Gradient: 0.0003729261
-101 : KL divergence:  1.93117604  time : 11458.46 Squared Gradient: 0.0003702311
-102 : KL divergence:  1.93113908  time : 11570.53 Squared Gradient: 0.0003675744
-103 : KL divergence:  1.93110239  time : 11682.02 Squared Gradient: 0.0003649549
-104 : KL divergence:  1.93106596  time : 11794.25 Squared Gradient: 0.0003623719
-105 : KL divergence:  1.93102978  time : 11906.58 Squared Gradient: 0.0003598245
-106 : KL divergence:  1.93099386  time : 12018.62 Squared Gradient: 0.0003573119
-107 : KL divergence:  1.93095820  time : 12131.23 Squared Gradient: 0.0003548333
-108 : KL divergence:  1.93092277  time : 12242.67 Squared Gradient: 0.0003523879
-109 : KL divergence:  1.93088760  time : 12354.97 Squared Gradient: 0.0003499750
-110 : KL divergence:  1.93085266  time : 12467.21 Squared Gradient: 0.0003475939
-111 : KL divergence:  1.93081796  time : 12579.51 Squared Gradient: 0.0003452439
-112 : KL divergence:  1.93078349  time : 12692.08 Squared Gradient: 0.0003429243
-113 : KL divergence:  1.93074926  time : 12803.59 Squared Gradient: 0.0003406345
-114 : KL divergence:  1.93071525  time : 12915.76 Squared Gradient: 0.0003383738
-115 : KL divergence:  1.93068147  time : 13027.94 Squared Gradient: 0.0003361417
-116 : KL divergence:  1.93064791  time : 13140.07 Squared Gradient: 0.0003339375
-117 : KL divergence:  1.93061457  time : 13252.50 Squared Gradient: 0.0003317608
-118 : KL divergence:  1.93058145  time : 13364.80 Squared Gradient: 0.0003296108
-119 : KL divergence:  1.93054854  time : 13477.02 Squared Gradient: 0.0003274872
-120 : KL divergence:  1.93051584  time : 13589.00 Squared Gradient: 0.0003253893
-121 : KL divergence:  1.93048336  time : 13700.95 Squared Gradient: 0.0003233166
-122 : KL divergence:  1.93045108  time : 13812.88 Squared Gradient: 0.0003212687
-123 : KL divergence:  1.93041900  time : 13925.85 Squared Gradient: 0.0003192451
-124 : KL divergence:  1.93038713  time : 14038.40 Squared Gradient: 0.0003172453
-125 : KL divergence:  1.93035545  time : 14150.70 Squared Gradient: 0.0003152689
-126 : KL divergence:  1.93032397  time : 14262.65 Squared Gradient: 0.0003133153
-127 : KL divergence:  1.93029269  time : 14374.64 Squared Gradient: 0.0003113842
-128 : KL divergence:  1.93026160  time : 14487.13 Squared Gradient: 0.0003094752
-129 : KL divergence:  1.93023070  time : 14599.62 Squared Gradient: 0.0003075879
-130 : KL divergence:  1.93019999  time : 14712.31 Squared Gradient: 0.0003057218
-131 : KL divergence:  1.93016946  time : 14824.17 Squared Gradient: 0.0003038765
-132 : KL divergence:  1.93013912  time : 14936.23 Squared Gradient: 0.0003020517
-133 : KL divergence:  1.93010896  time : 15048.00 Squared Gradient: 0.0003002470
-134 : KL divergence:  1.93007898  time : 15160.21 Squared Gradient: 0.0002984621
-135 : KL divergence:  1.93004918  time : 15272.52 Squared Gradient: 0.0002966966
-136 : KL divergence:  1.93001955  time : 15384.66 Squared Gradient: 0.0002949501
-137 : KL divergence:  1.92999010  time : 15496.82 Squared Gradient: 0.0002932224
-138 : KL divergence:  1.92996082  time : 15608.58 Squared Gradient: 0.0002915130
-139 : KL divergence:  1.92993171  time : 15721.03 Squared Gradient: 0.0002898218
-140 : KL divergence:  1.92990277  time : 15832.93 Squared Gradient: 0.0002881483
-141 : KL divergence:  1.92987400  time : 15945.79 Squared Gradient: 0.0002864922
-142 : KL divergence:  1.92984539  time : 16058.29 Squared Gradient: 0.0002848533
-143 : KL divergence:  1.92981695  time : 16170.40 Squared Gradient: 0.0002832313
-144 : KL divergence:  1.92978866  time : 16282.55 Squared Gradient: 0.0002816259
-145 : KL divergence:  1.92976054  time : 16395.07 Squared Gradient: 0.0002800368
-146 : KL divergence:  1.92973258  time : 16507.27 Squared Gradient: 0.0002784638
-147 : KL divergence:  1.92970477  time : 16619.41 Squared Gradient: 0.0002769065
-148 : KL divergence:  1.92967712  time : 16731.36 Squared Gradient: 0.0002753647
-149 : KL divergence:  1.92964962  time : 16843.82 Squared Gradient: 0.0002738383
-150 : KL divergence:  1.92962227  time : 16955.96 Squared Gradient: 0.0002723268
-151 : KL divergence:  1.92959508  time : 17067.75 Squared Gradient: 0.0002708302
-152 : KL divergence:  1.92956803  time : 17179.58 Squared Gradient: 0.0002693480
-153 : KL divergence:  1.92954113  time : 17292.22 Squared Gradient: 0.0002678803
-154 : KL divergence:  1.92951438  time : 17405.07 Squared Gradient: 0.0002664266
-155 : KL divergence:  1.92948777  time : 17517.25 Squared Gradient: 0.0002649867
-156 : KL divergence:  1.92946131  time : 17628.90 Squared Gradient: 0.0002635606
-157 : KL divergence:  1.92943499  time : 17741.02 Squared Gradient: 0.0002621478
-158 : KL divergence:  1.92940881  time : 17853.18 Squared Gradient: 0.0002607483
-159 : KL divergence:  1.92938277  time : 17965.38 Squared Gradient: 0.0002593619
-160 : KL divergence:  1.92935687  time : 18077.33 Squared Gradient: 0.0002579883
-161 : KL divergence:  1.92933110  time : 18189.08 Squared Gradient: 0.0002566273
-162 : KL divergence:  1.92930548  time : 18301.21 Squared Gradient: 0.0002552788
-163 : KL divergence:  1.92927998  time : 18412.71 Squared Gradient: 0.0002539426
-164 : KL divergence:  1.92925462  time : 18524.94 Squared Gradient: 0.0002526184
-165 : KL divergence:  1.92922939  time : 18636.92 Squared Gradient: 0.0002513061
-166 : KL divergence:  1.92920429  time : 18749.21 Squared Gradient: 0.0002500056
-167 : KL divergence:  1.92917932  time : 18861.28 Squared Gradient: 0.0002487167
-168 : KL divergence:  1.92915449  time : 18972.99 Squared Gradient: 0.0002474391
-169 : KL divergence:  1.92912977  time : 19085.23 Squared Gradient: 0.0002461728
-170 : KL divergence:  1.92910519  time : 19197.23 Squared Gradient: 0.0002449175
-171 : KL divergence:  1.92908073  time : 19309.37 Squared Gradient: 0.0002436732
-172 : KL divergence:  1.92905639  time : 19422.33 Squared Gradient: 0.0002424396
-173 : KL divergence:  1.92903218  time : 19534.46 Squared Gradient: 0.0002412166
-174 : KL divergence:  1.92900809  time : 19646.83 Squared Gradient: 0.0002400041
-175 : KL divergence:  1.92898412  time : 19758.96 Squared Gradient: 0.0002388019
-176 : KL divergence:  1.92896027  time : 19870.77 Squared Gradient: 0.0002376099
-177 : KL divergence:  1.92893653  time : 19983.03 Squared Gradient: 0.0002364279
-178 : KL divergence:  1.92891292  time : 20095.23 Squared Gradient: 0.0002352558
-179 : KL divergence:  1.92888942  time : 20207.03 Squared Gradient: 0.0002340934
-180 : KL divergence:  1.92886604  time : 20319.59 Squared Gradient: 0.0002329407
-181 : KL divergence:  1.92884278  time : 20431.08 Squared Gradient: 0.0002317975
-182 : KL divergence:  1.92881963  time : 20542.62 Squared Gradient: 0.0002306636
-183 : KL divergence:  1.92879659  time : 20655.25 Squared Gradient: 0.0002295390
-184 : KL divergence:  1.92877366  time : 20767.20 Squared Gradient: 0.0002284235
-185 : KL divergence:  1.92875085  time : 20879.51 Squared Gradient: 0.0002273170
-186 : KL divergence:  1.92872814  time : 20991.10 Squared Gradient: 0.0002262194
-187 : KL divergence:  1.92870555  time : 21103.09 Squared Gradient: 0.0002251306
-188 : KL divergence:  1.92868306  time : 21215.43 Squared Gradient: 0.0002240504
-189 : KL divergence:  1.92866068  time : 21327.18 Squared Gradient: 0.0002229788
-190 : KL divergence:  1.92863841  time : 21439.66 Squared Gradient: 0.0002219156
-191 : KL divergence:  1.92861625  time : 21551.74 Squared Gradient: 0.0002208607
-192 : KL divergence:  1.92859419  time : 21663.73 Squared Gradient: 0.0002198141
-193 : KL divergence:  1.92857223  time : 21775.64 Squared Gradient: 0.0002187755
-194 : KL divergence:  1.92855038  time : 21887.98 Squared Gradient: 0.0002177450
-195 : KL divergence:  1.92852863  time : 22000.50 Squared Gradient: 0.0002167225
-196 : KL divergence:  1.92850699  time : 22113.30 Squared Gradient: 0.0002157077
-197 : KL divergence:  1.92848544  time : 22225.42 Squared Gradient: 0.0002147007
-198 : KL divergence:  1.92846400  time : 22337.10 Squared Gradient: 0.0002137013
-199 : KL divergence:  1.92844265  time : 22449.39 Squared Gradient: 0.0002127094
-200 : KL divergence:  1.92842140  time : 22561.39 Squared Gradient: 0.0002117250
-201 : KL divergence:  1.92840026  time : 22673.66 Squared Gradient: 0.0002107480
-202 : KL divergence:  1.92837920  time : 22786.23 Squared Gradient: 0.0002097782
-203 : KL divergence:  1.92835825  time : 22897.89 Squared Gradient: 0.0002088156
-204 : KL divergence:  1.92833739  time : 23009.94 Squared Gradient: 0.0002078601
-205 : KL divergence:  1.92831663  time : 23121.87 Squared Gradient: 0.0002069116
-206 : KL divergence:  1.92829596  time : 23233.71 Squared Gradient: 0.0002059700
-207 : KL divergence:  1.92827539  time : 23346.11 Squared Gradient: 0.0002050353
-208 : KL divergence:  1.92825491  time : 23458.43 Squared Gradient: 0.0002041074
-209 : KL divergence:  1.92823452  time : 23570.23 Squared Gradient: 0.0002031862
-210 : KL divergence:  1.92821423  time : 23682.20 Squared Gradient: 0.0002022716
-211 : KL divergence:  1.92819402  time : 23793.85 Squared Gradient: 0.0002013635
-212 : KL divergence:  1.92817391  time : 23905.89 Squared Gradient: 0.0002004619
-213 : KL divergence:  1.92815388  time : 24018.86 Squared Gradient: 0.0001995667
-214 : KL divergence:  1.92813395  time : 24131.24 Squared Gradient: 0.0001986778
-215 : KL divergence:  1.92811410  time : 24243.63 Squared Gradient: 0.0001977952
-216 : KL divergence:  1.92809435  time : 24355.13 Squared Gradient: 0.0001969187
-217 : KL divergence:  1.92807468  time : 24467.51 Squared Gradient: 0.0001960484
-218 : KL divergence:  1.92805509  time : 24579.92 Squared Gradient: 0.0001951841
-219 : KL divergence:  1.92803560  time : 24691.95 Squared Gradient: 0.0001943259
-220 : KL divergence:  1.92801619  time : 24804.67 Squared Gradient: 0.0001934735
-221 : KL divergence:  1.92799686  time : 24916.87 Squared Gradient: 0.0001926270
-222 : KL divergence:  1.92797762  time : 25028.91 Squared Gradient: 0.0001917862
-223 : KL divergence:  1.92795846  time : 25140.92 Squared Gradient: 0.0001909512
-224 : KL divergence:  1.92793939  time : 25253.01 Squared Gradient: 0.0001901219
-225 : KL divergence:  1.92792039  time : 25365.05 Squared Gradient: 0.0001892982
-226 : KL divergence:  1.92790148  time : 25478.45 Squared Gradient: 0.0001884800
-227 : KL divergence:  1.92788266  time : 25590.46 Squared Gradient: 0.0001876674
-228 : KL divergence:  1.92786391  time : 25702.12 Squared Gradient: 0.0001868601
-229 : KL divergence:  1.92784524  time : 25814.36 Squared Gradient: 0.0001860583
-230 : KL divergence:  1.92782666  time : 25925.98 Squared Gradient: 0.0001852617
-231 : KL divergence:  1.92780815  time : 26038.56 Squared Gradient: 0.0001844704
-232 : KL divergence:  1.92778973  time : 26150.90 Squared Gradient: 0.0001836844
-233 : KL divergence:  1.92777138  time : 26262.46 Squared Gradient: 0.0001829035
-234 : KL divergence:  1.92775311  time : 26374.53 Squared Gradient: 0.0001821277
-235 : KL divergence:  1.92773491  time : 26486.46 Squared Gradient: 0.0001813570
-236 : KL divergence:  1.92771680  time : 26599.04 Squared Gradient: 0.0001805913
-237 : KL divergence:  1.92769876  time : 26711.49 Squared Gradient: 0.0001798305
-238 : KL divergence:  1.92768079  time : 26824.06 Squared Gradient: 0.0001790746
-239 : KL divergence:  1.92766290  time : 26936.60 Squared Gradient: 0.0001783236
-240 : KL divergence:  1.92764509  time : 27048.80 Squared Gradient: 0.0001775775
-241 : KL divergence:  1.92762735  time : 27161.06 Squared Gradient: 0.0001768360
-242 : KL divergence:  1.92760968  time : 27273.02 Squared Gradient: 0.0001760993
-243 : KL divergence:  1.92759209  time : 27385.42 Squared Gradient: 0.0001753673
-244 : KL divergence:  1.92757457  time : 27497.99 Squared Gradient: 0.0001746399
-245 : KL divergence:  1.92755713  time : 27610.12 Squared Gradient: 0.0001739171
-246 : KL divergence:  1.92753975  time : 27722.00 Squared Gradient: 0.0001731988
-247 : KL divergence:  1.92752245  time : 27834.33 Squared Gradient: 0.0001724850
-248 : KL divergence:  1.92750522  time : 27946.76 Squared Gradient: 0.0001717757
-249 : KL divergence:  1.92748806  time : 28059.12 Squared Gradient: 0.0001710708
-250 : KL divergence:  1.92747097  time : 28171.46 Squared Gradient: 0.0001703702
-251 : KL divergence:  1.92745395  time : 28283.35 Squared Gradient: 0.0001696740
-252 : KL divergence:  1.92743700  time : 28395.74 Squared Gradient: 0.0001689821
-253 : KL divergence:  1.92742012  time : 28507.65 Squared Gradient: 0.0001682944
-254 : KL divergence:  1.92740331  time : 28619.44 Squared Gradient: 0.0001676109
-255 : KL divergence:  1.92738657  time : 28731.75 Squared Gradient: 0.0001669317
-256 : KL divergence:  1.92736989  time : 28843.91 Squared Gradient: 0.0001662565
-257 : KL divergence:  1.92735328  time : 28956.28 Squared Gradient: 0.0001655854
-258 : KL divergence:  1.92733674  time : 29067.88 Squared Gradient: 0.0001649184
-259 : KL divergence:  1.92732026  time : 29180.10 Squared Gradient: 0.0001642554
-260 : KL divergence:  1.92730385  time : 29292.01 Squared Gradient: 0.0001635964
-261 : KL divergence:  1.92728751  time : 29404.86 Squared Gradient: 0.0001629414
-262 : KL divergence:  1.92727123  time : 29517.14 Squared Gradient: 0.0001622903
-263 : KL divergence:  1.92725502  time : 29628.94 Squared Gradient: 0.0001616430
-264 : KL divergence:  1.92723887  time : 29740.91 Squared Gradient: 0.0001609996
-265 : KL divergence:  1.92722279  time : 29853.28 Squared Gradient: 0.0001603600
-266 : KL divergence:  1.92720677  time : 29965.27 Squared Gradient: 0.0001597242
-267 : KL divergence:  1.92719081  time : 30077.56 Squared Gradient: 0.0001590922
-268 : KL divergence:  1.92717492  time : 30189.51 Squared Gradient: 0.0001584638
-269 : KL divergence:  1.92715909  time : 30301.67 Squared Gradient: 0.0001578392
-270 : KL divergence:  1.92714332  time : 30413.82 Squared Gradient: 0.0001572181
-271 : KL divergence:  1.92712761  time : 30525.98 Squared Gradient: 0.0001566008
-272 : KL divergence:  1.92711197  time : 30637.97 Squared Gradient: 0.0001559870
-273 : KL divergence:  1.92709638  time : 30750.69 Squared Gradient: 0.0001553767
-274 : KL divergence:  1.92708086  time : 30863.02 Squared Gradient: 0.0001547700
-275 : KL divergence:  1.92706540  time : 30975.27 Squared Gradient: 0.0001541668
-276 : KL divergence:  1.92705000  time : 31087.03 Squared Gradient: 0.0001535670
-277 : KL divergence:  1.92703466  time : 31199.39 Squared Gradient: 0.0001529707
-278 : KL divergence:  1.92701937  time : 31311.64 Squared Gradient: 0.0001523778
-279 : KL divergence:  1.92700415  time : 31423.84 Squared Gradient: 0.0001517883
-280 : KL divergence:  1.92698899  time : 31536.37 Squared Gradient: 0.0001512021
-281 : KL divergence:  1.92697388  time : 31648.40 Squared Gradient: 0.0001506193
-282 : KL divergence:  1.92695883  time : 31760.71 Squared Gradient: 0.0001500398
-283 : KL divergence:  1.92694384  time : 31873.03 Squared Gradient: 0.0001494635
-284 : KL divergence:  1.92692891  time : 31985.22 Squared Gradient: 0.0001488905
-285 : KL divergence:  1.92691404  time : 32097.75 Squared Gradient: 0.0001483207
-286 : KL divergence:  1.92689922  time : 32210.32 Squared Gradient: 0.0001477541
-287 : KL divergence:  1.92688446  time : 32322.83 Squared Gradient: 0.0001471907
-288 : KL divergence:  1.92686975  time : 32434.58 Squared Gradient: 0.0001466304
-289 : KL divergence:  1.92685510  time : 32546.82 Squared Gradient: 0.0001460732
-290 : KL divergence:  1.92684051  time : 32659.18 Squared Gradient: 0.0001455191
-291 : KL divergence:  1.92682597  time : 32772.19 Squared Gradient: 0.0001449681
-292 : KL divergence:  1.92681149  time : 32884.64 Squared Gradient: 0.0001444201
-293 : KL divergence:  1.92679706  time : 32996.56 Squared Gradient: 0.0001438752
-294 : KL divergence:  1.92678269  time : 33108.80 Squared Gradient: 0.0001433332
-295 : KL divergence:  1.92676837  time : 33221.36 Squared Gradient: 0.0001427943
-296 : KL divergence:  1.92675410  time : 33333.60 Squared Gradient: 0.0001422582
-297 : KL divergence:  1.92673989  time : 33445.87 Squared Gradient: 0.0001417251
-298 : KL divergence:  1.92672573  time : 33558.35 Squared Gradient: 0.0001411949
-299 : KL divergence:  1.92671162  time : 33670.57 Squared Gradient: 0.0001406676
-300 : KL divergence:  1.92669757  time : 33782.98 Squared Gradient: 0.0001401432
-301 : KL divergence:  1.92668357  time : 33895.21 Squared Gradient: 0.0001396215
-302 : KL divergence:  1.92666962  time : 34007.16 Squared Gradient: 0.0001391027
-303 : KL divergence:  1.92665572  time : 34120.23 Squared Gradient: 0.0001385867
-304 : KL divergence:  1.92664188  time : 34232.62 Squared Gradient: 0.0001380735
-305 : KL divergence:  1.92662808  time : 34344.86 Squared Gradient: 0.0001375630
-306 : KL divergence:  1.92661434  time : 34457.05 Squared Gradient: 0.0001370553
-307 : KL divergence:  1.92660065  time : 34569.04 Squared Gradient: 0.0001365502
-308 : KL divergence:  1.92658700  time : 34681.22 Squared Gradient: 0.0001360479
-309 : KL divergence:  1.92657341  time : 34793.79 Squared Gradient: 0.0001355482
-310 : KL divergence:  1.92655987  time : 34906.38 Squared Gradient: 0.0001350512
-311 : KL divergence:  1.92654638  time : 35018.70 Squared Gradient: 0.0001345568
-312 : KL divergence:  1.92653293  time : 35131.41 Squared Gradient: 0.0001340650
-313 : KL divergence:  1.92651954  time : 35243.80 Squared Gradient: 0.0001335758
-314 : KL divergence:  1.92650619  time : 35356.05 Squared Gradient: 0.0001330892
-315 : KL divergence:  1.92649290  time : 35468.53 Squared Gradient: 0.0001326051
-316 : KL divergence:  1.92647965  time : 35580.91 Squared Gradient: 0.0001321236
-317 : KL divergence:  1.92646645  time : 35693.59 Squared Gradient: 0.0001316446
-318 : KL divergence:  1.92645329  time : 35805.68 Squared Gradient: 0.0001311681
-319 : KL divergence:  1.92644019  time : 35918.13 Squared Gradient: 0.0001306940
-320 : KL divergence:  1.92642713  time : 36030.32 Squared Gradient: 0.0001302225
-321 : KL divergence:  1.92641412  time : 36142.65 Squared Gradient: 0.0001297534
-322 : KL divergence:  1.92640116  time : 36255.59 Squared Gradient: 0.0001292867
-323 : KL divergence:  1.92638824  time : 36367.39 Squared Gradient: 0.0001288224
-324 : KL divergence:  1.92637537  time : 36479.13 Squared Gradient: 0.0001283605
-325 : KL divergence:  1.92636255  time : 36591.59 Squared Gradient: 0.0001279010
-326 : KL divergence:  1.92634977  time : 36703.52 Squared Gradient: 0.0001274438
-327 : KL divergence:  1.92633703  time : 36815.51 Squared Gradient: 0.0001269890
-328 : KL divergence:  1.92632435  time : 36927.86 Squared Gradient: 0.0001265365
-329 : KL divergence:  1.92631170  time : 37039.84 Squared Gradient: 0.0001260863
-330 : KL divergence:  1.92629911  time : 37152.06 Squared Gradient: 0.0001256384
-331 : KL divergence:  1.92628655  time : 37263.86 Squared Gradient: 0.0001251928
-332 : KL divergence:  1.92627405  time : 37375.79 Squared Gradient: 0.0001247495
-333 : KL divergence:  1.92626158  time : 37489.02 Squared Gradient: 0.0001243084
-334 : KL divergence:  1.92624916  time : 37601.25 Squared Gradient: 0.0001238695
-335 : KL divergence:  1.92623679  time : 37713.43 Squared Gradient: 0.0001234329
-336 : KL divergence:  1.92622445  time : 37825.12 Squared Gradient: 0.0001229984
-337 : KL divergence:  1.92621216  time : 37937.01 Squared Gradient: 0.0001225661
-338 : KL divergence:  1.92619992  time : 38049.16 Squared Gradient: 0.0001221360
-339 : KL divergence:  1.92618772  time : 38161.13 Squared Gradient: 0.0001217081
-340 : KL divergence:  1.92617556  time : 38273.45 Squared Gradient: 0.0001212823
-341 : KL divergence:  1.92616344  time : 38385.50 Squared Gradient: 0.0001208586
-342 : KL divergence:  1.92615136  time : 38497.30 Squared Gradient: 0.0001204370
-343 : KL divergence:  1.92613933  time : 38608.82 Squared Gradient: 0.0001200175
-344 : KL divergence:  1.92612734  time : 38720.81 Squared Gradient: 0.0001196001
-345 : KL divergence:  1.92611539  time : 38832.81 Squared Gradient: 0.0001191848
-346 : KL divergence:  1.92610348  time : 38944.89 Squared Gradient: 0.0001187715
-347 : KL divergence:  1.92609161  time : 39057.30 Squared Gradient: 0.0001183603
-348 : KL divergence:  1.92607979  time : 39168.69 Squared Gradient: 0.0001179511
-349 : KL divergence:  1.92606800  time : 39281.67 Squared Gradient: 0.0001175439
-350 : KL divergence:  1.92605626  time : 39393.66 Squared Gradient: 0.0001171387
-351 : KL divergence:  1.92604455  time : 39506.11 Squared Gradient: 0.0001167355
-352 : KL divergence:  1.92603289  time : 39618.56 Squared Gradient: 0.0001163343
-353 : KL divergence:  1.92602127  time : 39730.27 Squared Gradient: 0.0001159350
-354 : KL divergence:  1.92600968  time : 39842.31 Squared Gradient: 0.0001155377
-355 : KL divergence:  1.92599814  time : 39954.78 Squared Gradient: 0.0001151423
-356 : KL divergence:  1.92598664  time : 40066.48 Squared Gradient: 0.0001147488
-357 : KL divergence:  1.92597517  time : 40179.25 Squared Gradient: 0.0001143573
-358 : KL divergence:  1.92596374  time : 40291.37 Squared Gradient: 0.0001139676
-359 : KL divergence:  1.92595236  time : 40403.83 Squared Gradient: 0.0001135798
-360 : KL divergence:  1.92594101  time : 40516.11 Squared Gradient: 0.0001131939
-361 : KL divergence:  1.92592970  time : 40627.72 Squared Gradient: 0.0001128099
-362 : KL divergence:  1.92591843  time : 40739.96 Squared Gradient: 0.0001124277
-363 : KL divergence:  1.92590719  time : 40852.50 Squared Gradient: 0.0001120473
-364 : KL divergence:  1.92589600  time : 40965.10 Squared Gradient: 0.0001116688
-365 : KL divergence:  1.92588484  time : 41077.45 Squared Gradient: 0.0001112921
-366 : KL divergence:  1.92587372  time : 41188.94 Squared Gradient: 0.0001109172
-367 : KL divergence:  1.92586264  time : 41301.61 Squared Gradient: 0.0001105440
-368 : KL divergence:  1.92585159  time : 41413.76 Squared Gradient: 0.0001101727
-369 : KL divergence:  1.92584059  time : 41526.07 Squared Gradient: 0.0001098031
-370 : KL divergence:  1.92582962  time : 41638.64 Squared Gradient: 0.0001094353
-371 : KL divergence:  1.92581868  time : 41750.38 Squared Gradient: 0.0001090692
-372 : KL divergence:  1.92580778  time : 41862.48 Squared Gradient: 0.0001087048
-373 : KL divergence:  1.92579692  time : 41974.17 Squared Gradient: 0.0001083422
-374 : KL divergence:  1.92578610  time : 42086.43 Squared Gradient: 0.0001079813
-375 : KL divergence:  1.92577531  time : 42198.47 Squared Gradient: 0.0001076220
-376 : KL divergence:  1.92576455  time : 42310.86 Squared Gradient: 0.0001072645
-377 : KL divergence:  1.92575384  time : 42423.04 Squared Gradient: 0.0001069087
-378 : KL divergence:  1.92574316  time : 42534.73 Squared Gradient: 0.0001065545
-379 : KL divergence:  1.92573251  time : 42646.87 Squared Gradient: 0.0001062020
-380 : KL divergence:  1.92572190  time : 42758.81 Squared Gradient: 0.0001058511
-381 : KL divergence:  1.92571132  time : 42871.31 Squared Gradient: 0.0001055018
-382 : KL divergence:  1.92570078  time : 42983.60 Squared Gradient: 0.0001051542
-383 : KL divergence:  1.92569027  time : 43095.47 Squared Gradient: 0.0001048082
-384 : KL divergence:  1.92567980  time : 43207.74 Squared Gradient: 0.0001044639
-385 : KL divergence:  1.92566936  time : 43319.87 Squared Gradient: 0.0001041211
-386 : KL divergence:  1.92565896  time : 43431.83 Squared Gradient: 0.0001037799
-387 : KL divergence:  1.92564859  time : 43544.16 Squared Gradient: 0.0001034403
-388 : KL divergence:  1.92563825  time : 43656.17 Squared Gradient: 0.0001031022
-389 : KL divergence:  1.92562795  time : 43768.50 Squared Gradient: 0.0001027657
-390 : KL divergence:  1.92561768  time : 43880.59 Squared Gradient: 0.0001024308
-391 : KL divergence:  1.92560745  time : 43992.63 Squared Gradient: 0.0001020974
-392 : KL divergence:  1.92559725  time : 44105.22 Squared Gradient: 0.0001017655
-393 : KL divergence:  1.92558708  time : 44217.85 Squared Gradient: 0.0001014351
-394 : KL divergence:  1.92557694  time : 44330.28 Squared Gradient: 0.0001011063
-395 : KL divergence:  1.92556684  time : 44442.59 Squared Gradient: 0.0001007790
-396 : KL divergence:  1.92555677  time : 44554.30 Squared Gradient: 0.0001004531
-397 : KL divergence:  1.92554673  time : 44666.41 Squared Gradient: 0.0001001288
-398 : KL divergence:  1.92553673  time : 44778.64 Squared Gradient: 0.0000998059
-399 : KL divergence:  1.92552676  time : 44891.18 Squared Gradient: 0.0000994845
-400 : KL divergence:  1.92551682  time : 45003.77 Squared Gradient: 0.0000991645
-401 : KL divergence:  1.92550691  time : 45115.60 Squared Gradient: 0.0000988460
-402 : KL divergence:  1.92549703  time : 45227.49 Squared Gradient: 0.0000985290
-403 : KL divergence:  1.92548719  time : 45339.29 Squared Gradient: 0.0000982133
-404 : KL divergence:  1.92547737  time : 45451.35 Squared Gradient: 0.0000978991
-405 : KL divergence:  1.92546759  time : 45563.51 Squared Gradient: 0.0000975863
-406 : KL divergence:  1.92545784  time : 45675.76 Squared Gradient: 0.0000972750
-407 : KL divergence:  1.92544812  time : 45787.88 Squared Gradient: 0.0000969650
-408 : KL divergence:  1.92543843  time : 45899.62 Squared Gradient: 0.0000966564
-409 : KL divergence:  1.92542877  time : 46012.31 Squared Gradient: 0.0000963492
-410 : KL divergence:  1.92541915  time : 46125.12 Squared Gradient: 0.0000960433
-411 : KL divergence:  1.92540955  time : 46238.00 Squared Gradient: 0.0000957389
-412 : KL divergence:  1.92539998  time : 46350.47 Squared Gradient: 0.0000954358
-413 : KL divergence:  1.92539045  time : 46462.24 Squared Gradient: 0.0000951340
-414 : KL divergence:  1.92538094  time : 46574.22 Squared Gradient: 0.0000948336
-415 : KL divergence:  1.92537147  time : 46686.40 Squared Gradient: 0.0000945345
-416 : KL divergence:  1.92536202  time : 46798.69 Squared Gradient: 0.0000942368
-417 : KL divergence:  1.92535260  time : 46911.13 Squared Gradient: 0.0000939403
-418 : KL divergence:  1.92534322  time : 47023.61 Squared Gradient: 0.0000936452
-419 : KL divergence:  1.92533386  time : 47135.87 Squared Gradient: 0.0000933514
-420 : KL divergence:  1.92532453  time : 47247.98 Squared Gradient: 0.0000930588
-421 : KL divergence:  1.92531523  time : 47359.59 Squared Gradient: 0.0000927676
-422 : KL divergence:  1.92530596  time : 47471.62 Squared Gradient: 0.0000924777
-423 : KL divergence:  1.92529672  time : 47584.36 Squared Gradient: 0.0000921890
-424 : KL divergence:  1.92528751  time : 47696.59 Squared Gradient: 0.0000919016
-425 : KL divergence:  1.92527833  time : 47808.92 Squared Gradient: 0.0000916154
-426 : KL divergence:  1.92526917  time : 47920.29 Squared Gradient: 0.0000913305
-427 : KL divergence:  1.92526005  time : 48033.18 Squared Gradient: 0.0000910469
-428 : KL divergence:  1.92525095  time : 48145.44 Squared Gradient: 0.0000907644
-429 : KL divergence:  1.92524188  time : 48257.80 Squared Gradient: 0.0000904833
-430 : KL divergence:  1.92523284  time : 48370.45 Squared Gradient: 0.0000902033
-431 : KL divergence:  1.92522383  time : 48482.27 Squared Gradient: 0.0000899246
-432 : KL divergence:  1.92521484  time : 48594.52 Squared Gradient: 0.0000896470
-433 : KL divergence:  1.92520588  time : 48706.47 Squared Gradient: 0.0000893707
-434 : KL divergence:  1.92519695  time : 48818.28 Squared Gradient: 0.0000890956
-435 : KL divergence:  1.92518805  time : 48930.73 Squared Gradient: 0.0000888216
-436 : KL divergence:  1.92517917  time : 49043.05 Squared Gradient: 0.0000885489
-437 : KL divergence:  1.92517033  time : 49155.49 Squared Gradient: 0.0000882773
-438 : KL divergence:  1.92516151  time : 49267.17 Squared Gradient: 0.0000880069
-439 : KL divergence:  1.92515271  time : 49379.46 Squared Gradient: 0.0000877376
-440 : KL divergence:  1.92514394  time : 49491.31 Squared Gradient: 0.0000874695
-441 : KL divergence:  1.92513520  time : 49603.96 Squared Gradient: 0.0000872026
-442 : KL divergence:  1.92512649  time : 49716.34 Squared Gradient: 0.0000869368
-443 : KL divergence:  1.92511780  time : 49828.33 Squared Gradient: 0.0000866721
-444 : KL divergence:  1.92510914  time : 49940.38 Squared Gradient: 0.0000864086
-445 : KL divergence:  1.92510051  time : 50052.48 Squared Gradient: 0.0000861462
-446 : KL divergence:  1.92509190  time : 50164.88 Squared Gradient: 0.0000858849
-447 : KL divergence:  1.92508332  time : 50277.40 Squared Gradient: 0.0000856248
-448 : KL divergence:  1.92507476  time : 50389.75 Squared Gradient: 0.0000853657
-449 : KL divergence:  1.92506623  time : 50502.54 Squared Gradient: 0.0000851078
-450 : KL divergence:  1.92505773  time : 50614.77 Squared Gradient: 0.0000848509
-451 : KL divergence:  1.92504925  time : 50727.29 Squared Gradient: 0.0000845951
-452 : KL divergence:  1.92504080  time : 50839.52 Squared Gradient: 0.0000843404
-453 : KL divergence:  1.92503237  time : 50952.17 Squared Gradient: 0.0000840868
-454 : KL divergence:  1.92502397  time : 51064.66 Squared Gradient: 0.0000838343
-455 : KL divergence:  1.92501559  time : 51176.59 Squared Gradient: 0.0000835828
-456 : KL divergence:  1.92500724  time : 51288.26 Squared Gradient: 0.0000833324
-457 : KL divergence:  1.92499891  time : 51400.70 Squared Gradient: 0.0000830830
-458 : KL divergence:  1.92499061  time : 51513.02 Squared Gradient: 0.0000828347
-459 : KL divergence:  1.92498233  time : 51625.88 Squared Gradient: 0.0000825874
-460 : KL divergence:  1.92497408  time : 51738.63 Squared Gradient: 0.0000823411
-461 : KL divergence:  1.92496585  time : 51851.02 Squared Gradient: 0.0000820959
-462 : KL divergence:  1.92495765  time : 51963.71 Squared Gradient: 0.0000818517
-463 : KL divergence:  1.92494947  time : 52075.77 Squared Gradient: 0.0000816086
-464 : KL divergence:  1.92494131  time : 52187.93 Squared Gradient: 0.0000813664
-465 : KL divergence:  1.92493318  time : 52300.30 Squared Gradient: 0.0000811253
-466 : KL divergence:  1.92492508  time : 52412.66 Squared Gradient: 0.0000808851
-467 : KL divergence:  1.92491699  time : 52525.27 Squared Gradient: 0.0000806460
-468 : KL divergence:  1.92490893  time : 52636.94 Squared Gradient: 0.0000804079
-469 : KL divergence:  1.92490090  time : 52749.43 Squared Gradient: 0.0000801707
-470 : KL divergence:  1.92489289  time : 52861.50 Squared Gradient: 0.0000799345
-471 : KL divergence:  1.92488490  time : 52973.87 Squared Gradient: 0.0000796993
-472 : KL divergence:  1.92487694  time : 53086.02 Squared Gradient: 0.0000794651
-473 : KL divergence:  1.92486900  time : 53197.90 Squared Gradient: 0.0000792318
-474 : KL divergence:  1.92486108  time : 53309.75 Squared Gradient: 0.0000789995
-475 : KL divergence:  1.92485319  time : 53421.82 Squared Gradient: 0.0000787682
-476 : KL divergence:  1.92484531  time : 53533.74 Squared Gradient: 0.0000785378
-477 : KL divergence:  1.92483747  time : 53646.07 Squared Gradient: 0.0000783083
-478 : KL divergence:  1.92482964  time : 53758.81 Squared Gradient: 0.0000780798
-479 : KL divergence:  1.92482184  time : 53871.30 Squared Gradient: 0.0000778522
-480 : KL divergence:  1.92481406  time : 53983.66 Squared Gradient: 0.0000776256
-481 : KL divergence:  1.92480630  time : 54095.69 Squared Gradient: 0.0000773999
-482 : KL divergence:  1.92479857  time : 54207.76 Squared Gradient: 0.0000771751
-483 : KL divergence:  1.92479086  time : 54321.01 Squared Gradient: 0.0000769512
-484 : KL divergence:  1.92478317  time : 54433.22 Squared Gradient: 0.0000767283
-485 : KL divergence:  1.92477550  time : 54545.73 Squared Gradient: 0.0000765062
-486 : KL divergence:  1.92476785  time : 54657.65 Squared Gradient: 0.0000762850
-487 : KL divergence:  1.92476023  time : 54770.14 Squared Gradient: 0.0000760648
-488 : KL divergence:  1.92475263  time : 54882.38 Squared Gradient: 0.0000758454
-489 : KL divergence:  1.92474505  time : 54994.94 Squared Gradient: 0.0000756270
-490 : KL divergence:  1.92473749  time : 55107.37 Squared Gradient: 0.0000754094
-491 : KL divergence:  1.92472996  time : 55219.43 Squared Gradient: 0.0000751926
-492 : KL divergence:  1.92472244  time : 55331.80 Squared Gradient: 0.0000749768
-493 : KL divergence:  1.92471495  time : 55443.57 Squared Gradient: 0.0000747618
-494 : KL divergence:  1.92470748  time : 55555.99 Squared Gradient: 0.0000745477
-495 : KL divergence:  1.92470003  time : 55668.51 Squared Gradient: 0.0000743345
-496 : KL divergence:  1.92469260  time : 55781.36 Squared Gradient: 0.0000741221
-497 : KL divergence:  1.92468520  time : 55894.22 Squared Gradient: 0.0000739106
-498 : KL divergence:  1.92467781  time : 56005.72 Squared Gradient: 0.0000736999
-499 : KL divergence:  1.92467045  time : 56117.95 Squared Gradient: 0.0000734901
-500 : KL divergence:  1.92466310  time : 56230.11 Squared Gradient: 0.0000732811
-501 : KL divergence:  1.92465578  time : 56342.73 Squared Gradient: 0.0000730729
-502 : KL divergence:  1.92464848  time : 56455.53 Squared Gradient: 0.0000728656
-503 : KL divergence:  1.92464120  time : 56567.39 Squared Gradient: 0.0000726591
-504 : KL divergence:  1.92463394  time : 56679.89 Squared Gradient: 0.0000724534
-505 : KL divergence:  1.92462670  time : 56792.77 Squared Gradient: 0.0000722485
-506 : KL divergence:  1.92461948  time : 56905.36 Squared Gradient: 0.0000720445
-507 : KL divergence:  1.92461228  time : 57018.26 Squared Gradient: 0.0000718412
-508 : KL divergence:  1.92460510  time : 57131.19 Squared Gradient: 0.0000716388
-509 : KL divergence:  1.92459794  time : 57244.02 Squared Gradient: 0.0000714371
-510 : KL divergence:  1.92459080  time : 57356.63 Squared Gradient: 0.0000712363
-511 : KL divergence:  1.92458368  time : 57468.89 Squared Gradient: 0.0000710363
-512 : KL divergence:  1.92457658  time : 57581.34 Squared Gradient: 0.0000708370
-513 : KL divergence:  1.92456950  time : 57694.57 Squared Gradient: 0.0000706385
-514 : KL divergence:  1.92456244  time : 57807.42 Squared Gradient: 0.0000704408
-515 : KL divergence:  1.92455541  time : 57920.18 Squared Gradient: 0.0000702439
-516 : KL divergence:  1.92454839  time : 58032.34 Squared Gradient: 0.0000700478
-517 : KL divergence:  1.92454139  time : 58145.10 Squared Gradient: 0.0000698524
-518 : KL divergence:  1.92453441  time : 58257.81 Squared Gradient: 0.0000696578
-519 : KL divergence:  1.92452744  time : 58370.67 Squared Gradient: 0.0000694640
-520 : KL divergence:  1.92452050  time : 58483.85 Squared Gradient: 0.0000692709
-521 : KL divergence:  1.92451358  time : 58596.27 Squared Gradient: 0.0000690786
-522 : KL divergence:  1.92450668  time : 58708.66 Squared Gradient: 0.0000688870
-523 : KL divergence:  1.92449979  time : 58820.78 Squared Gradient: 0.0000686962
-524 : KL divergence:  1.92449293  time : 58933.24 Squared Gradient: 0.0000685061
-525 : KL divergence:  1.92448608  time : 59046.01 Squared Gradient: 0.0000683168
-526 : KL divergence:  1.92447926  time : 59158.76 Squared Gradient: 0.0000681281
-527 : KL divergence:  1.92447245  time : 59271.26 Squared Gradient: 0.0000679403
-528 : KL divergence:  1.92446566  time : 59383.22 Squared Gradient: 0.0000677531
-529 : KL divergence:  1.92445889  time : 59496.07 Squared Gradient: 0.0000675667
-530 : KL divergence:  1.92445214  time : 59608.56 Squared Gradient: 0.0000673810
-531 : KL divergence:  1.92444540  time : 59721.49 Squared Gradient: 0.0000671960
-532 : KL divergence:  1.92443869  time : 59834.21 Squared Gradient: 0.0000670117
-533 : KL divergence:  1.92443199  time : 59946.30 Squared Gradient: 0.0000668282
-534 : KL divergence:  1.92442531  time : 60058.53 Squared Gradient: 0.0000666453
-535 : KL divergence:  1.92441865  time : 60171.12 Squared Gradient: 0.0000664632
-536 : KL divergence:  1.92441201  time : 60283.32 Squared Gradient: 0.0000662818
-537 : KL divergence:  1.92440539  time : 60396.08 Squared Gradient: 0.0000661010
-538 : KL divergence:  1.92439878  time : 60508.57 Squared Gradient: 0.0000659210
-539 : KL divergence:  1.92439219  time : 60621.20 Squared Gradient: 0.0000657416
-540 : KL divergence:  1.92438562  time : 60733.56 Squared Gradient: 0.0000655629
-541 : KL divergence:  1.92437907  time : 60845.82 Squared Gradient: 0.0000653849
-542 : KL divergence:  1.92437254  time : 60958.18 Squared Gradient: 0.0000652076
-543 : KL divergence:  1.92436602  time : 61071.14 Squared Gradient: 0.0000650310
-544 : KL divergence:  1.92435952  time : 61183.82 Squared Gradient: 0.0000648550
-545 : KL divergence:  1.92435304  time : 61296.33 Squared Gradient: 0.0000646797
-546 : KL divergence:  1.92434658  time : 61408.03 Squared Gradient: 0.0000645051
-547 : KL divergence:  1.92434013  time : 61520.49 Squared Gradient: 0.0000643311
-548 : KL divergence:  1.92433370  time : 61632.64 Squared Gradient: 0.0000641578
-549 : KL divergence:  1.92432729  time : 61745.29 Squared Gradient: 0.0000639852
-550 : KL divergence:  1.92432090  time : 61858.30 Squared Gradient: 0.0000638132
-551 : KL divergence:  1.92431452  time : 61970.52 Squared Gradient: 0.0000636419
-552 : KL divergence:  1.92430816  time : 62083.24 Squared Gradient: 0.0000634712
-553 : KL divergence:  1.92430182  time : 62195.11 Squared Gradient: 0.0000633011
-554 : KL divergence:  1.92429549  time : 62307.06 Squared Gradient: 0.0000631317
-555 : KL divergence:  1.92428918  time : 62419.84 Squared Gradient: 0.0000629630
-556 : KL divergence:  1.92428289  time : 62532.13 Squared Gradient: 0.0000627949
-557 : KL divergence:  1.92427662  time : 62644.50 Squared Gradient: 0.0000626274
-558 : KL divergence:  1.92427036  time : 62756.41 Squared Gradient: 0.0000624605
-559 : KL divergence:  1.92426412  time : 62868.66 Squared Gradient: 0.0000622943
-560 : KL divergence:  1.92425789  time : 62981.11 Squared Gradient: 0.0000621287
-561 : KL divergence:  1.92425168  time : 63093.93 Squared Gradient: 0.0000619637
-562 : KL divergence:  1.92424549  time : 63206.51 Squared Gradient: 0.0000617993
-563 : KL divergence:  1.92423931  time : 63318.90 Squared Gradient: 0.0000616355
-564 : KL divergence:  1.92423315  time : 63431.37 Squared Gradient: 0.0000614724
-565 : KL divergence:  1.92422701  time : 63543.59 Squared Gradient: 0.0000613099
-566 : KL divergence:  1.92422088  time : 63655.71 Squared Gradient: 0.0000611479
-567 : KL divergence:  1.92421477  time : 63768.14 Squared Gradient: 0.0000609866
-568 : KL divergence:  1.92420868  time : 63880.55 Squared Gradient: 0.0000608259
-569 : KL divergence:  1.92420260  time : 63993.10 Squared Gradient: 0.0000606657
-570 : KL divergence:  1.92419654  time : 64105.46 Squared Gradient: 0.0000605062
-571 : KL divergence:  1.92419049  time : 64217.79 Squared Gradient: 0.0000603473
-572 : KL divergence:  1.92418446  time : 64327.72 Squared Gradient: 0.0000601889
-573 : KL divergence:  1.92417845  time : 64438.12 Squared Gradient: 0.0000600311
-574 : KL divergence:  1.92417245  time : 64548.12 Squared Gradient: 0.0000598740
-575 : KL divergence:  1.92416646  time : 64657.93 Squared Gradient: 0.0000597174
-576 : KL divergence:  1.92416049  time : 64767.47 Squared Gradient: 0.0000595613
-577 : KL divergence:  1.92415454  time : 64877.32 Squared Gradient: 0.0000594059
-578 : KL divergence:  1.92414861  time : 64987.09 Squared Gradient: 0.0000592510
-579 : KL divergence:  1.92414268  time : 65097.13 Squared Gradient: 0.0000590967
-580 : KL divergence:  1.92413678  time : 65206.88 Squared Gradient: 0.0000589430
-581 : KL divergence:  1.92413089  time : 65316.63 Squared Gradient: 0.0000587898
-582 : KL divergence:  1.92412501  time : 65425.64 Squared Gradient: 0.0000586372
-583 : KL divergence:  1.92411915  time : 65532.90 Squared Gradient: 0.0000584851
-584 : KL divergence:  1.92411331  time : 65640.44 Squared Gradient: 0.0000583336
-585 : KL divergence:  1.92410748  time : 65747.75 Squared Gradient: 0.0000581827
-586 : KL divergence:  1.92410166  time : 65851.98 Squared Gradient: 0.0000580323
-587 : KL divergence:  1.92409586  time : 65954.47 Squared Gradient: 0.0000578825
-588 : KL divergence:  1.92409008  time : 66055.73 Squared Gradient: 0.0000577332
-589 : KL divergence:  1.92408431  time : 66157.85 Squared Gradient: 0.0000575844
-590 : KL divergence:  1.92407856  time : 66258.96 Squared Gradient: 0.0000574362
-591 : KL divergence:  1.92407282  time : 66360.57 Squared Gradient: 0.0000572886
-592 : KL divergence:  1.92406709  time : 66461.93 Squared Gradient: 0.0000571414
-593 : KL divergence:  1.92406138  time : 66562.77 Squared Gradient: 0.0000569949
-594 : KL divergence:  1.92405568  time : 66663.85 Squared Gradient: 0.0000568488
-595 : KL divergence:  1.92405000  time : 66765.14 Squared Gradient: 0.0000567033
-596 : KL divergence:  1.92404434  time : 66866.16 Squared Gradient: 0.0000565583
-597 : KL divergence:  1.92403868  time : 66967.43 Squared Gradient: 0.0000564138
-598 : KL divergence:  1.92403305  time : 67068.58 Squared Gradient: 0.0000562698
-599 : KL divergence:  1.92402742  time : 67169.78 Squared Gradient: 0.0000561264
-600 : KL divergence:  1.92402181  time : 67270.75 Squared Gradient: 0.0000559835
-601 : KL divergence:  1.92401622  time : 67371.65 Squared Gradient: 0.0000558410
-602 : KL divergence:  1.92401064  time : 67472.59 Squared Gradient: 0.0000556992
-603 : KL divergence:  1.92400507  time : 67574.24 Squared Gradient: 0.0000555578
-604 : KL divergence:  1.92399952  time : 67675.51 Squared Gradient: 0.0000554169
-605 : KL divergence:  1.92399398  time : 67776.66 Squared Gradient: 0.0000552765
-606 : KL divergence:  1.92398846  time : 67877.35 Squared Gradient: 0.0000551367
-607 : KL divergence:  1.92398295  time : 67978.55 Squared Gradient: 0.0000549973
-608 : KL divergence:  1.92397745  time : 68079.84 Squared Gradient: 0.0000548584
-609 : KL divergence:  1.92397197  time : 68181.28 Squared Gradient: 0.0000547201
-610 : KL divergence:  1.92396650  time : 68282.55 Squared Gradient: 0.0000545822
-611 : KL divergence:  1.92396105  time : 68383.48 Squared Gradient: 0.0000544448
-612 : KL divergence:  1.92395560  time : 68484.44 Squared Gradient: 0.0000543079
-613 : KL divergence:  1.92395018  time : 68585.16 Squared Gradient: 0.0000541715
-614 : KL divergence:  1.92394476  time : 68686.11 Squared Gradient: 0.0000540356
-615 : KL divergence:  1.92393936  time : 68787.34 Squared Gradient: 0.0000539002
-616 : KL divergence:  1.92393398  time : 68888.56 Squared Gradient: 0.0000537652
-617 : KL divergence:  1.92392860  time : 68989.73 Squared Gradient: 0.0000536307
-618 : KL divergence:  1.92392324  time : 69090.26 Squared Gradient: 0.0000534967
-619 : KL divergence:  1.92391790  time : 69191.44 Squared Gradient: 0.0000533632
-620 : KL divergence:  1.92391256  time : 69292.43 Squared Gradient: 0.0000532302
-621 : KL divergence:  1.92390724  time : 69393.98 Squared Gradient: 0.0000530976
-622 : KL divergence:  1.92390194  time : 69495.39 Squared Gradient: 0.0000529655
-623 : KL divergence:  1.92389665  time : 69596.38 Squared Gradient: 0.0000528338
-624 : KL divergence:  1.92389136  time : 69697.61 Squared Gradient: 0.0000527027
-625 : KL divergence:  1.92388610  time : 69798.91 Squared Gradient: 0.0000525719
-626 : KL divergence:  1.92388084  time : 69899.96 Squared Gradient: 0.0000524417
-627 : KL divergence:  1.92387560  time : 70001.30 Squared Gradient: 0.0000523119
-628 : KL divergence:  1.92387038  time : 70102.62 Squared Gradient: 0.0000521825
-629 : KL divergence:  1.92386516  time : 70204.05 Squared Gradient: 0.0000520536
-630 : KL divergence:  1.92385996  time : 70305.04 Squared Gradient: 0.0000519252
-631 : KL divergence:  1.92385477  time : 70405.99 Squared Gradient: 0.0000517972
-632 : KL divergence:  1.92384959  time : 70507.02 Squared Gradient: 0.0000516697
-633 : KL divergence:  1.92384443  time : 70608.77 Squared Gradient: 0.0000515426
-634 : KL divergence:  1.92383928  time : 70710.17 Squared Gradient: 0.0000514159
-635 : KL divergence:  1.92383414  time : 70815.64 Squared Gradient: 0.0000512897
-636 : KL divergence:  1.92382901  time : 70927.40 Squared Gradient: 0.0000511640
-637 : KL divergence:  1.92382390  time : 71039.92 Squared Gradient: 0.0000510386
-638 : KL divergence:  1.92381880  time : 71152.21 Squared Gradient: 0.0000509138
-639 : KL divergence:  1.92381371  time : 71264.70 Squared Gradient: 0.0000507893
-640 : KL divergence:  1.92380863  time : 71377.40 Squared Gradient: 0.0000506653
-641 : KL divergence:  1.92380357  time : 71489.63 Squared Gradient: 0.0000505417
-642 : KL divergence:  1.92379852  time : 71602.12 Squared Gradient: 0.0000504185
-643 : KL divergence:  1.92379348  time : 71714.20 Squared Gradient: 0.0000502958
-644 : KL divergence:  1.92378846  time : 71826.50 Squared Gradient: 0.0000501735
-645 : KL divergence:  1.92378344  time : 71938.88 Squared Gradient: 0.0000500516
-646 : KL divergence:  1.92377844  time : 72051.31 Squared Gradient: 0.0000499301
-647 : KL divergence:  1.92377345  time : 72163.61 Squared Gradient: 0.0000498091
-648 : KL divergence:  1.92376847  time : 72275.50 Squared Gradient: 0.0000496884
-649 : KL divergence:  1.92376350  time : 72387.93 Squared Gradient: 0.0000495682
-650 : KL divergence:  1.92375855  time : 72500.04 Squared Gradient: 0.0000494484
-651 : KL divergence:  1.92375361  time : 72612.70 Squared Gradient: 0.0000493290
-652 : KL divergence:  1.92374868  time : 72725.02 Squared Gradient: 0.0000492100
-653 : KL divergence:  1.92374376  time : 72837.03 Squared Gradient: 0.0000490915
-654 : KL divergence:  1.92373886  time : 72949.06 Squared Gradient: 0.0000489733
-655 : KL divergence:  1.92373396  time : 73061.44 Squared Gradient: 0.0000488555
-656 : KL divergence:  1.92372908  time : 73173.72 Squared Gradient: 0.0000487382
-657 : KL divergence:  1.92372421  time : 73286.42 Squared Gradient: 0.0000486212
-658 : KL divergence:  1.92371935  time : 73399.07 Squared Gradient: 0.0000485047
-659 : KL divergence:  1.92371450  time : 73511.41 Squared Gradient: 0.0000483885
-660 : KL divergence:  1.92370966  time : 73623.47 Squared Gradient: 0.0000482728
-661 : KL divergence:  1.92370484  time : 73735.34 Squared Gradient: 0.0000481574
-662 : KL divergence:  1.92370003  time : 73847.31 Squared Gradient: 0.0000480424
-663 : KL divergence:  1.92369523  time : 73959.94 Squared Gradient: 0.0000479279
-664 : KL divergence:  1.92369044  time : 74072.16 Squared Gradient: 0.0000478137
-665 : KL divergence:  1.92368566  time : 74184.33 Squared Gradient: 0.0000476999
-666 : KL divergence:  1.92368089  time : 74295.89 Squared Gradient: 0.0000475865
-667 : KL divergence:  1.92367613  time : 74408.19 Squared Gradient: 0.0000474734
-668 : KL divergence:  1.92367139  time : 74520.41 Squared Gradient: 0.0000473608
-669 : KL divergence:  1.92366666  time : 74632.75 Squared Gradient: 0.0000472485
-670 : KL divergence:  1.92366193  time : 74744.96 Squared Gradient: 0.0000471366
-671 : KL divergence:  1.92365722  time : 74856.88 Squared Gradient: 0.0000470251
-672 : KL divergence:  1.92365252  time : 74968.80 Squared Gradient: 0.0000469140
-673 : KL divergence:  1.92364784  time : 75080.52 Squared Gradient: 0.0000468032
-674 : KL divergence:  1.92364316  time : 75192.47 Squared Gradient: 0.0000466929
-675 : KL divergence:  1.92363849  time : 75304.91 Squared Gradient: 0.0000465828
-676 : KL divergence:  1.92363384  time : 75417.31 Squared Gradient: 0.0000464732
-677 : KL divergence:  1.92362919  time : 75529.65 Squared Gradient: 0.0000463639
-678 : KL divergence:  1.92362456  time : 75641.40 Squared Gradient: 0.0000462550
-679 : KL divergence:  1.92361993  time : 75753.70 Squared Gradient: 0.0000461465
-680 : KL divergence:  1.92361532  time : 75865.60 Squared Gradient: 0.0000460383
-681 : KL divergence:  1.92361072  time : 75978.13 Squared Gradient: 0.0000459305
-682 : KL divergence:  1.92360613  time : 76090.42 Squared Gradient: 0.0000458230
-683 : KL divergence:  1.92360155  time : 76202.25 Squared Gradient: 0.0000457160
-684 : KL divergence:  1.92359698  time : 76314.28 Squared Gradient: 0.0000456092
-685 : KL divergence:  1.92359242  time : 76426.54 Squared Gradient: 0.0000455028
-686 : KL divergence:  1.92358788  time : 76538.67 Squared Gradient: 0.0000453968
-687 : KL divergence:  1.92358334  time : 76651.20 Squared Gradient: 0.0000452911
-688 : KL divergence:  1.92357881  time : 76763.79 Squared Gradient: 0.0000451858
-689 : KL divergence:  1.92357430  time : 76876.19 Squared Gradient: 0.0000450809
-690 : KL divergence:  1.92356979  time : 76988.51 Squared Gradient: 0.0000449762
-691 : KL divergence:  1.92356530  time : 77100.62 Squared Gradient: 0.0000448720
-692 : KL divergence:  1.92356081  time : 77213.38 Squared Gradient: 0.0000447681
-693 : KL divergence:  1.92355634  time : 77326.45 Squared Gradient: 0.0000446645
-694 : KL divergence:  1.92355187  time : 77439.27 Squared Gradient: 0.0000445612
-695 : KL divergence:  1.92354742  time : 77551.80 Squared Gradient: 0.0000444583
-696 : KL divergence:  1.92354298  time : 77663.66 Squared Gradient: 0.0000443558
-697 : KL divergence:  1.92353854  time : 77776.10 Squared Gradient: 0.0000442536
-698 : KL divergence:  1.92353412  time : 77888.55 Squared Gradient: 0.0000441517
-699 : KL divergence:  1.92352971  time : 78001.08 Squared Gradient: 0.0000440501
-700 : KL divergence:  1.92352531  time : 78113.70 Squared Gradient: 0.0000439489
-701 : KL divergence:  1.92352091  time : 78225.89 Squared Gradient: 0.0000438481
-702 : KL divergence:  1.92351653  time : 78338.27 Squared Gradient: 0.0000437475
-703 : KL divergence:  1.92351216  time : 78450.16 Squared Gradient: 0.0000436473
-704 : KL divergence:  1.92350780  time : 78562.44 Squared Gradient: 0.0000435474
-705 : KL divergence:  1.92350345  time : 78674.95 Squared Gradient: 0.0000434479
-706 : KL divergence:  1.92349910  time : 78787.51 Squared Gradient: 0.0000433486
-707 : KL divergence:  1.92349477  time : 78899.98 Squared Gradient: 0.0000432497
-708 : KL divergence:  1.92349045  time : 79011.87 Squared Gradient: 0.0000431512
-709 : KL divergence:  1.92348614  time : 79124.18 Squared Gradient: 0.0000430529
-710 : KL divergence:  1.92348183  time : 79236.20 Squared Gradient: 0.0000429550
-711 : KL divergence:  1.92347754  time : 79348.94 Squared Gradient: 0.0000428574
-712 : KL divergence:  1.92347326  time : 79461.39 Squared Gradient: 0.0000427601
-713 : KL divergence:  1.92346898  time : 79573.15 Squared Gradient: 0.0000426631
-714 : KL divergence:  1.92346472  time : 79685.18 Squared Gradient: 0.0000425664
-715 : KL divergence:  1.92346046  time : 79797.38 Squared Gradient: 0.0000424701
-716 : KL divergence:  1.92345622  time : 79909.41 Squared Gradient: 0.0000423740
-717 : KL divergence:  1.92345198  time : 80021.78 Squared Gradient: 0.0000422783
-718 : KL divergence:  1.92344776  time : 80133.86 Squared Gradient: 0.0000421829
-719 : KL divergence:  1.92344354  time : 80245.89 Squared Gradient: 0.0000420878
-720 : KL divergence:  1.92343934  time : 80357.68 Squared Gradient: 0.0000419930
-721 : KL divergence:  1.92343514  time : 80469.71 Squared Gradient: 0.0000418985
-722 : KL divergence:  1.92343095  time : 80580.12 Squared Gradient: 0.0000418043
-723 : KL divergence:  1.92342677  time : 80687.73 Squared Gradient: 0.0000417104
-724 : KL divergence:  1.92342261  time : 80789.86 Squared Gradient: 0.0000416169
-725 : KL divergence:  1.92341845  time : 80891.80 Squared Gradient: 0.0000415236
-726 : KL divergence:  1.92341430  time : 80992.62 Squared Gradient: 0.0000414306
-727 : KL divergence:  1.92341016  time : 81094.02 Squared Gradient: 0.0000413379
-728 : KL divergence:  1.92340602  time : 81195.33 Squared Gradient: 0.0000412456
-729 : KL divergence:  1.92340190  time : 81296.58 Squared Gradient: 0.0000411535
-730 : KL divergence:  1.92339779  time : 81397.88 Squared Gradient: 0.0000410617
-731 : KL divergence:  1.92339368  time : 81498.85 Squared Gradient: 0.0000409702
-732 : KL divergence:  1.92338959  time : 81600.02 Squared Gradient: 0.0000408790
-733 : KL divergence:  1.92338550  time : 81701.04 Squared Gradient: 0.0000407881
-734 : KL divergence:  1.92338143  time : 81802.20 Squared Gradient: 0.0000406975
-735 : KL divergence:  1.92337736  time : 81903.59 Squared Gradient: 0.0000406072
-736 : KL divergence:  1.92337330  time : 82004.91 Squared Gradient: 0.0000405171
-737 : KL divergence:  1.92336925  time : 82106.14 Squared Gradient: 0.0000404274
-738 : KL divergence:  1.92336521  time : 82206.73 Squared Gradient: 0.0000403379
-739 : KL divergence:  1.92336118  time : 82307.92 Squared Gradient: 0.0000402488
-740 : KL divergence:  1.92335716  time : 82408.93 Squared Gradient: 0.0000401599
-741 : KL divergence:  1.92335314  time : 82510.46 Squared Gradient: 0.0000400713
-742 : KL divergence:  1.92334914  time : 82611.73 Squared Gradient: 0.0000399829
-743 : KL divergence:  1.92334514  time : 82712.48 Squared Gradient: 0.0000398949
-744 : KL divergence:  1.92334116  time : 82813.46 Squared Gradient: 0.0000398071
-745 : KL divergence:  1.92333718  time : 82914.62 Squared Gradient: 0.0000397197
-746 : KL divergence:  1.92333321  time : 83015.59 Squared Gradient: 0.0000396324
-747 : KL divergence:  1.92332925  time : 83116.98 Squared Gradient: 0.0000395455
-748 : KL divergence:  1.92332529  time : 83218.21 Squared Gradient: 0.0000394589
-749 : KL divergence:  1.92332135  time : 83319.39 Squared Gradient: 0.0000393725
-750 : KL divergence:  1.92331742  time : 83420.38 Squared Gradient: 0.0000392864
-751 : KL divergence:  1.92331349  time : 83521.27 Squared Gradient: 0.0000392005
-752 : KL divergence:  1.92330957  time : 83622.20 Squared Gradient: 0.0000391150
-753 : KL divergence:  1.92330566  time : 83723.85 Squared Gradient: 0.0000390297
-754 : KL divergence:  1.92330176  time : 83825.16 Squared Gradient: 0.0000389446
-755 : KL divergence:  1.92329787  time : 83926.44 Squared Gradient: 0.0000388599
-756 : KL divergence:  1.92329398  time : 84027.24 Squared Gradient: 0.0000387754
-757 : KL divergence:  1.92329011  time : 84128.53 Squared Gradient: 0.0000386912
-758 : KL divergence:  1.92328624  time : 84229.75 Squared Gradient: 0.0000386072
-759 : KL divergence:  1.92328238  time : 84330.99 Squared Gradient: 0.0000385235
-760 : KL divergence:  1.92327853  time : 84432.26 Squared Gradient: 0.0000384400
-761 : KL divergence:  1.92327469  time : 84533.15 Squared Gradient: 0.0000383569
-762 : KL divergence:  1.92327086  time : 84634.12 Squared Gradient: 0.0000382740
-763 : KL divergence:  1.92326703  time : 84734.85 Squared Gradient: 0.0000381913
-764 : KL divergence:  1.92326322  time : 84835.84 Squared Gradient: 0.0000381089
-765 : KL divergence:  1.92325941  time : 84937.11 Squared Gradient: 0.0000380268
-766 : KL divergence:  1.92325561  time : 85038.43 Squared Gradient: 0.0000379449
-767 : KL divergence:  1.92325181  time : 85139.92 Squared Gradient: 0.0000378632
-768 : KL divergence:  1.92324803  time : 85240.56 Squared Gradient: 0.0000377819
-769 : KL divergence:  1.92324425  time : 85341.78 Squared Gradient: 0.0000377007
-770 : KL divergence:  1.92324048  time : 85442.78 Squared Gradient: 0.0000376199
-771 : KL divergence:  1.92323672  time : 85544.27 Squared Gradient: 0.0000375392
-772 : KL divergence:  1.92323297  time : 85645.54 Squared Gradient: 0.0000374589
-773 : KL divergence:  1.92322923  time : 85746.30 Squared Gradient: 0.0000373788
-774 : KL divergence:  1.92322549  time : 85847.26 Squared Gradient: 0.0000372989
-775 : KL divergence:  1.92322177  time : 85948.46 Squared Gradient: 0.0000372193
-776 : KL divergence:  1.92321805  time : 86049.45 Squared Gradient: 0.0000371399
-777 : KL divergence:  1.92321433  time : 86150.70 Squared Gradient: 0.0000370607
-778 : KL divergence:  1.92321063  time : 86251.82 Squared Gradient: 0.0000369819
-779 : KL divergence:  1.92320693  time : 86353.00 Squared Gradient: 0.0000369032
-780 : KL divergence:  1.92320324  time : 86453.98 Squared Gradient: 0.0000368248
-781 : KL divergence:  1.92319956  time : 86554.91 Squared Gradient: 0.0000367466
-782 : KL divergence:  1.92319589  time : 86656.04 Squared Gradient: 0.0000366687
-783 : KL divergence:  1.92319223  time : 86757.95 Squared Gradient: 0.0000365910
-784 : KL divergence:  1.92318857  time : 86859.50 Squared Gradient: 0.0000365136
-785 : KL divergence:  1.92318492  time : 86960.89 Squared Gradient: 0.0000364364
-786 : KL divergence:  1.92318128  time : 87061.74 Squared Gradient: 0.0000363594
-787 : KL divergence:  1.92317764  time : 87163.26 Squared Gradient: 0.0000362827
-788 : KL divergence:  1.92317402  time : 87264.55 Squared Gradient: 0.0000362062
-789 : KL divergence:  1.92317040  time : 87365.82 Squared Gradient: 0.0000361299
-790 : KL divergence:  1.92316679  time : 87467.07 Squared Gradient: 0.0000360539
-791 : KL divergence:  1.92316318  time : 87567.96 Squared Gradient: 0.0000359781
-792 : KL divergence:  1.92315959  time : 87668.93 Squared Gradient: 0.0000359026
-793 : KL divergence:  1.92315600  time : 87769.70 Squared Gradient: 0.0000358272
-794 : KL divergence:  1.92315242  time : 87870.73 Squared Gradient: 0.0000357521
-795 : KL divergence:  1.92314885  time : 87982.58 Squared Gradient: 0.0000356772
-796 : KL divergence:  1.92314528  time : 88095.05 Squared Gradient: 0.0000356026
-797 : KL divergence:  1.92314172  time : 88207.48 Squared Gradient: 0.0000355282
-798 : KL divergence:  1.92313817  time : 88319.09 Squared Gradient: 0.0000354540
-799 : KL divergence:  1.92313463  time : 88431.64 Squared Gradient: 0.0000353800
-800 : KL divergence:  1.92313109  time : 88544.01 Squared Gradient: 0.0000353063
-801 : KL divergence:  1.92312756  time : 88656.96 Squared Gradient: 0.0000352327
-802 : KL divergence:  1.92312404  time : 88769.62 Squared Gradient: 0.0000351594
-803 : KL divergence:  1.92312053  time : 88881.71 Squared Gradient: 0.0000350864
-804 : KL divergence:  1.92311702  time : 88994.25 Squared Gradient: 0.0000350135
-805 : KL divergence:  1.92311352  time : 89106.83 Squared Gradient: 0.0000349409
-806 : KL divergence:  1.92311003  time : 89210.26 Squared Gradient: 0.0000348685
-807 : KL divergence:  1.92310654  time : 89311.80 Squared Gradient: 0.0000347963
-808 : KL divergence:  1.92310307  time : 89412.93 Squared Gradient: 0.0000347243
-809 : KL divergence:  1.92309959  time : 89514.18 Squared Gradient: 0.0000346525
-810 : KL divergence:  1.92309613  time : 89615.16 Squared Gradient: 0.0000345810
-811 : KL divergence:  1.92309267  time : 89716.24 Squared Gradient: 0.0000345096
-812 : KL divergence:  1.92308923  time : 89817.24 Squared Gradient: 0.0000344385
-813 : KL divergence:  1.92308578  time : 89918.89 Squared Gradient: 0.0000343676
-814 : KL divergence:  1.92308235  time : 90020.22 Squared Gradient: 0.0000342969
-815 : KL divergence:  1.92307892  time : 90121.57 Squared Gradient: 0.0000342264
-816 : KL divergence:  1.92307550  time : 90222.33 Squared Gradient: 0.0000341562
-817 : KL divergence:  1.92307209  time : 90323.56 Squared Gradient: 0.0000340861
-818 : KL divergence:  1.92306868  time : 90424.82 Squared Gradient: 0.0000340163
-819 : KL divergence:  1.92306528  time : 90526.07 Squared Gradient: 0.0000339466
-820 : KL divergence:  1.92306189  time : 90627.35 Squared Gradient: 0.0000338772
-821 : KL divergence:  1.92305850  time : 90728.29 Squared Gradient: 0.0000338080
-822 : KL divergence:  1.92305512  time : 90829.31 Squared Gradient: 0.0000337390
-823 : KL divergence:  1.92305175  time : 90930.10 Squared Gradient: 0.0000336701
-824 : KL divergence:  1.92304838  time : 91031.13 Squared Gradient: 0.0000336015
-825 : KL divergence:  1.92304503  time : 91132.38 Squared Gradient: 0.0000335331
-826 : KL divergence:  1.92304167  time : 91233.81 Squared Gradient: 0.0000334649
-827 : KL divergence:  1.92303833  time : 91335.14 Squared Gradient: 0.0000333969
-828 : KL divergence:  1.92303499  time : 91435.76 Squared Gradient: 0.0000333291
-829 : KL divergence:  1.92303166  time : 91536.96 Squared Gradient: 0.0000332615
-830 : KL divergence:  1.92302834  time : 91637.96 Squared Gradient: 0.0000331942
-831 : KL divergence:  1.92302502  time : 91739.49 Squared Gradient: 0.0000331270
-832 : KL divergence:  1.92302171  time : 91840.79 Squared Gradient: 0.0000330600
-833 : KL divergence:  1.92301840  time : 91941.55 Squared Gradient: 0.0000329932
-834 : KL divergence:  1.92301510  time : 92042.54 Squared Gradient: 0.0000329266
-835 : KL divergence:  1.92301181  time : 92143.84 Squared Gradient: 0.0000328602
-836 : KL divergence:  1.92300853  time : 92245.08 Squared Gradient: 0.0000327940
-837 : KL divergence:  1.92300525  time : 92346.62 Squared Gradient: 0.0000327279
-838 : KL divergence:  1.92300198  time : 92447.95 Squared Gradient: 0.0000326621
-839 : KL divergence:  1.92299872  time : 92549.27 Squared Gradient: 0.0000325965
-840 : KL divergence:  1.92299546  time : 92650.31 Squared Gradient: 0.0000325311
-841 : KL divergence:  1.92299221  time : 92751.24 Squared Gradient: 0.0000324658
-842 : KL divergence:  1.92298896  time : 92852.23 Squared Gradient: 0.0000324008
-843 : KL divergence:  1.92298572  time : 92953.90 Squared Gradient: 0.0000323359
-844 : KL divergence:  1.92298249  time : 93055.14 Squared Gradient: 0.0000322713
-845 : KL divergence:  1.92297927  time : 93156.37 Squared Gradient: 0.0000322068
-846 : KL divergence:  1.92297605  time : 93257.26 Squared Gradient: 0.0000321425
-847 : KL divergence:  1.92297283  time : 93358.56 Squared Gradient: 0.0000320784
-848 : KL divergence:  1.92296963  time : 93459.75 Squared Gradient: 0.0000320145
-849 : KL divergence:  1.92296643  time : 93560.98 Squared Gradient: 0.0000319507
-850 : KL divergence:  1.92296323  time : 93662.21 Squared Gradient: 0.0000318872
-851 : KL divergence:  1.92296005  time : 93763.09 Squared Gradient: 0.0000318238
-852 : KL divergence:  1.92295687  time : 93864.05 Squared Gradient: 0.0000317607
-853 : KL divergence:  1.92295369  time : 93964.77 Squared Gradient: 0.0000316977
-854 : KL divergence:  1.92295052  time : 94065.72 Squared Gradient: 0.0000316349
-855 : KL divergence:  1.92294736  time : 94166.94 Squared Gradient: 0.0000315723
-856 : KL divergence:  1.92294421  time : 94268.18 Squared Gradient: 0.0000315098
-857 : KL divergence:  1.92294106  time : 94369.35 Squared Gradient: 0.0000314476
-858 : KL divergence:  1.92293791  time : 94469.90 Squared Gradient: 0.0000313855
-859 : KL divergence:  1.92293478  time : 94571.03 Squared Gradient: 0.0000313236
-860 : KL divergence:  1.92293165  time : 94672.00 Squared Gradient: 0.0000312619
-861 : KL divergence:  1.92292852  time : 94773.51 Squared Gradient: 0.0000312003
-862 : KL divergence:  1.92292540  time : 94874.74 Squared Gradient: 0.0000311390
-863 : KL divergence:  1.92292229  time : 94975.57 Squared Gradient: 0.0000310778
-864 : KL divergence:  1.92291918  time : 95076.56 Squared Gradient: 0.0000310168
-865 : KL divergence:  1.92291608  time : 95177.82 Squared Gradient: 0.0000309559
-866 : KL divergence:  1.92291299  time : 95279.05 Squared Gradient: 0.0000308953
-867 : KL divergence:  1.92290990  time : 95380.34 Squared Gradient: 0.0000308348
-868 : KL divergence:  1.92290682  time : 95481.45 Squared Gradient: 0.0000307745
-869 : KL divergence:  1.92290374  time : 95582.61 Squared Gradient: 0.0000307143
-870 : KL divergence:  1.92290067  time : 95683.63 Squared Gradient: 0.0000306544
-871 : KL divergence:  1.92289761  time : 95784.76 Squared Gradient: 0.0000305946
-872 : KL divergence:  1.92289455  time : 95886.55 Squared Gradient: 0.0000305350
-873 : KL divergence:  1.92289150  time : 95988.59 Squared Gradient: 0.0000304755
-874 : KL divergence:  1.92288845  time : 96090.60 Squared Gradient: 0.0000304162
-875 : KL divergence:  1.92288541  time : 96195.09 Squared Gradient: 0.0000303571
-876 : KL divergence:  1.92288238  time : 96303.19 Squared Gradient: 0.0000302982
-877 : KL divergence:  1.92287935  time : 96412.91 Squared Gradient: 0.0000302394
-878 : KL divergence:  1.92287633  time : 96522.56 Squared Gradient: 0.0000301808
-879 : KL divergence:  1.92287331  time : 96632.32 Squared Gradient: 0.0000301224
-880 : KL divergence:  1.92287030  time : 96742.39 Squared Gradient: 0.0000300641
-881 : KL divergence:  1.92286730  time : 96851.68 Squared Gradient: 0.0000300060
-882 : KL divergence:  1.92286430  time : 96961.36 Squared Gradient: 0.0000299481
-883 : KL divergence:  1.92286130  time : 97070.67 Squared Gradient: 0.0000298903
-884 : KL divergence:  1.92285832  time : 97180.12 Squared Gradient: 0.0000298327
-885 : KL divergence:  1.92285533  time : 97290.18 Squared Gradient: 0.0000297752
-886 : KL divergence:  1.92285236  time : 97400.22 Squared Gradient: 0.0000297179
-887 : KL divergence:  1.92284939  time : 97510.03 Squared Gradient: 0.0000296608
-888 : KL divergence:  1.92284642  time : 97619.14 Squared Gradient: 0.0000296039
-889 : KL divergence:  1.92284346  time : 97729.14 Squared Gradient: 0.0000295471
-890 : KL divergence:  1.92284051  time : 97838.96 Squared Gradient: 0.0000294904
-891 : KL divergence:  1.92283756  time : 97949.38 Squared Gradient: 0.0000294340
-892 : KL divergence:  1.92283462  time : 98059.53 Squared Gradient: 0.0000293776
-893 : KL divergence:  1.92283168  time : 98168.93 Squared Gradient: 0.0000293215
-894 : KL divergence:  1.92282875  time : 98278.90 Squared Gradient: 0.0000292655
-895 : KL divergence:  1.92282583  time : 98388.93 Squared Gradient: 0.0000292096
-896 : KL divergence:  1.92282291  time : 98498.86 Squared Gradient: 0.0000291539
-897 : KL divergence:  1.92282000  time : 98608.99 Squared Gradient: 0.0000290984
-898 : KL divergence:  1.92281709  time : 98717.18 Squared Gradient: 0.0000290430
-899 : KL divergence:  1.92281418  time : 98825.15 Squared Gradient: 0.0000289878
-900 : KL divergence:  1.92281129  time : 98945.15 Squared Gradient: 0.0000289328
-901 : KL divergence:  1.92280839  time : 99066.29 Squared Gradient: 0.0000288779
-902 : KL divergence:  1.92280551  time : 99187.54 Squared Gradient: 0.0000288231
-903 : KL divergence:  1.92280263  time : 99309.58 Squared Gradient: 0.0000287685
-904 : KL divergence:  1.92279975  time : 99431.18 Squared Gradient: 0.0000287141
-905 : KL divergence:  1.92279688  time : 99552.69 Squared Gradient: 0.0000286598
-906 : KL divergence:  1.92279402  time : 99673.78 Squared Gradient: 0.0000286056
-907 : KL divergence:  1.92279116  time : 99795.31 Squared Gradient: 0.0000285516
-908 : KL divergence:  1.92278830  time : 99916.80 Squared Gradient: 0.0000284978
-909 : KL divergence:  1.92278546  time : 100038.44 Squared Gradient: 0.0000284441
-910 : KL divergence:  1.92278261  time : 100160.10 Squared Gradient: 0.0000283905
-911 : KL divergence:  1.92277977  time : 100281.35 Squared Gradient: 0.0000283371
-912 : KL divergence:  1.92277694  time : 100402.68 Squared Gradient: 0.0000282839
-913 : KL divergence:  1.92277412  time : 100523.74 Squared Gradient: 0.0000282308
-914 : KL divergence:  1.92277129  time : 100645.05 Squared Gradient: 0.0000281779
-915 : KL divergence:  1.92276848  time : 100766.61 Squared Gradient: 0.0000281251
-916 : KL divergence:  1.92276567  time : 100888.15 Squared Gradient: 0.0000280724
-917 : KL divergence:  1.92276286  time : 101009.66 Squared Gradient: 0.0000280199
-918 : KL divergence:  1.92276006  time : 101128.83 Squared Gradient: 0.0000279675
-919 : KL divergence:  1.92275726  time : 101237.03 Squared Gradient: 0.0000279153
-920 : KL divergence:  1.92275447  time : 101344.64 Squared Gradient: 0.0000278632
-921 : KL divergence:  1.92275169  time : 101452.38 Squared Gradient: 0.0000278113
-922 : KL divergence:  1.92274891  time : 101559.63 Squared Gradient: 0.0000277595
-923 : KL divergence:  1.92274613  time : 101666.48 Squared Gradient: 0.0000277079
-924 : KL divergence:  1.92274336  time : 101773.39 Squared Gradient: 0.0000276564
-925 : KL divergence:  1.92274060  time : 101880.66 Squared Gradient: 0.0000276050
-926 : KL divergence:  1.92273784  time : 101987.68 Squared Gradient: 0.0000275538
-927 : KL divergence:  1.92273509  time : 102095.04 Squared Gradient: 0.0000275027
-928 : KL divergence:  1.92273234  time : 102202.00 Squared Gradient: 0.0000274518
-929 : KL divergence:  1.92272959  time : 102309.15 Squared Gradient: 0.0000274010
-930 : KL divergence:  1.92272686  time : 102415.97 Squared Gradient: 0.0000273503
-931 : KL divergence:  1.92272412  time : 102522.76 Squared Gradient: 0.0000272998
-932 : KL divergence:  1.92272139  time : 102629.51 Squared Gradient: 0.0000272494
-933 : KL divergence:  1.92271867  time : 102737.07 Squared Gradient: 0.0000271992
-934 : KL divergence:  1.92271595  time : 102844.20 Squared Gradient: 0.0000271490
-935 : KL divergence:  1.92271324  time : 102951.23 Squared Gradient: 0.0000270991
-936 : KL divergence:  1.92271053  time : 103057.84 Squared Gradient: 0.0000270492
-937 : KL divergence:  1.92270782  time : 103164.86 Squared Gradient: 0.0000269995
-938 : KL divergence:  1.92270513  time : 103271.85 Squared Gradient: 0.0000269500
-939 : KL divergence:  1.92270243  time : 103378.95 Squared Gradient: 0.0000269006
-940 : KL divergence:  1.92269974  time : 103486.07 Squared Gradient: 0.0000268513
-941 : KL divergence:  1.92269706  time : 103592.96 Squared Gradient: 0.0000268021
-942 : KL divergence:  1.92269438  time : 103700.01 Squared Gradient: 0.0000267531
-943 : KL divergence:  1.92269171  time : 103806.72 Squared Gradient: 0.0000267042
-944 : KL divergence:  1.92268904  time : 103913.60 Squared Gradient: 0.0000266554
-945 : KL divergence:  1.92268637  time : 104020.67 Squared Gradient: 0.0000266068
-946 : KL divergence:  1.92268371  time : 104128.06 Squared Gradient: 0.0000265583
-947 : KL divergence:  1.92268106  time : 104235.18 Squared Gradient: 0.0000265100
-948 : KL divergence:  1.92267841  time : 104341.69 Squared Gradient: 0.0000264617
-949 : KL divergence:  1.92267576  time : 104448.68 Squared Gradient: 0.0000264136
-950 : KL divergence:  1.92267312  time : 104555.69 Squared Gradient: 0.0000263657
-951 : KL divergence:  1.92267049  time : 104663.05 Squared Gradient: 0.0000263178
-952 : KL divergence:  1.92266786  time : 104770.39 Squared Gradient: 0.0000262701
-953 : KL divergence:  1.92266523  time : 104876.96 Squared Gradient: 0.0000262225
-954 : KL divergence:  1.92266261  time : 104983.99 Squared Gradient: 0.0000261751
-955 : KL divergence:  1.92265999  time : 105091.01 Squared Gradient: 0.0000261277
-956 : KL divergence:  1.92265738  time : 105197.93 Squared Gradient: 0.0000260805
-957 : KL divergence:  1.92265478  time : 105305.01 Squared Gradient: 0.0000260335
-958 : KL divergence:  1.92265217  time : 105412.10 Squared Gradient: 0.0000259865
-959 : KL divergence:  1.92264958  time : 105519.18 Squared Gradient: 0.0000259397
-960 : KL divergence:  1.92264698  time : 105626.09 Squared Gradient: 0.0000258930
-961 : KL divergence:  1.92264440  time : 105732.88 Squared Gradient: 0.0000258464
-962 : KL divergence:  1.92264181  time : 105839.67 Squared Gradient: 0.0000258000
-963 : KL divergence:  1.92263923  time : 105947.33 Squared Gradient: 0.0000257537
-964 : KL divergence:  1.92263666  time : 106054.47 Squared Gradient: 0.0000257075
-965 : KL divergence:  1.92263409  time : 106158.46 Squared Gradient: 0.0000256614
-966 : KL divergence:  1.92263152  time : 106260.46 Squared Gradient: 0.0000256154
-967 : KL divergence:  1.92262896  time : 106362.56 Squared Gradient: 0.0000255696
-968 : KL divergence:  1.92262641  time : 106464.54 Squared Gradient: 0.0000255239
-969 : KL divergence:  1.92262386  time : 106566.75 Squared Gradient: 0.0000254783
-970 : KL divergence:  1.92262131  time : 106668.74 Squared Gradient: 0.0000254329
-971 : KL divergence:  1.92261877  time : 106770.60 Squared Gradient: 0.0000253875
-972 : KL divergence:  1.92261623  time : 106872.60 Squared Gradient: 0.0000253423
-973 : KL divergence:  1.92261370  time : 106974.39 Squared Gradient: 0.0000252972
-974 : KL divergence:  1.92261117  time : 107076.30 Squared Gradient: 0.0000252522
-975 : KL divergence:  1.92260864  time : 107178.54 Squared Gradient: 0.0000252073
-976 : KL divergence:  1.92260612  time : 107280.76 Squared Gradient: 0.0000251626
-977 : KL divergence:  1.92260361  time : 107383.12 Squared Gradient: 0.0000251180
-978 : KL divergence:  1.92260110  time : 107484.76 Squared Gradient: 0.0000250735
-979 : KL divergence:  1.92259859  time : 107587.16 Squared Gradient: 0.0000250291
-980 : KL divergence:  1.92259609  time : 107689.27 Squared Gradient: 0.0000249848
-981 : KL divergence:  1.92259359  time : 107791.95 Squared Gradient: 0.0000249407
-982 : KL divergence:  1.92259110  time : 107894.30 Squared Gradient: 0.0000248966
-983 : KL divergence:  1.92258861  time : 107996.15 Squared Gradient: 0.0000248527
-984 : KL divergence:  1.92258613  time : 108098.27 Squared Gradient: 0.0000248089
-985 : KL divergence:  1.92258365  time : 108200.65 Squared Gradient: 0.0000247652
-986 : KL divergence:  1.92258117  time : 108302.94 Squared Gradient: 0.0000247216
-987 : KL divergence:  1.92257870  time : 108405.50 Squared Gradient: 0.0000246782
-988 : KL divergence:  1.92257623  time : 108507.94 Squared Gradient: 0.0000246348
-989 : KL divergence:  1.92257377  time : 108610.51 Squared Gradient: 0.0000245916
-990 : KL divergence:  1.92257131  time : 108712.72 Squared Gradient: 0.0000245485
-991 : KL divergence:  1.92256886  time : 108814.68 Squared Gradient: 0.0000245055
-992 : KL divergence:  1.92256641  time : 108916.64 Squared Gradient: 0.0000244626
-993 : KL divergence:  1.92256397  time : 109019.47 Squared Gradient: 0.0000244198
-994 : KL divergence:  1.92256152  time : 109121.97 Squared Gradient: 0.0000243771
-995 : KL divergence:  1.92255909  time : 109224.65 Squared Gradient: 0.0000243346
-996 : KL divergence:  1.92255666  time : 109326.77 Squared Gradient: 0.0000242921
-997 : KL divergence:  1.92255423  time : 109429.40 Squared Gradient: 0.0000242498
-998 : KL divergence:  1.92255180  time : 109531.87 Squared Gradient: 0.0000242076
-999 : KL divergence:  1.92254938  time : 109634.19 Squared Gradient: 0.0000241654
-1000 : KL divergence:  1.92254697  time : 109736.34 Squared Gradient: 0.0000241234
+0 : KL divergence:  1.9704602656852046  time : 104.79
+1 : KL divergence:  1.9638936693843709  time : 212.07
+2 : KL divergence:  1.9587301266284209  time : 319.27
+3 : KL divergence:  1.9546288990185336  time : 426.66
+4 : KL divergence:  1.9513428813513063  time : 534.25
+5 : KL divergence:  1.9486894998900073  time : 641.49
+6 : KL divergence:  1.9465317519493071  time : 748.95
+7 : KL divergence:  1.9447654790933482  time : 857.08
+8 : KL divergence:  1.9433106066604882  time : 964.13
+9 : KL divergence:  1.9421049826490671  time : 1072.22
+10 : KL divergence:  1.9410999635570292  time : 1179.56
+11 : KL divergence:  1.9402572006096503  time : 1286.85
+12 : KL divergence:  1.9395462669785859  time : 1394.01
+13 : KL divergence:  1.9389428839144214  time : 1501.71
+14 : KL divergence:  1.9384275801922333  time : 1609.45
+15 : KL divergence:  1.9379846690831535  time : 1717.34
+16 : KL divergence:  1.9376014608760761  time : 1824.68
+17 : KL divergence:  1.9372676519836600  time : 1932.60
+18 : KL divergence:  1.9369748477239010  time : 2040.51
+19 : KL divergence:  1.9367161872603207  time : 2147.77
+20 : KL divergence:  1.9364860469594694  time : 2255.15
+21 : KL divergence:  1.9362798048732517  time : 2361.86
+22 : KL divergence:  1.9360936525199544  time : 2468.23
+23 : KL divergence:  1.9359244441793155  time : 2574.22
+24 : KL divergence:  1.9357695755142070  time : 2679.79
+25 : KL divergence:  1.9356268855052980  time : 2786.28
+26 : KL divergence:  1.9354945771674614  time : 2892.45
+27 : KL divergence:  1.9353711529235365  time : 2998.04
+28 : KL divergence:  1.9352553620426629  time : 3103.68
+29 : KL divergence:  1.9351461577916234  time : 3209.10
+30 : KL divergence:  1.9350426621460730  time : 3314.64
+31 : KL divergence:  1.9349441370214160  time : 3420.35
+32 : KL divergence:  1.9348499605749985  time : 3525.43
+33 : KL divergence:  1.9347596076187130  time : 3631.33
+34 : KL divergence:  1.9346726335067115  time : 3736.65
+35 : KL divergence:  1.9345886608791776  time : 3842.25
+36 : KL divergence:  1.9345073685426730  time : 3947.77
+37 : KL divergence:  1.9344284824299840  time : 4053.09
+38 : KL divergence:  1.9343517679053195  time : 4158.92
+39 : KL divergence:  1.9342770235538072  time : 4264.79
+40 : KL divergence:  1.9342040758603547  time : 4370.39
+41 : KL divergence:  1.9341327749044970  time : 4476.55
+42 : KL divergence:  1.9340629906051630  time : 4582.13
+43 : KL divergence:  1.9339946097386895  time : 4687.68
+44 : KL divergence:  1.9339275333606709  time : 4793.12
+45 : KL divergence:  1.9338616747055011  time : 4898.52
+46 : KL divergence:  1.9337969573235396  time : 5004.63
+47 : KL divergence:  1.9337333135892556  time : 5110.48
+48 : KL divergence:  1.9336706834676374  time : 5215.82
+49 : KL divergence:  1.9336090133614481  time : 5322.07
+50 : KL divergence:  1.9335482553334691  time : 5427.63
+51 : KL divergence:  1.9334883662272278  time : 5533.50
+52 : KL divergence:  1.9334293070544035  time : 5639.21
+53 : KL divergence:  1.9333710424684651  time : 5744.38
+54 : KL divergence:  1.9333135402832280  time : 5850.07
+55 : KL divergence:  1.9332567710411430  time : 5955.99
+56 : KL divergence:  1.9332007077362319  time : 6061.19
+57 : KL divergence:  1.9331453254741202  time : 6167.47
+58 : KL divergence:  1.9330906012571698  time : 6273.38
+59 : KL divergence:  1.9330365137274694  time : 6378.58
+60 : KL divergence:  1.9329830430327970  time : 6483.96
+61 : KL divergence:  1.9329301706358590  time : 6589.19
+62 : KL divergence:  1.9328778791740635  time : 6695.79
+63 : KL divergence:  1.9328261523354089  time : 6801.87
+64 : KL divergence:  1.9327749748212593  time : 6907.02
+65 : KL divergence:  1.9327243321533760  time : 7013.03
+66 : KL divergence:  1.9326742106443424  time : 7118.29
+67 : KL divergence:  1.9326245973501639  time : 7223.56
+68 : KL divergence:  1.9325754799698565  time : 7329.05
+69 : KL divergence:  1.9325268467904986  time : 7434.23
+70 : KL divergence:  1.9324786866694537  time : 7540.02
+71 : KL divergence:  1.9324309889761158  time : 7645.79
+72 : KL divergence:  1.9323837435384494  time : 7750.55
+73 : KL divergence:  1.9323369406327646  time : 7857.08
+74 : KL divergence:  1.9322905709370222  time : 7962.52
+75 : KL divergence:  1.9322446254929362  time : 8067.99
+76 : KL divergence:  1.9321990957354884  time : 8173.54
+77 : KL divergence:  1.9321539733558972  time : 8279.17
+78 : KL divergence:  1.9321092504507600  time : 8384.87
+79 : KL divergence:  1.9320649193306696  time : 8490.80
+80 : KL divergence:  1.9320209726068576  time : 8595.98
+81 : KL divergence:  1.9319774031285140  time : 8702.02
+82 : KL divergence:  1.9319342040470393  time : 8807.48
+83 : KL divergence:  1.9318913686612902  time : 8912.55
+84 : KL divergence:  1.9318488905374196  time : 9018.30
+85 : KL divergence:  1.9318067634269458  time : 9123.40
+86 : KL divergence:  1.9317649813181206  time : 9229.39
+87 : KL divergence:  1.9317235383107314  time : 9335.08
+88 : KL divergence:  1.9316824287475873  time : 9440.21
+89 : KL divergence:  1.9316416470970299  time : 9546.09
+90 : KL divergence:  1.9316011880160502  time : 9651.71
+91 : KL divergence:  1.9315610462924038  time : 9757.09
+92 : KL divergence:  1.9315212168943461  time : 9862.81
+93 : KL divergence:  1.9314816948689806  time : 9968.07
+94 : KL divergence:  1.9314424754590265  time : 10073.69
+95 : KL divergence:  1.9314035539893779  time : 10179.82
+96 : KL divergence:  1.9313649259475272  time : 10285.19
+97 : KL divergence:  1.9313265869049492  time : 10391.69
+98 : KL divergence:  1.9312885325558584  time : 10497.37
+99 : KL divergence:  1.9312507587183112  time : 10603.05
+100 : KL divergence:  1.9312132612980912  time : 10708.69
+101 : KL divergence:  1.9311760363019563  time : 10814.59
+102 : KL divergence:  1.9311390798411618  time : 10920.71
+103 : KL divergence:  1.9311023881203315  time : 11026.71
+104 : KL divergence:  1.9310659574144200  time : 11132.22
+105 : KL divergence:  1.9310297841246717  time : 11238.46
+106 : KL divergence:  1.9309938647118907  time : 11344.50
+107 : KL divergence:  1.9309581956871336  time : 11449.98
+108 : KL divergence:  1.9309227736998393  time : 11555.49
+109 : KL divergence:  1.9308875954299916  time : 11660.91
+110 : KL divergence:  1.9308526576540193  time : 11766.64
+111 : KL divergence:  1.9308179572144288  time : 11872.53
+112 : KL divergence:  1.9307834910005879  time : 11977.98
+113 : KL divergence:  1.9307492560023478  time : 12084.17
+114 : KL divergence:  1.9307152492420436  time : 12189.86
+115 : KL divergence:  1.9306814678486448  time : 12295.16
+116 : KL divergence:  1.9306479089436193  time : 12400.52
+117 : KL divergence:  1.9306145697774399  time : 12505.70
+118 : KL divergence:  1.9305814476204108  time : 12611.19
+119 : KL divergence:  1.9305485397910653  time : 12716.90
+120 : KL divergence:  1.9305158436790220  time : 12821.86
+121 : KL divergence:  1.9304833567205943  time : 12927.74
+122 : KL divergence:  1.9304510764096843  time : 13033.12
+123 : KL divergence:  1.9304190002852528  time : 13138.79
+124 : KL divergence:  1.9303871259129033  time : 13244.59
+125 : KL divergence:  1.9303554509347938  time : 13350.23
+126 : KL divergence:  1.9303239730293160  time : 13456.11
+127 : KL divergence:  1.9302926899072281  time : 13561.97
+128 : KL divergence:  1.9302615993532737  time : 13667.56
+129 : KL divergence:  1.9302306991546170  time : 13773.72
+130 : KL divergence:  1.9301999871322815  time : 13879.41
+131 : KL divergence:  1.9301694612208580  time : 13984.81
+132 : KL divergence:  1.9301391193194766  time : 14090.06
+133 : KL divergence:  1.9301089593829577  time : 14195.30
+134 : KL divergence:  1.9300789794293223  time : 14301.15
+135 : KL divergence:  1.9300491774708686  time : 14406.73
+136 : KL divergence:  1.9300195515962932  time : 14511.85
+137 : KL divergence:  1.9299900998816470  time : 14617.67
+138 : KL divergence:  1.9299608204887340  time : 14722.91
+139 : KL divergence:  1.9299317115843539  time : 14828.70
+140 : KL divergence:  1.9299027713537915  time : 14934.31
+141 : KL divergence:  1.9298739980409951  time : 15039.65
+142 : KL divergence:  1.9298453898886616  time : 15145.45
+143 : KL divergence:  1.9298169452124356  time : 15251.39
+144 : KL divergence:  1.9297886623242964  time : 15356.46
+145 : KL divergence:  1.9297605395641115  time : 15462.68
+146 : KL divergence:  1.9297325753073613  time : 15568.45
+147 : KL divergence:  1.9297047679624488  time : 15673.51
+148 : KL divergence:  1.9296771159510124  time : 15778.88
+149 : KL divergence:  1.9296496177381650  time : 15889.34
+150 : KL divergence:  1.9296222717926190  time : 16009.08
+151 : KL divergence:  1.9295950766062930  time : 16128.38
+152 : KL divergence:  1.9295680307366732  time : 16246.78
+153 : KL divergence:  1.9295411327214667  time : 16366.06
+154 : KL divergence:  1.9295143811278819  time : 16484.72
+155 : KL divergence:  1.9294877745595638  time : 16603.27
+156 : KL divergence:  1.9294613116221269  time : 16722.08
+157 : KL divergence:  1.9294349909594775  time : 16840.54
+158 : KL divergence:  1.9294088112484193  time : 16959.62
+159 : KL divergence:  1.9293827711591522  time : 17078.87
+160 : KL divergence:  1.9293568693860881  time : 17197.03
+161 : KL divergence:  1.9293311046655512  time : 17317.00
+162 : KL divergence:  1.9293054757176860  time : 17435.67
+163 : KL divergence:  1.9292799813244574  time : 17554.23
+164 : KL divergence:  1.9292546202446392  time : 17672.83
+165 : KL divergence:  1.9292293912848155  time : 17791.42
+166 : KL divergence:  1.9292042932567175  time : 17910.39
+167 : KL divergence:  1.9291793249830977  time : 18029.72
+168 : KL divergence:  1.9291544853269884  time : 18148.06
+169 : KL divergence:  1.9291297731447534  time : 18267.52
+170 : KL divergence:  1.9291051873123148  time : 18386.16
+171 : KL divergence:  1.9290807267348127  time : 18504.65
+172 : KL divergence:  1.9290563903129556  time : 18619.49
+173 : KL divergence:  1.9290321770012255  time : 18725.57
+174 : KL divergence:  1.9290080857173175  time : 18831.72
+175 : KL divergence:  1.9289841154112635  time : 18937.56
+176 : KL divergence:  1.9289602650855775  time : 19042.93
+177 : KL divergence:  1.9289365337063591  time : 19149.20
+178 : KL divergence:  1.9289129202910604  time : 19261.34
+179 : KL divergence:  1.9288894238209551  time : 19380.02
+180 : KL divergence:  1.9288660433642286  time : 19498.98
+181 : KL divergence:  1.9288427779390378  time : 19617.39
+182 : KL divergence:  1.9288196265973674  time : 19736.17
+183 : KL divergence:  1.9287965884080671  time : 19855.58
+184 : KL divergence:  1.9287736624598357  time : 19974.01
+185 : KL divergence:  1.9287508478281874  time : 20093.50
+186 : KL divergence:  1.9287281436177457  time : 20212.29
+187 : KL divergence:  1.9287055489618616  time : 20330.82
+188 : KL divergence:  1.9286830629538219  time : 20449.31
+189 : KL divergence:  1.9286606847512653  time : 20568.26
+190 : KL divergence:  1.9286384135224626  time : 20687.49
+191 : KL divergence:  1.9286162483850104  time : 20806.49
+192 : KL divergence:  1.9285941885352689  time : 20925.05
+193 : KL divergence:  1.9285722331339379  time : 21044.60
+194 : KL divergence:  1.9285503813912117  time : 21163.86
+195 : KL divergence:  1.9285286324998419  time : 21282.56
+196 : KL divergence:  1.9285069856754855  time : 21401.43
+197 : KL divergence:  1.9284854401213556  time : 21520.08
+198 : KL divergence:  1.9284639950931597  time : 21639.05
+199 : KL divergence:  1.9284426498061573  time : 21758.15
+200 : KL divergence:  1.9284214035258487  time : 21877.12
+201 : KL divergence:  1.9284002554850854  time : 21996.66
+202 : KL divergence:  1.9283792049754798  time : 22115.73
+203 : KL divergence:  1.9283582512856601  time : 22234.62
+204 : KL divergence:  1.9283373936418233  time : 22353.31
+205 : KL divergence:  1.9283166313998494  time : 22471.88
+206 : KL divergence:  1.9282959638315478  time : 22591.08
+207 : KL divergence:  1.9282753902302674  time : 22710.07
+208 : KL divergence:  1.9282549099285926  time : 22828.44
+209 : KL divergence:  1.9282345222643722  time : 22948.05
+210 : KL divergence:  1.9282142265713527  time : 23066.64
+211 : KL divergence:  1.9281940221530758  time : 23185.63
+212 : KL divergence:  1.9281739083851881  time : 23304.70
+213 : KL divergence:  1.9281538846088573  time : 23423.44
+214 : KL divergence:  1.9281339501993686  time : 23542.74
+215 : KL divergence:  1.9281141045304344  time : 23662.04
+216 : KL divergence:  1.9280943469503546  time : 23780.92
+217 : KL divergence:  1.9280746768791472  time : 23900.64
+218 : KL divergence:  1.9280550936831182  time : 24019.65
+219 : KL divergence:  1.9280355967649738  time : 24138.29
+220 : KL divergence:  1.9280161855263303  time : 24257.18
+221 : KL divergence:  1.9279968593685322  time : 24375.69
+222 : KL divergence:  1.9279776177409937  time : 24495.15
+223 : KL divergence:  1.9279584600149919  time : 24614.36
+224 : KL divergence:  1.9279393856616327  time : 24732.86
+225 : KL divergence:  1.9279203940999603  time : 24852.39
+226 : KL divergence:  1.9279014847789580  time : 24971.32
+227 : KL divergence:  1.9278826571228058  time : 25090.75
+228 : KL divergence:  1.9278639105937350  time : 25209.76
+229 : KL divergence:  1.9278452446699508  time : 25328.42
+230 : KL divergence:  1.9278266587809598  time : 25447.66
+231 : KL divergence:  1.9278081524226915  time : 25567.12
+232 : KL divergence:  1.9277897250556602  time : 25685.97
+233 : KL divergence:  1.9277713761777395  time : 25805.89
+234 : KL divergence:  1.9277531052554391  time : 25925.26
+235 : KL divergence:  1.9277349117829763  time : 26043.74
+236 : KL divergence:  1.9277167952576815  time : 26162.36
+237 : KL divergence:  1.9276987551838090  time : 26281.01
+238 : KL divergence:  1.9276807910668943  time : 26400.92
+239 : KL divergence:  1.9276629023938159  time : 26520.09
+240 : KL divergence:  1.9276450887238186  time : 26638.44
+241 : KL divergence:  1.9276273495483318  time : 26757.72
+242 : KL divergence:  1.9276096843915183  time : 26876.50
+243 : KL divergence:  1.9275920927766406  time : 26995.30
+244 : KL divergence:  1.9275745742596357  time : 27114.17
+245 : KL divergence:  1.9275571283616193  time : 27232.86
+246 : KL divergence:  1.9275397546537980  time : 27352.37
+247 : KL divergence:  1.9275224526362378  time : 27471.78
+248 : KL divergence:  1.9275052218938937  time : 27590.27
+249 : KL divergence:  1.9274880619784913  time : 27710.77
+250 : KL divergence:  1.9274709724358312  time : 27829.88
+251 : KL divergence:  1.9274539528568748  time : 27948.96
+252 : KL divergence:  1.9274370027761090  time : 28067.99
+253 : KL divergence:  1.9274201217748985  time : 28186.87
+254 : KL divergence:  1.9274033094499059  time : 28306.07
+255 : KL divergence:  1.9273865653538815  time : 28425.56
+256 : KL divergence:  1.9273698891004241  time : 28544.21
+257 : KL divergence:  1.9273532802525724  time : 28663.95
+258 : KL divergence:  1.9273367384078677  time : 28782.81
+259 : KL divergence:  1.9273202631690263  time : 28901.43
+260 : KL divergence:  1.9273038541256271  time : 29020.79
+261 : KL divergence:  1.9272875108879901  time : 29139.35
+262 : KL divergence:  1.9272712330422219  time : 29259.02
+263 : KL divergence:  1.9272550202295549  time : 29378.42
+264 : KL divergence:  1.9272388720318330  time : 29496.77
+265 : KL divergence:  1.9272227880790513  time : 29616.13
+266 : KL divergence:  1.9272067679894900  time : 29735.28
+267 : KL divergence:  1.9271908113986480  time : 29853.67
+268 : KL divergence:  1.9271749179159448  time : 29972.77
+269 : KL divergence:  1.9271590871645015  time : 30091.49
+270 : KL divergence:  1.9271433187926645  time : 30210.55
+271 : KL divergence:  1.9271276124524910  time : 30329.90
+272 : KL divergence:  1.9271119677323181  time : 30448.61
+273 : KL divergence:  1.9270963843079920  time : 30568.59
+274 : KL divergence:  1.9270808618333213  time : 30687.70
+275 : KL divergence:  1.9270653999279204  time : 30806.71
+276 : KL divergence:  1.9270499982772147  time : 30925.64
+277 : KL divergence:  1.9270346565107459  time : 31044.77
+278 : KL divergence:  1.9270193742779855  time : 31164.24
+279 : KL divergence:  1.9270041512566309  time : 31283.27
+280 : KL divergence:  1.9269889871088732  time : 31402.11
+281 : KL divergence:  1.9269738814913238  time : 31521.61
+282 : KL divergence:  1.9269588340694022  time : 31640.88
+283 : KL divergence:  1.9269438445134959  time : 31759.88
+284 : KL divergence:  1.9269289125110254  time : 31878.75
+285 : KL divergence:  1.9269140377200542  time : 31997.49
+286 : KL divergence:  1.9268992198469497  time : 32116.51
+287 : KL divergence:  1.9268844585363802  time : 32235.85
+288 : KL divergence:  1.9268697534978783  time : 32354.48
+289 : KL divergence:  1.9268551044055322  time : 32473.99
+290 : KL divergence:  1.9268405109627045  time : 32593.52
+291 : KL divergence:  1.9268259728430894  time : 32712.33
+292 : KL divergence:  1.9268114897462796  time : 32831.30
+293 : KL divergence:  1.9267970613777563  time : 32950.02
+294 : KL divergence:  1.9267826874250069  time : 33069.17
+295 : KL divergence:  1.9267683676002580  time : 33188.61
+296 : KL divergence:  1.9267541015937344  time : 33307.06
+297 : KL divergence:  1.9267398891298873  time : 33426.56
+298 : KL divergence:  1.9267257298644804  time : 33545.38
+299 : KL divergence:  1.9267116235842243  time : 33664.28
+300 : KL divergence:  1.9266975699482778  time : 33783.48
+301 : KL divergence:  1.9266835686951962  time : 33902.19
+302 : KL divergence:  1.9266696195259032  time : 34021.12
+303 : KL divergence:  1.9266557221626117  time : 34140.12
+304 : KL divergence:  1.9266418763504334  time : 34258.90
+305 : KL divergence:  1.9266280817662573  time : 34378.26
+306 : KL divergence:  1.9266143381795646  time : 34496.99
+307 : KL divergence:  1.9266006452981461  time : 34615.59
+308 : KL divergence:  1.9265870028503338  time : 34734.44
+309 : KL divergence:  1.9265734105612475  time : 34852.86
+310 : KL divergence:  1.9265598681824794  time : 34972.08
+311 : KL divergence:  1.9265463754483925  time : 35091.03
+312 : KL divergence:  1.9265329320782476  time : 35209.41
+313 : KL divergence:  1.9265195378277664  time : 35329.04
+314 : KL divergence:  1.9265061924183564  time : 35447.65
+315 : KL divergence:  1.9264928956132978  time : 35566.72
+316 : KL divergence:  1.9264796471589034  time : 35685.24
+317 : KL divergence:  1.9264664467887131  time : 35803.50
+318 : KL divergence:  1.9264532942664385  time : 35922.72
+319 : KL divergence:  1.9264401893226988  time : 36041.81
+320 : KL divergence:  1.9264271317155075  time : 36160.43
+321 : KL divergence:  1.9264141212050920  time : 36280.18
+322 : KL divergence:  1.9264011575588207  time : 36399.46
+323 : KL divergence:  1.9263882405125119  time : 36518.28
+324 : KL divergence:  1.9263753698391508  time : 36637.13
+325 : KL divergence:  1.9263625452988782  time : 36755.53
+326 : KL divergence:  1.9263497666297231  time : 36875.51
+327 : KL divergence:  1.9263370336374463  time : 36994.63
+328 : KL divergence:  1.9263243460752568  time : 37113.22
+329 : KL divergence:  1.9263117036982289  time : 37232.85
+330 : KL divergence:  1.9262991062661721  time : 37351.62
+331 : KL divergence:  1.9262865535774656  time : 37470.68
+332 : KL divergence:  1.9262740453887592  time : 37589.88
+333 : KL divergence:  1.9262615814841688  time : 37708.57
+334 : KL divergence:  1.9262491616236386  time : 37828.02
+335 : KL divergence:  1.9262367856157807  time : 37947.21
+336 : KL divergence:  1.9262244531922137  time : 38065.51
+337 : KL divergence:  1.9262121641760106  time : 38185.67
+338 : KL divergence:  1.9261999183304472  time : 38304.54
+339 : KL divergence:  1.9261877154397140  time : 38423.19
+340 : KL divergence:  1.9261755552876618  time : 38542.07
+341 : KL divergence:  1.9261634376618688  time : 38660.89
+342 : KL divergence:  1.9261513623458066  time : 38779.91
+343 : KL divergence:  1.9261393291601276  time : 38899.57
+344 : KL divergence:  1.9261273378609713  time : 39017.99
+345 : KL divergence:  1.9261153882369577  time : 39137.66
+346 : KL divergence:  1.9261034800990440  time : 39256.74
+347 : KL divergence:  1.9260916132276449  time : 39375.27
+348 : KL divergence:  1.9260797874405473  time : 39494.68
+349 : KL divergence:  1.9260680025187362  time : 39613.40
+350 : KL divergence:  1.9260562582746366  time : 39733.09
+351 : KL divergence:  1.9260445545025342  time : 39852.62
+352 : KL divergence:  1.9260328909795679  time : 39971.24
+353 : KL divergence:  1.9260212675502777  time : 40090.74
+354 : KL divergence:  1.9260096839844900  time : 40210.06
+355 : KL divergence:  1.9259981401164368  time : 40328.68
+356 : KL divergence:  1.9259866357358852  time : 40447.71
+357 : KL divergence:  1.9259751706537913  time : 40566.46
+358 : KL divergence:  1.9259637446703672  time : 40685.26
+359 : KL divergence:  1.9259523576202964  time : 40804.49
+360 : KL divergence:  1.9259410092879143  time : 40923.24
+361 : KL divergence:  1.9259296995080086  time : 41042.93
+362 : KL divergence:  1.9259184280966151  time : 41161.54
+363 : KL divergence:  1.9259071948386228  time : 41280.14
+364 : KL divergence:  1.9258959995891947  time : 41398.66
+365 : KL divergence:  1.9258848421388883  time : 41517.53
+366 : KL divergence:  1.9258737223004332  time : 41636.80
+367 : KL divergence:  1.9258626399225911  time : 41755.62
+368 : KL divergence:  1.9258515948221404  time : 41873.97
+369 : KL divergence:  1.9258405868028332  time : 41993.32
+370 : KL divergence:  1.9258296157069552  time : 42112.78
+371 : KL divergence:  1.9258186813429023  time : 42231.71
+372 : KL divergence:  1.9258077835513967  time : 42350.88
+373 : KL divergence:  1.9257969221434381  time : 42469.75
+374 : KL divergence:  1.9257860969607785  time : 42589.12
+375 : KL divergence:  1.9257753078342470  time : 42708.54
+376 : KL divergence:  1.9257645545717603  time : 42827.28
+377 : KL divergence:  1.9257538370238196  time : 42947.15
+378 : KL divergence:  1.9257431550151476  time : 43066.32
+379 : KL divergence:  1.9257325083923478  time : 43185.02
+380 : KL divergence:  1.9257218969828138  time : 43304.04
+381 : KL divergence:  1.9257113206272454  time : 43422.55
+382 : KL divergence:  1.9257007791257106  time : 43541.47
+383 : KL divergence:  1.9256902723690121  time : 43660.71
+384 : KL divergence:  1.9256798001654662  time : 43779.20
+385 : KL divergence:  1.9256693623666417  time : 43898.67
+386 : KL divergence:  1.9256589588030268  time : 44017.43
+387 : KL divergence:  1.9256485893107926  time : 44136.32
+388 : KL divergence:  1.9256382537373131  time : 44255.17
+389 : KL divergence:  1.9256279519456065  time : 44373.91
+390 : KL divergence:  1.9256176837676355  time : 44493.02
+391 : KL divergence:  1.9256074490339607  time : 44611.99
+392 : KL divergence:  1.9255972475880416  time : 44730.67
+393 : KL divergence:  1.9255870793104164  time : 44849.92
+394 : KL divergence:  1.9255769440307804  time : 44968.98
+395 : KL divergence:  1.9255668415926142  time : 45087.88
+396 : KL divergence:  1.9255567718448592  time : 45206.46
+397 : KL divergence:  1.9255467346573001  time : 45325.30
+398 : KL divergence:  1.9255367298635722  time : 45444.64
+399 : KL divergence:  1.9255267573094099  time : 45563.67
+400 : KL divergence:  1.9255168168754127  time : 45682.52
+401 : KL divergence:  1.9255069083838010  time : 45801.99
+402 : KL divergence:  1.9254970317277245  time : 45920.75
+403 : KL divergence:  1.9254871867259697  time : 46040.12
+404 : KL divergence:  1.9254773732497110  time : 46158.95
+405 : KL divergence:  1.9254675911696475  time : 46277.36
+406 : KL divergence:  1.9254578403231160  time : 46396.48
+407 : KL divergence:  1.9254481205942220  time : 46515.64
+408 : KL divergence:  1.9254384318211857  time : 46633.96
+409 : KL divergence:  1.9254287738670965  time : 46753.64
+410 : KL divergence:  1.9254191465933410  time : 46872.99
+411 : KL divergence:  1.9254095498858326  time : 46991.31
+412 : KL divergence:  1.9253999835846665  time : 47110.17
+413 : KL divergence:  1.9253904475563617  time : 47228.62
+414 : KL divergence:  1.9253809416763672  time : 47348.48
+415 : KL divergence:  1.9253714657962837  time : 47467.73
+416 : KL divergence:  1.9253620198149315  time : 47586.56
+417 : KL divergence:  1.9253526035526787  time : 47706.71
+418 : KL divergence:  1.9253432169004530  time : 47825.41
+419 : KL divergence:  1.9253338597395249  time : 47944.05
+420 : KL divergence:  1.9253245319247472  time : 48063.80
+421 : KL divergence:  1.9253152333220920  time : 48183.12
+422 : KL divergence:  1.9253059638211347  time : 48302.60
+423 : KL divergence:  1.9252967232838838  time : 48422.54
+424 : KL divergence:  1.9252875115702186  time : 48541.67
+425 : KL divergence:  1.9252783285828092  time : 48661.77
+426 : KL divergence:  1.9252691741741617  time : 48780.97
+427 : KL divergence:  1.9252600482192903  time : 48900.60
+428 : KL divergence:  1.9252509505945135  time : 49019.15
+429 : KL divergence:  1.9252418811927887  time : 49137.87
+430 : KL divergence:  1.9252328398671825  time : 49257.04
+431 : KL divergence:  1.9252238265133179  time : 49377.13
+432 : KL divergence:  1.9252148410063228  time : 49496.01
+433 : KL divergence:  1.9252058832277790  time : 49615.46
+434 : KL divergence:  1.9251969530397057  time : 49734.90
+435 : KL divergence:  1.9251880503317629  time : 49853.86
+436 : KL divergence:  1.9251791749987810  time : 49972.91
+437 : KL divergence:  1.9251703269056120  time : 50092.29
+438 : KL divergence:  1.9251615059477456  time : 50211.84
+439 : KL divergence:  1.9251527119992062  time : 50330.88
+440 : KL divergence:  1.9251439449497771  time : 50449.61
+441 : KL divergence:  1.9251352046675605  time : 50569.55
+442 : KL divergence:  1.9251264910508039  time : 50688.95
+443 : KL divergence:  1.9251178040046972  time : 50807.42
+444 : KL divergence:  1.9251091433887180  time : 50926.83
+445 : KL divergence:  1.9251005090905808  time : 51046.20
+446 : KL divergence:  1.9250919010150163  time : 51165.32
+447 : KL divergence:  1.9250833190215531  time : 51285.44
+448 : KL divergence:  1.9250747630359404  time : 51404.57
+449 : KL divergence:  1.9250662329143782  time : 51524.51
+450 : KL divergence:  1.9250577285724191  time : 51643.41
+451 : KL divergence:  1.9250492498815828  time : 51762.05
+452 : KL divergence:  1.9250407967418797  time : 51881.05
+453 : KL divergence:  1.9250323690552829  time : 52000.13
+454 : KL divergence:  1.9250239666835767  time : 52119.38
+455 : KL divergence:  1.9250155895597441  time : 52238.62
+456 : KL divergence:  1.9250072375467033  time : 52356.90
+457 : KL divergence:  1.9249989105509493  time : 52476.26
+458 : KL divergence:  1.9249906084710382  time : 52595.49
+459 : KL divergence:  1.9249823311867726  time : 52713.95
+460 : KL divergence:  1.9249740786154910  time : 52832.89
+461 : KL divergence:  1.9249658506358536  time : 52951.35
+462 : KL divergence:  1.9249576471473278  time : 53070.24
+463 : KL divergence:  1.9249494680641979  time : 53189.78
+464 : KL divergence:  1.9249413132701889  time : 53308.55
+465 : KL divergence:  1.9249331826558433  time : 53428.21
+466 : KL divergence:  1.9249250761488916  time : 53547.74
+467 : KL divergence:  1.9249169936072545  time : 53666.35
+468 : KL divergence:  1.9249089349720896  time : 53785.33
+469 : KL divergence:  1.9249009001209827  time : 53904.32
+470 : KL divergence:  1.9248928889580061  time : 54023.66
+471 : KL divergence:  1.9248849013867668  time : 54143.04
+472 : KL divergence:  1.9248769373232595  time : 54261.95
+473 : KL divergence:  1.9248689966569916  time : 54381.66
+474 : KL divergence:  1.9248610792916594  time : 54497.06
+475 : KL divergence:  1.9248531851231050  time : 54607.18
+476 : KL divergence:  1.9248453140835671  time : 54717.30
+477 : KL divergence:  1.9248374660393939  time : 54827.13
+478 : KL divergence:  1.9248296409289305  time : 54933.17
+479 : KL divergence:  1.9248218386487796  time : 55039.06
+480 : KL divergence:  1.9248140590858918  time : 55144.72
+481 : KL divergence:  1.9248063021784021  time : 55250.86
+482 : KL divergence:  1.9247985678236363  time : 55356.43
+483 : KL divergence:  1.9247908559088198  time : 55461.88
+484 : KL divergence:  1.9247831663616144  time : 55567.15
+485 : KL divergence:  1.9247754990971815  time : 55672.36
+486 : KL divergence:  1.9247678540103366  time : 55778.31
+487 : KL divergence:  1.9247602310210199  time : 55883.95
+488 : KL divergence:  1.9247526300190645  time : 55989.15
+489 : KL divergence:  1.9247450509587680  time : 56095.12
+490 : KL divergence:  1.9247374936959989  time : 56200.44
+491 : KL divergence:  1.9247299581905368  time : 56306.17
+492 : KL divergence:  1.9247224443260673  time : 56411.66
+493 : KL divergence:  1.9247149520157087  time : 56516.88
+494 : KL divergence:  1.9247074812016054  time : 56622.71
+495 : KL divergence:  1.9247000317573508  time : 56728.47
+496 : KL divergence:  1.9246926036247898  time : 56833.63
+497 : KL divergence:  1.9246851967003351  time : 56939.87
+498 : KL divergence:  1.9246778109171891  time : 57045.69
+499 : KL divergence:  1.9246704461806767  time : 57150.84
+500 : KL divergence:  1.9246631023989720  time : 57256.17
+501 : KL divergence:  1.9246557795049439  time : 57361.19
+502 : KL divergence:  1.9246484774062003  time : 57467.55
+503 : KL divergence:  1.9246411960080001  time : 57573.37
+504 : KL divergence:  1.9246339352582633  time : 57678.40
+505 : KL divergence:  1.9246266950438538  time : 57784.42
+506 : KL divergence:  1.9246194753034933  time : 57889.84
+507 : KL divergence:  1.9246122759476509  time : 57995.21
+508 : KL divergence:  1.9246050968909498  time : 58100.87
+509 : KL divergence:  1.9245979380526348  time : 58206.19
+510 : KL divergence:  1.9245907993733973  time : 58312.05
+511 : KL divergence:  1.9245836807389520  time : 58417.91
+512 : KL divergence:  1.9245765820964147  time : 58522.72
+513 : KL divergence:  1.9245695033754973  time : 58629.18
+514 : KL divergence:  1.9245624444621707  time : 58734.57
+515 : KL divergence:  1.9245554053036049  time : 58839.77
+516 : KL divergence:  1.9245483858325101  time : 58945.08
+517 : KL divergence:  1.9245413859362359  time : 59050.36
+518 : KL divergence:  1.9245344055627969  time : 59155.99
+519 : KL divergence:  1.9245274446240037  time : 59261.92
+520 : KL divergence:  1.9245205030610271  time : 59367.20
+521 : KL divergence:  1.9245135807863307  time : 59473.56
+522 : KL divergence:  1.9245066777231845  time : 59579.31
+523 : KL divergence:  1.9244997937915236  time : 59684.92
+524 : KL divergence:  1.9244929289352071  time : 59791.15
+525 : KL divergence:  1.9244860830659751  time : 59896.66
+526 : KL divergence:  1.9244792561114770  time : 60002.84
+527 : KL divergence:  1.9244724479941053  time : 60108.79
+528 : KL divergence:  1.9244656586556226  time : 60214.00
+529 : KL divergence:  1.9244588880013533  time : 60320.08
+530 : KL divergence:  1.9244521359886899  time : 60425.85
+531 : KL divergence:  1.9244454025103073  time : 60531.13
+532 : KL divergence:  1.9244386875342270  time : 60636.87
+533 : KL divergence:  1.9244319909419174  time : 60742.43
+534 : KL divergence:  1.9244253127032773  time : 60848.15
+535 : KL divergence:  1.9244186527106013  time : 60954.12
+536 : KL divergence:  1.9244120109459024  time : 61059.32
+537 : KL divergence:  1.9244053872843960  time : 61165.41
+538 : KL divergence:  1.9243987816994801  time : 61270.83
+539 : KL divergence:  1.9243921940952209  time : 61376.18
+540 : KL divergence:  1.9243856243958544  time : 61481.46
+541 : KL divergence:  1.9243790725614236  time : 61586.99
+542 : KL divergence:  1.9243725385088286  time : 61692.85
+543 : KL divergence:  1.9243660221723309  time : 61798.44
+544 : KL divergence:  1.9243595234747721  time : 61903.61
+545 : KL divergence:  1.9243530423571245  time : 62009.63
+546 : KL divergence:  1.9243465787564422  time : 62115.44
+547 : KL divergence:  1.9243401325960392  time : 62220.82
+548 : KL divergence:  1.9243337038204096  time : 62326.33
+549 : KL divergence:  1.9243272923470125  time : 62431.63
+550 : KL divergence:  1.9243208981314586  time : 62537.37
+551 : KL divergence:  1.9243145211083956  time : 62643.29
+552 : KL divergence:  1.9243081611901331  time : 62748.87
+553 : KL divergence:  1.9243018183339118  time : 62855.24
+554 : KL divergence:  1.9242954924553175  time : 62961.31
+555 : KL divergence:  1.9242891835031384  time : 63066.81
+556 : KL divergence:  1.9242828914051759  time : 63172.55
+557 : KL divergence:  1.9242766161169929  time : 63278.08
+558 : KL divergence:  1.9242703575516893  time : 63383.96
+559 : KL divergence:  1.9242641156612617  time : 63489.89
+560 : KL divergence:  1.9242578903639429  time : 63595.21
+561 : KL divergence:  1.9242516816376583  time : 63701.16
+562 : KL divergence:  1.9242454893825514  time : 63806.61
+563 : KL divergence:  1.9242393135652842  time : 63912.32
+564 : KL divergence:  1.9242331540829452  time : 64017.93
+565 : KL divergence:  1.9242270109086603  time : 64123.26
+566 : KL divergence:  1.9242208839892463  time : 64228.93
+567 : KL divergence:  1.9242147732340531  time : 64334.57
+568 : KL divergence:  1.9242086785859656  time : 64440.06
+569 : KL divergence:  1.9242026000057857  time : 64546.02
+570 : KL divergence:  1.9241965374235022  time : 64651.58
+571 : KL divergence:  1.9241904907908201  time : 64757.04
+572 : KL divergence:  1.9241844600147384  time : 64862.56
+573 : KL divergence:  1.9241784450756994  time : 64968.06
+574 : KL divergence:  1.9241724458868483  time : 65074.45
+575 : KL divergence:  1.9241664624144224  time : 65180.37
+576 : KL divergence:  1.9241604945879860  time : 65285.60
+577 : KL divergence:  1.9241545423382451  time : 65391.49
+578 : KL divergence:  1.9241486056331163  time : 65496.75
+579 : KL divergence:  1.9241426843903704  time : 65602.40
+580 : KL divergence:  1.9241367785558734  time : 65707.79
+581 : KL divergence:  1.9241308880953911  time : 65812.84
+582 : KL divergence:  1.9241250129349659  time : 65918.50
+583 : KL divergence:  1.9241191530127850  time : 66024.33
+584 : KL divergence:  1.9241133083025381  time : 66129.56
+585 : KL divergence:  1.9241074787163481  time : 66235.80
+586 : KL divergence:  1.9241016642101432  time : 66341.65
+587 : KL divergence:  1.9240958647346589  time : 66446.79
+588 : KL divergence:  1.9240900802121985  time : 66552.07
+589 : KL divergence:  1.9240843106185952  time : 66657.14
+590 : KL divergence:  1.9240785558834197  time : 66763.52
+591 : KL divergence:  1.9240728159480436  time : 66869.30
+592 : KL divergence:  1.9240670907772426  time : 66974.42
+593 : KL divergence:  1.9240613802997311  time : 67080.40
+594 : KL divergence:  1.9240556844741408  time : 67185.78
+595 : KL divergence:  1.9240500032286747  time : 67291.21
+596 : KL divergence:  1.9240443365295861  time : 67397.04
+597 : KL divergence:  1.9240386843183419  time : 67502.55
+598 : KL divergence:  1.9240330465467044  time : 67608.74
+599 : KL divergence:  1.9240274231589305  time : 67714.94
+600 : KL divergence:  1.9240218141004783  time : 67820.02
+601 : KL divergence:  1.9240162193179244  time : 67926.91
+602 : KL divergence:  1.9240106387631359  time : 68032.63
+603 : KL divergence:  1.9240050723871007  time : 68138.11
+604 : KL divergence:  1.9239995201262368  time : 68243.70
+605 : KL divergence:  1.9239939819486898  time : 68349.18
+606 : KL divergence:  1.9239884578072377  time : 68454.98
+607 : KL divergence:  1.9239829476186787  time : 68561.03
+608 : KL divergence:  1.9239774513614190  time : 68666.34
+609 : KL divergence:  1.9239719689821075  time : 68772.61
+610 : KL divergence:  1.9239665004245368  time : 68878.18
+611 : KL divergence:  1.9239610456456213  time : 68983.58
+612 : KL divergence:  1.9239556045939294  time : 69089.60
+613 : KL divergence:  1.9239501772103746  time : 69195.15
+614 : KL divergence:  1.9239447634618367  time : 69301.46
+615 : KL divergence:  1.9239393632929092  time : 69407.63
+616 : KL divergence:  1.9239339766480292  time : 69513.23
+617 : KL divergence:  1.9239286034955863  time : 69619.51
+618 : KL divergence:  1.9239232437734284  time : 69725.38
+619 : KL divergence:  1.9239178974333642  time : 69830.73
+620 : KL divergence:  1.9239125644476573  time : 69936.51
+621 : KL divergence:  1.9239072447377423  time : 70042.03
+622 : KL divergence:  1.9239019383094376  time : 70147.89
+623 : KL divergence:  1.9238966450389527  time : 70254.07
+624 : KL divergence:  1.9238913649351734  time : 70359.54
+625 : KL divergence:  1.9238860979400842  time : 70466.10
+626 : KL divergence:  1.9238808439994244  time : 70571.80
+627 : KL divergence:  1.9238756030809379  time : 70677.27
+628 : KL divergence:  1.9238703751398705  time : 70782.72
+629 : KL divergence:  1.9238651601096697  time : 70888.35
+630 : KL divergence:  1.9238599579591225  time : 70994.33
+631 : KL divergence:  1.9238547686323033  time : 71100.13
+632 : KL divergence:  1.9238495921079184  time : 71205.38
+633 : KL divergence:  1.9238444283113221  time : 71311.50
+634 : KL divergence:  1.9238392772343065  time : 71417.41
+635 : KL divergence:  1.9238341387900142  time : 71522.79
+636 : KL divergence:  1.9238290129744136  time : 71628.24
+637 : KL divergence:  1.9238238997077628  time : 71733.48
+638 : KL divergence:  1.9238187989647555  time : 71839.14
+639 : KL divergence:  1.9238137107042568  time : 71944.96
+640 : KL divergence:  1.9238086348787631  time : 72050.41
+641 : KL divergence:  1.9238035714328807  time : 72156.60
+642 : KL divergence:  1.9237985203599746  time : 72262.42
+643 : KL divergence:  1.9237934815754052  time : 72367.79
+644 : KL divergence:  1.9237884550570663  time : 72473.25
+645 : KL divergence:  1.9237834407591243  time : 72578.55
+646 : KL divergence:  1.9237784386422834  time : 72684.25
+647 : KL divergence:  1.9237734486653213  time : 72790.03
+648 : KL divergence:  1.9237684707794871  time : 72895.17
+649 : KL divergence:  1.9237635049451174  time : 73001.16
+650 : KL divergence:  1.9237585511202779  time : 73106.64
+651 : KL divergence:  1.9237536092572811  time : 73212.21
+652 : KL divergence:  1.9237486793463188  time : 73317.92
+653 : KL divergence:  1.9237437613147601  time : 73423.38
+654 : KL divergence:  1.9237388551178971  time : 73529.35
+655 : KL divergence:  1.9237339607319490  time : 73635.27
+656 : KL divergence:  1.9237290781146050  time : 73740.90
+657 : KL divergence:  1.9237242072213276  time : 73846.84
+658 : KL divergence:  1.9237193480091681  time : 73952.34
+659 : KL divergence:  1.9237145004481655  time : 74057.75
+660 : KL divergence:  1.9237096644948517  time : 74163.10
+661 : KL divergence:  1.9237048401079235  time : 74268.35
+662 : KL divergence:  1.9237000272437041  time : 74374.38
+663 : KL divergence:  1.9236952258610638  time : 74479.98
+664 : KL divergence:  1.9236904359343767  time : 74585.26
+665 : KL divergence:  1.9236856574051502  time : 74691.31
+666 : KL divergence:  1.9236808902632700  time : 74796.64
+667 : KL divergence:  1.9236761344354170  time : 74902.34
+668 : KL divergence:  1.9236713899244973  time : 75007.74
+669 : KL divergence:  1.9236666566431919  time : 75112.86
+670 : KL divergence:  1.9236619346094121  time : 75218.67
+671 : KL divergence:  1.9236572237374512  time : 75324.60
+672 : KL divergence:  1.9236525239971984  time : 75429.83
+673 : KL divergence:  1.9236478353676556  time : 75536.26
+674 : KL divergence:  1.9236431578013866  time : 75642.48
+675 : KL divergence:  1.9236384912754920  time : 75748.02
+676 : KL divergence:  1.9236338357329497  time : 75853.90
+677 : KL divergence:  1.9236291911502672  time : 75959.43
+678 : KL divergence:  1.9236245574842146  time : 76066.11
+679 : KL divergence:  1.9236199346987934  time : 76172.31
+680 : KL divergence:  1.9236153227536428  time : 76277.76
+681 : KL divergence:  1.9236107216142584  time : 76388.23
+682 : KL divergence:  1.9236061312533186  time : 76507.00
+683 : KL divergence:  1.9236015516258609  time : 76625.68
+684 : KL divergence:  1.9235969827008879  time : 76744.64
+685 : KL divergence:  1.9235924244431126  time : 76855.19
+686 : KL divergence:  1.9235878768146881  time : 76960.99
+687 : KL divergence:  1.9235833397658064  time : 77066.76
+688 : KL divergence:  1.9235788132914573  time : 77171.56
+689 : KL divergence:  1.9235742973392080  time : 77278.02
+690 : KL divergence:  1.9235697918640915  time : 77383.38
+691 : KL divergence:  1.9235652968491346  time : 77488.73
+692 : KL divergence:  1.9235608122512191  time : 77594.13
+693 : KL divergence:  1.9235563380454488  time : 77700.22
+694 : KL divergence:  1.9235518741850435  time : 77808.03
+695 : KL divergence:  1.9235474206341667  time : 77916.41
+696 : KL divergence:  1.9235429773681121  time : 78024.03
+697 : KL divergence:  1.9235385443349284  time : 78132.16
+698 : KL divergence:  1.9235341215416641  time : 78237.66
+699 : KL divergence:  1.9235297089047034  time : 78342.80
+700 : KL divergence:  1.9235253064270157  time : 78448.60
+701 : KL divergence:  1.9235209140580249  time : 78553.95
+702 : KL divergence:  1.9235165317692908  time : 78660.01
+703 : KL divergence:  1.9235121595172855  time : 78765.89
+704 : KL divergence:  1.9235077972795322  time : 78871.13
+705 : KL divergence:  1.9235034450349442  time : 78977.22
+706 : KL divergence:  1.9234991027274138  time : 79083.06
+707 : KL divergence:  1.9234947703349214  time : 79188.36
+708 : KL divergence:  1.9234904478228996  time : 79294.10
+709 : KL divergence:  1.9234861351793340  time : 79399.62
+710 : KL divergence:  1.9234818323253351  time : 79505.36
+711 : KL divergence:  1.9234775392802559  time : 79611.37
+712 : KL divergence:  1.9234732559785019  time : 79716.74
+713 : KL divergence:  1.9234689823997173  time : 79822.96
+714 : KL divergence:  1.9234647185045093  time : 79928.38
+715 : KL divergence:  1.9234604642794528  time : 80033.74
+716 : KL divergence:  1.9234562196721128  time : 80139.05
+717 : KL divergence:  1.9234519846621205  time : 80244.59
+718 : KL divergence:  1.9234477592282402  time : 80350.54
+719 : KL divergence:  1.9234435433156452  time : 80456.29
+720 : KL divergence:  1.9234393369061917  time : 80561.55
+721 : KL divergence:  1.9234351399773060  time : 80667.75
+722 : KL divergence:  1.9234309524906850  time : 80773.83
+723 : KL divergence:  1.9234267744103439  time : 80879.42
+724 : KL divergence:  1.9234226056917190  time : 80985.20
+725 : KL divergence:  1.9234184463439465  time : 81090.90
+726 : KL divergence:  1.9234142963076943  time : 81196.97
+727 : KL divergence:  1.9234101555734628  time : 81303.03
+728 : KL divergence:  1.9234060240923541  time : 81408.64
+729 : KL divergence:  1.9234019018379336  time : 81514.84
+730 : KL divergence:  1.9233977887953218  time : 81620.69
+731 : KL divergence:  1.9233936849056388  time : 81726.00
+732 : KL divergence:  1.9233895901685649  time : 81831.49
+733 : KL divergence:  1.9233855045325789  time : 81936.97
+734 : KL divergence:  1.9233814280014812  time : 82042.81
+735 : KL divergence:  1.9233773605096594  time : 82148.72
+736 : KL divergence:  1.9233733020434518  time : 82254.04
+737 : KL divergence:  1.9233692525759627  time : 82359.97
+738 : KL divergence:  1.9233652120721854  time : 82465.38
+739 : KL divergence:  1.9233611805089745  time : 82571.00
+740 : KL divergence:  1.9233571578540756  time : 82676.51
+741 : KL divergence:  1.9233531440840206  time : 82781.67
+742 : KL divergence:  1.9233491391719268  time : 82887.28
+743 : KL divergence:  1.9233451430789701  time : 82992.89
+744 : KL divergence:  1.9233411557864126  time : 83098.22
+745 : KL divergence:  1.9233371772606853  time : 83204.19
+746 : KL divergence:  1.9233332074814580  time : 83309.66
+747 : KL divergence:  1.9233292464042775  time : 83414.90
+748 : KL divergence:  1.9233252940350409  time : 83520.26
+749 : KL divergence:  1.9233213502966924  time : 83625.52
+750 : KL divergence:  1.9233174152032688  time : 83731.38
+751 : KL divergence:  1.9233134887086736  time : 83836.96
+752 : KL divergence:  1.9233095708066892  time : 83942.28
+753 : KL divergence:  1.9233056614478217  time : 84048.35
+754 : KL divergence:  1.9233017606057210  time : 84153.87
+755 : KL divergence:  1.9232978682560651  time : 84259.64
+756 : KL divergence:  1.9232939843865668  time : 84365.09
+757 : KL divergence:  1.9232901089570276  time : 84470.06
+758 : KL divergence:  1.9232862419390924  time : 84575.75
+759 : KL divergence:  1.9232823833221275  time : 84681.61
+760 : KL divergence:  1.9232785330502291  time : 84786.91
+761 : KL divergence:  1.9232746911325298  time : 84893.15
+762 : KL divergence:  1.9232708575137456  time : 84999.03
+763 : KL divergence:  1.9232670321881624  time : 85104.23
+764 : KL divergence:  1.9232632151257039  time : 85209.56
+765 : KL divergence:  1.9232594062960822  time : 85314.49
+766 : KL divergence:  1.9232556056712196  time : 85420.86
+767 : KL divergence:  1.9232518132172616  time : 85526.61
+768 : KL divergence:  1.9232480289291385  time : 85631.62
+769 : KL divergence:  1.9232442527719233  time : 85737.58
+770 : KL divergence:  1.9232404847318711  time : 85842.97
+771 : KL divergence:  1.9232367247621149  time : 85948.28
+772 : KL divergence:  1.9232329728439339  time : 86053.85
+773 : KL divergence:  1.9232292289609025  time : 86159.02
+774 : KL divergence:  1.9232254930761463  time : 86264.86
+775 : KL divergence:  1.9232217651896977  time : 86370.64
+776 : KL divergence:  1.9232180452484575  time : 86475.68
+777 : KL divergence:  1.9232143332380023  time : 86582.46
+778 : KL divergence:  1.9232106291350444  time : 86688.29
+779 : KL divergence:  1.9232069329205144  time : 86793.88
+780 : KL divergence:  1.9232032445528930  time : 86899.34
+781 : KL divergence:  1.9231995640323054  time : 87004.68
+782 : KL divergence:  1.9231958913160350  time : 87110.27
+783 : KL divergence:  1.9231922263862455  time : 87216.19
+784 : KL divergence:  1.9231885692131252  time : 87321.38
+785 : KL divergence:  1.9231849197917752  time : 87427.53
+786 : KL divergence:  1.9231812780715616  time : 87532.88
+787 : KL divergence:  1.9231776440582555  time : 87637.98
+788 : KL divergence:  1.9231740176892638  time : 87743.75
+789 : KL divergence:  1.9231703989787017  time : 87848.98
+790 : KL divergence:  1.9231667878988787  time : 87954.95
+791 : KL divergence:  1.9231631843902619  time : 88060.71
+792 : KL divergence:  1.9231595884749899  time : 88165.72
+793 : KL divergence:  1.9231560000996681  time : 88271.62
+794 : KL divergence:  1.9231524192578719  time : 88377.33
+795 : KL divergence:  1.9231488459184705  time : 88482.48
+796 : KL divergence:  1.9231452800733588  time : 88588.00
+797 : KL divergence:  1.9231417216792199  time : 88693.27
+798 : KL divergence:  1.9231381707125859  time : 88798.72
+799 : KL divergence:  1.9231346271662595  time : 88904.61
+800 : KL divergence:  1.9231310910140920  time : 89009.79
+801 : KL divergence:  1.9231275622294683  time : 89115.92
+802 : KL divergence:  1.9231240407714982  time : 89221.30
+803 : KL divergence:  1.9231205266633857  time : 89326.66
+804 : KL divergence:  1.9231170198609464  time : 89431.95
+805 : KL divergence:  1.9231135203208691  time : 89537.53
+806 : KL divergence:  1.9231100280529057  time : 89643.42
+807 : KL divergence:  1.9231065430017666  time : 89749.01
+808 : KL divergence:  1.9231030651788064  time : 89854.16
+809 : KL divergence:  1.9230995945467217  time : 89960.14
+810 : KL divergence:  1.9230961310893122  time : 90065.95
+811 : KL divergence:  1.9230926747693602  time : 90171.27
+812 : KL divergence:  1.9230892255857899  time : 90276.75
+813 : KL divergence:  1.9230857835120061  time : 90381.96
+814 : KL divergence:  1.9230823485157882  time : 90487.57
+815 : KL divergence:  1.9230789205887213  time : 90593.37
+816 : KL divergence:  1.9230754997083996  time : 90698.69
+817 : KL divergence:  1.9230720858436405  time : 90804.84
+818 : KL divergence:  1.9230686789727727  time : 90910.73
+819 : KL divergence:  1.9230652790836529  time : 91016.17
+820 : KL divergence:  1.9230618861682067  time : 91121.90
+821 : KL divergence:  1.9230585001716882  time : 91227.40
+822 : KL divergence:  1.9230551211028570  time : 91332.99
+823 : KL divergence:  1.9230517489336294  time : 91438.81
+824 : KL divergence:  1.9230483836267780  time : 91544.07
+825 : KL divergence:  1.9230450251875548  time : 91650.16
+826 : KL divergence:  1.9230416735854683  time : 91755.90
+827 : KL divergence:  1.9230383287879984  time : 91861.87
+828 : KL divergence:  1.9230349907961988  time : 91967.79
+829 : KL divergence:  1.9230316595757921  time : 92073.48
+830 : KL divergence:  1.9230283351031607  time : 92179.50
+831 : KL divergence:  1.9230250173724577  time : 92285.32
+832 : KL divergence:  1.9230217063484907  time : 92390.84
+833 : KL divergence:  1.9230184020246990  time : 92496.85
+834 : KL divergence:  1.9230151043716470  time : 92602.29
+835 : KL divergence:  1.9230118133812841  time : 92707.63
+836 : KL divergence:  1.9230085290121197  time : 92812.97
+837 : KL divergence:  1.9230052512709737  time : 92918.30
+838 : KL divergence:  1.9230019801249945  time : 93024.27
+839 : KL divergence:  1.9229987155580788  time : 93129.93
+840 : KL divergence:  1.9229954575407131  time : 93235.21
+841 : KL divergence:  1.9229922060725197  time : 93341.28
+842 : KL divergence:  1.9229889611128996  time : 93446.70
+843 : KL divergence:  1.9229857226586853  time : 93552.49
+844 : KL divergence:  1.9229824906776745  time : 93658.09
+845 : KL divergence:  1.9229792651621422  time : 93763.28
+846 : KL divergence:  1.9229760460969552  time : 93869.18
+847 : KL divergence:  1.9229728334524570  time : 93975.20
+848 : KL divergence:  1.9229696272056047  time : 94080.61
+849 : KL divergence:  1.9229664273571161  time : 94187.03
+850 : KL divergence:  1.9229632338736367  time : 94293.12
+851 : KL divergence:  1.9229600467421655  time : 94398.46
+852 : KL divergence:  1.9229568659300178  time : 94503.86
+853 : KL divergence:  1.9229536914382159  time : 94609.12
+854 : KL divergence:  1.9229505232470137  time : 94715.75
+855 : KL divergence:  1.9229473613185717  time : 94821.76
+856 : KL divergence:  1.9229442056582089  time : 94927.10
+857 : KL divergence:  1.9229410562300597  time : 95033.26
+858 : KL divergence:  1.9229379130331905  time : 95138.96
+859 : KL divergence:  1.9229347760363025  time : 95244.77
+860 : KL divergence:  1.9229316452233634  time : 95350.84
+861 : KL divergence:  1.9229285205830178  time : 95456.45
+862 : KL divergence:  1.9229254020854469  time : 95562.76
+863 : KL divergence:  1.9229222897107476  time : 95668.97
+864 : KL divergence:  1.9229191834550596  time : 95774.11
+865 : KL divergence:  1.9229160833053252  time : 95880.96
+866 : KL divergence:  1.9229129892214243  time : 95986.69
+867 : KL divergence:  1.9229099012115491  time : 96092.24
+868 : KL divergence:  1.9229068192491050  time : 96197.95
+869 : KL divergence:  1.9229037433040832  time : 96303.52
+870 : KL divergence:  1.9229006733732361  time : 96409.45
+871 : KL divergence:  1.9228976094281895  time : 96515.84
+872 : KL divergence:  1.9228945514513223  time : 96621.44
+873 : KL divergence:  1.9228914994463930  time : 96728.11
+874 : KL divergence:  1.9228884533745956  time : 96834.07
+875 : KL divergence:  1.9228854132425985  time : 96939.69
+876 : KL divergence:  1.9228823790020697  time : 97045.81
+877 : KL divergence:  1.9228793506522417  time : 97151.40
+878 : KL divergence:  1.9228763281786063  time : 97257.59
+879 : KL divergence:  1.9228733115508938  time : 97363.59
+880 : KL divergence:  1.9228703007716188  time : 97468.96
+881 : KL divergence:  1.9228672958252049  time : 97575.15
+882 : KL divergence:  1.9228642966706491  time : 97681.02
+883 : KL divergence:  1.9228613032980035  time : 97786.48
+884 : KL divergence:  1.9228583157224586  time : 97892.29
+885 : KL divergence:  1.9228553338997902  time : 97997.68
+886 : KL divergence:  1.9228523578075056  time : 98103.25
+887 : KL divergence:  1.9228493874371055  time : 98209.12
+888 : KL divergence:  1.9228464227811906  time : 98314.34
+889 : KL divergence:  1.9228434638126242  time : 98420.53
+890 : KL divergence:  1.9228405105132393  time : 98525.94
+891 : KL divergence:  1.9228375628990564  time : 98631.28
+892 : KL divergence:  1.9228346209016518  time : 98736.57
+893 : KL divergence:  1.9228316845332953  time : 98842.06
+894 : KL divergence:  1.9228287538002324  time : 98947.79
+895 : KL divergence:  1.9228258286581628  time : 99053.39
+896 : KL divergence:  1.9228229090839815  time : 99158.63
+897 : KL divergence:  1.9228199950767968  time : 99264.88
+898 : KL divergence:  1.9228170866136618  time : 99370.97
+899 : KL divergence:  1.9228141836968498  time : 99476.37
+900 : KL divergence:  1.9228112862903646  time : 99581.84
+901 : KL divergence:  1.9228083943861951  time : 99687.15
+902 : KL divergence:  1.9228055079668231  time : 99792.80
+903 : KL divergence:  1.9228026270265874  time : 99898.50
+904 : KL divergence:  1.9227997515417841  time : 100003.90
+905 : KL divergence:  1.9227968814861525  time : 100110.04
+906 : KL divergence:  1.9227940168772100  time : 100215.79
+907 : KL divergence:  1.9227911576675487  time : 100321.22
+908 : KL divergence:  1.9227883038508820  time : 100426.80
+909 : KL divergence:  1.9227854554148049  time : 100532.29
+910 : KL divergence:  1.9227826123442195  time : 100638.07
+911 : KL divergence:  1.9227797746327990  time : 100743.91
+912 : KL divergence:  1.9227769422410201  time : 100849.07
+913 : KL divergence:  1.9227741151802935  time : 100955.01
+914 : KL divergence:  1.9227712934251702  time : 101060.47
+915 : KL divergence:  1.9227684769583044  time : 101165.99
+916 : KL divergence:  1.9227656657724608  time : 101271.47
+917 : KL divergence:  1.9227628598465454  time : 101376.66
+918 : KL divergence:  1.9227600591651279  time : 101482.32
+919 : KL divergence:  1.9227572637292185  time : 101588.00
+920 : KL divergence:  1.9227544734948501  time : 101693.58
+921 : KL divergence:  1.9227516884799050  time : 101799.76
+922 : KL divergence:  1.9227489086372009  time : 101905.57
+923 : KL divergence:  1.9227461339790739  time : 102011.11
+924 : KL divergence:  1.9227433644724090  time : 102116.56
+925 : KL divergence:  1.9227406001245435  time : 102221.78
+926 : KL divergence:  1.9227378409202194  time : 102327.60
+927 : KL divergence:  1.9227350868099258  time : 102433.08
+928 : KL divergence:  1.9227323378155676  time : 102538.20
+929 : KL divergence:  1.9227295939077047  time : 102644.11
+930 : KL divergence:  1.9227268550911019  time : 102749.35
+931 : KL divergence:  1.9227241213092676  time : 102854.90
+932 : KL divergence:  1.9227213925965674  time : 102960.14
+933 : KL divergence:  1.9227186689157192  time : 103064.99
+934 : KL divergence:  1.9227159502517310  time : 103170.56
+935 : KL divergence:  1.9227132365998871  time : 103276.29
+936 : KL divergence:  1.9227105279497905  time : 103381.41
+937 : KL divergence:  1.9227078242536995  time : 103487.77
+938 : KL divergence:  1.9227051255422403  time : 103593.73
+939 : KL divergence:  1.9227024317824277  time : 103698.96
+940 : KL divergence:  1.9226997429568253  time : 103804.20
+941 : KL divergence:  1.9226970590539689  time : 103909.21
+942 : KL divergence:  1.9226943800727629  time : 104015.52
+943 : KL divergence:  1.9226917059910680  time : 104121.27
+944 : KL divergence:  1.9226890367837191  time : 104226.22
+945 : KL divergence:  1.9226863724642917  time : 104332.10
+946 : KL divergence:  1.9226837129908372  time : 104437.49
+947 : KL divergence:  1.9226810583598608  time : 104542.75
+948 : KL divergence:  1.9226784085836808  time : 104648.23
+949 : KL divergence:  1.9226757636205278  time : 104753.36
+950 : KL divergence:  1.9226731234418530  time : 104859.11
+951 : KL divergence:  1.9226704880817236  time : 104964.81
+952 : KL divergence:  1.9226678574885947  time : 105069.57
+953 : KL divergence:  1.9226652316755075  time : 105176.09
+954 : KL divergence:  1.9226626106062188  time : 105281.35
+955 : KL divergence:  1.9226599942816434  time : 105386.56
+956 : KL divergence:  1.9226573826969837  time : 105491.77
+957 : KL divergence:  1.9226547758236106  time : 105596.96
+958 : KL divergence:  1.9226521736532403  time : 105702.55
+959 : KL divergence:  1.9226495761679283  time : 105808.44
+960 : KL divergence:  1.9226469833716422  time : 105913.55
+961 : KL divergence:  1.9226443952321264  time : 106019.61
+962 : KL divergence:  1.9226418117593318  time : 106124.94
+963 : KL divergence:  1.9226392329294277  time : 106230.02
+964 : KL divergence:  1.9226366587102719  time : 106335.74
+965 : KL divergence:  1.9226340891141414  time : 106440.95
+966 : KL divergence:  1.9226315241249219  time : 106546.85
+967 : KL divergence:  1.9226289637309411  time : 106652.62
+968 : KL divergence:  1.9226264079161361  time : 106757.84
+969 : KL divergence:  1.9226238566591995  time : 106863.99
+970 : KL divergence:  1.9226213099717464  time : 106970.03
+971 : KL divergence:  1.9226187678025877  time : 107075.55
+972 : KL divergence:  1.9226162301985421  time : 107181.32
+973 : KL divergence:  1.9226136970956118  time : 107286.82
+974 : KL divergence:  1.9226111685027831  time : 107391.90
+975 : KL divergence:  1.9226086444041892  time : 107497.03
+976 : KL divergence:  1.9226061247807993  time : 107601.53
+977 : KL divergence:  1.9226036096321100  time : 107706.96
+978 : KL divergence:  1.9226010989544386  time : 107811.14
+979 : KL divergence:  1.9225985927207514  time : 107910.85
+980 : KL divergence:  1.9225960909266517  time : 108010.61
+981 : KL divergence:  1.9225935935371006  time : 108110.59
+982 : KL divergence:  1.9225911005827172  time : 108210.92
+983 : KL divergence:  1.9225886120117859  time : 108310.81
+984 : KL divergence:  1.9225861278303091  time : 108410.38
+985 : KL divergence:  1.9225836480403253  time : 108510.72
+986 : KL divergence:  1.9225811726118356  time : 108610.97
+987 : KL divergence:  1.9225787015328473  time : 108710.70
+988 : KL divergence:  1.9225762348061464  time : 108810.62
+989 : KL divergence:  1.9225737724065604  time : 108910.20
+990 : KL divergence:  1.9225713143222396  time : 109010.02
+991 : KL divergence:  1.9225688605567013  time : 109110.06
+992 : KL divergence:  1.9225664110742759  time : 109209.46
+993 : KL divergence:  1.9225639658979921  time : 109309.13
+994 : KL divergence:  1.9225615249787191  time : 109408.52
+995 : KL divergence:  1.9225590883331212  time : 109507.49
+996 : KL divergence:  1.9225566559371992  time : 109606.51
+997 : KL divergence:  1.9225542277845711  time : 109705.41
+998 : KL divergence:  1.9225518038566494  time : 109804.57
+999 : KL divergence:  1.9225493841518022  time : 109903.83
+1000 : KL divergence:  1.9225469686536614  time : 110002.14
