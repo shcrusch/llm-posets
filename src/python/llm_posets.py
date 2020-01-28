@@ -384,13 +384,14 @@ class LLM:
   def update_parameters(self,epoch,iter): #update parameters for ACDM
     n = len(self.B_)
     if epoch == 0 and iter == 0:
-      pre_alpha = n
+      pre_alpha = 1
       self.alpha = (- pre_alpha**2 / n + math.sqrt( pre_alpha**4 / n**2 + 4 * pre_alpha**2) )/2
       self.y = np.zeros(n)
       self.alpha_list = [pre_alpha, self.alpha]       #alpha_list = [alpha_(t-1) , alpha_t]
       self.theta_list = [np.zeros(n),np.zeros(n)]
     else:
       pre_alpha = copy.copy(self.alpha)
+#      print(pre_alpha)
       self.alpha = (- pre_alpha**2 / n + math.sqrt( pre_alpha**4 / n**2 + 4 * pre_alpha**2 ) ) /2
       pre_y = copy.copy(self.y)
       for phi in self.B_:
