@@ -60,6 +60,8 @@ elif args[3] == "coor":
     llm.fit(X, int(args[4]), solver = "coor")
 elif args[3] == "acc_grad":
     llm.fit(X, int(args[5]), stepsize = float(args[4]) , mu = float(args[6]), solver = "acc_grad")
+elif args[3] == "acc_coor":
+    llm.fit(X, int(args[4]), solver = "acc_coor")
 else:
     print("Error")
 

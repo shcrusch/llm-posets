@@ -3,15 +3,15 @@ import sys
 args =sys.argv
 
 datasetname = args[1]
-filename = '/home/hayashi/workspace/tbm-python/experiments/'+datasetname+'/coor.txt'
-
+coorfile = '/home/hayashi/workspace/tbm-python/experiments/'+datasetname+'/coor.txt'
+starfile = '/home/hayashi/workspace/tbm-python/experiments/'+datasetname+'/acc_grad_0.txt'
 L_star=1000
-with open(filename) as f:
+with open(starfile) as f:
     for line in f:
         li = re.split(' : KL divergence: |  time : ',line)
         L_star= float(li[1]) if float(li[1]) < L_star else L_star
 
-with open(filename) as f:
+with open(coorfile) as f:
     for line in f:
         li = re.split(' : KL divergence: |  time : ',line)
         li[1]= str(float(li[1])-L_star)
