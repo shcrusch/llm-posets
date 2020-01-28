@@ -251,7 +251,7 @@ class LLM:
         self.set_theta(phi, new_theta_phi)
 
       self.compute_theta_perp()
-
+      
 
   def update_accelerated_theta(self, iter, step, mu):      
     
@@ -340,22 +340,23 @@ class LLM:
       u[x] = 1.0
 
     Z = len(self.S_)
-
+    self.P_ = np.zeros(len(self.S_))
     start = time.time()
     for epoch in range(max_epoch):
-      self.P_ = np.zeros(len(self.S_))
-      for x in self.S_:
+      for x in self.S_:         #compute P
         self.P_[self.invS_[x]] = u[x]/Z
-#      self.compute_P()
-#      self.compute_eta()      
+
       kl = self.compute_KL()
       print(epoch ,":",  "KL divergence:",f'{kl:.16f}' ," time : %4.2f"% (time.time()-start),  flush=True)
+
       index = np.random.RandomState().permutation(range(len(self.B_))) #permutative
 #      index = np.random.randint(0,len(self.B_)-1,len(self.B_))  #random
 #      index = range(len(self.B_))
+
       for iter in range(len(self.B_)):
         phi = self.B_[ index[iter] ] 
         etahat_phi = self.etahat_[phi] 
+
         if etahat_phi == 1.0 or etahat_phi == 0.0:
           continue
 
@@ -380,21 +381,23 @@ class LLM:
 
 
 
-  def update_parameters(self,epoch,iter):
+  def update_parameters(self,epoch,iter): #update parameters for ACDM
     n = len(self.B_)
     if epoch == 0 and iter == 0:
       pre_alpha = n
       self.alpha = (- pre_alpha**2 / n + math.sqrt( pre_alpha**4 / n**2 + 4 * pre_alpha**2) )/2
       self.y = np.zeros(n)
-      self.alpha_list = [pre_alpha, self.alpha]
+      self.alpha_list = [pre_alpha, self.alpha]       #alpha_list = [alpha_(t-1) , alpha_t]
+      self.theta_list = [np.zeros(n),np.zeros(n)]
     else:
       pre_alpha = copy.copy(self.alpha)
       self.alpha = (- pre_alpha**2 / n + math.sqrt( pre_alpha**4 / n**2 + 4 * pre_alpha**2 ) ) /2
       pre_y = copy.copy(self.y)
       for phi in self.B_:
-        self.y[self.invB_[phi]] = (self.alpha-1)/pre_alpha * pre_y[self.invB_[phi]] - self.alpha* (n-pre_alpha)/ n / pre_alpha *self.theta_list[0][self.invB_[phi]] +(1/pre_alpha + 1 - pre_alpha/n ) * self.theta_[self.invB_[phi]]
+        self.y[self.invB_[phi]] = (self.alpha-1) / pre_alpha * pre_y[self.invB_[phi]] - self.alpha * (n-pre_alpha) / n / pre_alpha *self.theta_list[0][self.invB_[phi]] +(1/pre_alpha + 1 - pre_alpha/n ) * self.theta_[self.invB_[phi]]
       self.alpha_list = [pre_alpha,self.alpha]
-      self.y_list = [pre_y,self.y]
+      self.y_list = [pre_y,self.y]   #y_list = [y_(t-1) , y_t]
+
 
   def accelerated_coordinate_descent(self, X, max_epoch):
     """                                                                                                                                                               
@@ -430,12 +433,14 @@ class LLM:
       print(epoch ,":",  "KL divergence:",f'{kl:.16f}' ," time : %4.2f"% (time.time()-start),  flush=True)
       index = np.random.RandomState().permutation(range(len(self.B_))) #permutative                                                                                 
 #      index = np.random.randint(0,len(self.B_)-1,len(self.B_))  #random
-      
+#      index = range(len(self.B_))
       for iter in range(len(self.B_)):
 
         pre_theta_ = self.theta_
         self.update_parameters(epoch,iter)
         self.theta_ = copy.copy(self.y)
+#        print(self.alpha_list)
+#        print(self.y)
 
         phi = self.B_[ index[iter] ]
         etahat_phi = self.etahat_[phi]
@@ -463,4 +468,5 @@ class LLM:
                         
           u[x] *= exp_delta
         
-        self.theta_list = [pre_theta_,self.theta_]
+        self.theta_list = [pre_theta_ ,self.theta_]
+#        print(self.theta_list)
