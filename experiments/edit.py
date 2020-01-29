@@ -4,7 +4,7 @@ args =sys.argv
 
 datasetname = args[1]
 coorfile = '/home/hayashi/workspace/tbm-python/experiments/'+datasetname+'/coor.txt'
-starfile = '/home/hayashi/workspace/tbm-python/experiments/'+datasetname+'/acc_grad_0.txt'
+starfile = '/home/hayashi/workspace/tbm-python/experiments/'+datasetname+'/coor.txt'
 L_star=1000
 with open(starfile) as f:
     for line in f:

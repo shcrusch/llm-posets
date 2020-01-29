@@ -343,9 +343,10 @@ class LLM:
     self.P_ = np.zeros(len(self.S_))
     start = time.time()
     for epoch in range(max_epoch):
+
       for x in self.S_:         #compute P
         self.P_[self.invS_[x]] = u[x]/Z
-
+      
       kl = self.compute_KL()
       print(epoch ,":",  "KL divergence:",f'{kl:.16f}' ," time : %4.2f"% (time.time()-start),  flush=True)
 
@@ -377,96 +378,113 @@ class LLM:
 
         for x in self.Ssub_[phi]: #update u
           u[x] *= exp_delta
-
+      
 
 
 
   def update_parameters(self,epoch,iter): #update parameters for ACDM
     n = len(self.B_)
     if epoch == 0 and iter == 0:
-      pre_alpha = 1
-      self.alpha = (- pre_alpha**2 / n + math.sqrt( pre_alpha**4 / n**2 + 4 * pre_alpha**2) )/2
+      
       self.y = np.zeros(n)
-      self.alpha_list = [pre_alpha, self.alpha]       #alpha_list = [alpha_(t-1) , alpha_t]
       self.theta_list = [np.zeros(n),np.zeros(n)]
-    else:
-      pre_alpha = copy.copy(self.alpha)
-#      print(pre_alpha)
-      self.alpha = (- pre_alpha**2 / n + math.sqrt( pre_alpha**4 / n**2 + 4 * pre_alpha**2 ) ) /2
-      pre_y = copy.copy(self.y)
-      for phi in self.B_:
-        self.y[self.invB_[phi]] = (self.alpha-1) / pre_alpha * pre_y[self.invB_[phi]] - self.alpha * (n-pre_alpha) / n / pre_alpha *self.theta_list[0][self.invB_[phi]] +(1/pre_alpha + 1 - pre_alpha/n ) * self.theta_[self.invB_[phi]]
-      self.alpha_list = [pre_alpha,self.alpha]
-      self.y_list = [pre_y,self.y]   #y_list = [y_(t-1) , y_t]
 
+    else:
+
+      for phi in self.B_:
+        self.y[self.invB_[phi]] = (n-1) / n * self.alphas[n*epoch+iter] / self.alphas[n*epoch+iter-1] * self.y[self.invB_[phi]] - self.alphas[n*epoch+iter] * (1/self.alphas[n*epoch+iter-1] - 1/n) *self.theta_list[0][self.invB_[phi]] + (1 - self.alphas[n*epoch+iter]/n - self.alphas[n*epoch+iter]/n/self.alphas[n*epoch+iter-1])* self.theta_[self.invB_[phi]]
+
+#        self.y[self.invB_[phi]] = self.theta_[self.invB_[phi]]
+    
 
   def accelerated_coordinate_descent(self, X, max_epoch):
-    """                                                                                                                                                               
-    Actual implementation coodinate_descent                                                                                                                        
-    Parameters                                                                                                                                                       
-    -----                                                                                                                                                             
-    X : array-like, shape (n_samples,)                                                                                                                                
-
-            Training vectors, where n_samples is the number of samples and                                                                                         
-
-            each element is a tuple of indices of 1s.                                                                                                                 
-                         
-    max_epoch                                                                                                                                                         
-                         
-    -----                                                                                                                                                             
-                                                                                                                                                               
+    """                                                                                                                                   
+                           
+    Actual implementation coodinate_descent                                                                                               
                         
+    Parameters                                                                                                                            
+                          
+    -----                                                                                                                                 
+                           
+    X : array-like, shape (n_samples,)                                                                                                    
+                           
+            Training vectors, where n_samples is the number of samples and                                                                
+                   
+            each element is a tuple of indices of 1s.                                                                              
+                         
+    max_epoch                                                                                                                             
+                  
+    -----                                                                                                                                                                                       
     """
     u = {}
     for x in self.S_:
       u[x] = 1.0
 
     Z = len(self.S_)
+    
+    alphas = []
+    a = 1
+    n = len(self.B_)
+    for _ in range(max_epoch*n):
+      alphas.append(a)
+      a = (- a**2 / n + math.sqrt( a**4 / n**2 + 4 * a**2) )/2
+    self.alphas = alphas
 
     start = time.time()
     
     for epoch in range(max_epoch):
+#      print(self.theta_)
       self.P_ = np.zeros(len(self.S_))
       for x in self.S_:
         self.P_[self.invS_[x]] = u[x]/Z
-
+      
       kl = self.compute_KL()
       print(epoch ,":",  "KL divergence:",f'{kl:.16f}' ," time : %4.2f"% (time.time()-start),  flush=True)
-      index = np.random.RandomState().permutation(range(len(self.B_))) #permutative                                                                                 
-#      index = np.random.randint(0,len(self.B_)-1,len(self.B_))  #random
-#      index = range(len(self.B_))
-      for iter in range(len(self.B_)):
+      index = np.random.RandomState().permutation(range(n)) #permutative
+#      index = np.random.randint(0,n-1, n)  #random
+#      index = range(n)
+      for iter in range(n):
 
-        pre_theta_ = self.theta_
+        pre_theta_ = copy.copy(self.theta_)
+#        print(self.theta_)
         self.update_parameters(epoch,iter)
         self.theta_ = copy.copy(self.y)
-#        print(self.alpha_list)
-#        print(self.y)
+        
+
+        self.compute_theta_perp()
+        Z = np.exp(- self.theta_perp)
+
+        
+        for x in self.S_:
+          r = 0.0
+          for phi in self.B_ :
+            r +=  self.get_theta(phi) if includes(phi, x) else 0
+          u[x] = np.exp(r)
+
 
         phi = self.B_[ index[iter] ]
         etahat_phi = self.etahat_[phi]
+
         if etahat_phi == 1.0 or etahat_phi == 0.0:
           continue
-
+          
         eta_phi = 0.0
-        for x in self.Ssub_[phi]: #compute eta_phi                                                                                                                    
-
-            eta_phi += u[x]
+        for x in self.Ssub_[phi]: #compute eta_phi                                                                                      
+          eta_phi += u[x]
         eta_phi /= Z
+        
 
-        exp_delta = (1-eta_phi)/eta_phi * etahat_phi/(1-etahat_phi) #compute exp(delta)                                                                               
-                         
+        exp_delta = (1-eta_phi)/eta_phi * etahat_phi/(1-etahat_phi) #compute exp(delta)                                                 
+ 
+        self.theta_[self.invB_[phi]] += np.log(exp_delta) #update theta_phi            
 
-        self.theta_[self.invB_[phi]] += np.log(exp_delta) #update theta_phi                                                                                           
-                         
-        Z = np.exp(-self.theta_perp) #update Z                                                                                                                        
-                         
+        Z = np.exp(-self.theta_perp) #update Z                                                                                           
+
         for x in self.Ssub_[phi]:
           Z += u[x] * (exp_delta - 1)
         self.theta_perp = - np.log(Z)
         
-        for x in self.Ssub_[phi]: #update u                                                                                                                           
-                        
+        for x in self.Ssub_[phi]: #update u                                                                                             
           u[x] *= exp_delta
         
         self.theta_list = [pre_theta_ ,self.theta_]
