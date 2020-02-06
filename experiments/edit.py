@@ -3,8 +3,8 @@ import sys
 args =sys.argv
 
 datasetname = args[1]
-coorfile = '/home/hayashi/workspace/tbm-python/experiments/'+datasetname+'/coor.txt'
-starfile = '/home/hayashi/workspace/tbm-python/experiments/'+datasetname+'/coor.txt'
+coorfile = '/home/hayashi/workspace/tbm-python/experiments2/'+datasetname+'/coor.txt'
+starfile = '/home/hayashi/workspace/tbm-python/experiments2/'+datasetname+'/acc_grad_0.97.txt'
 L_star=1000
 with open(starfile) as f:
     for line in f:

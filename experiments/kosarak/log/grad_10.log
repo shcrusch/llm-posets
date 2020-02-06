@@ -1,0 +1,2 @@
+/home/hayashi/workspace/tbm-python/src/python/llm_posets.py:226: RuntimeWarning: divide by zero encountered in log
+  ret += Phatx * (np.log(Phatx) - np.log(self.P_[self.invS_[x]]))

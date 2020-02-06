@@ -1,4 +1,3 @@
-import tbm
 import llm_posets
 import sys
 import os
@@ -44,6 +43,7 @@ def get_B_from(filename):
       B2.append((Bfile.loc[j,0]-xij_min,int(Bfile.loc[j,1]-xij_min)))
   B1.sort()
   B2.sort()
+
   B=B1+B2
 
   return B
@@ -51,6 +51,7 @@ def get_B_from(filename):
 B = get_B_from(args[2])
 
 S = list(dict.fromkeys(B+X+[()]))
+
 
 llm = llm_posets.LLM(n,B,S,X)
 

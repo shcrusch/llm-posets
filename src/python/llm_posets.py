@@ -3,7 +3,7 @@ import time
 import sys
 import math
 import copy
- 
+import itertools 
 def includes(phi,x):
   return set(phi).issubset(x)
 
@@ -15,10 +15,10 @@ class LLM:
     self.n_= n
     self.set_Phi(self.S_, self.B_) #dict (key: tuple, val: list of tuples)
     self.set_Ssub(self.S_, self.B_)  # dict (key: tuple, val: list of tuples)
-    self.init_theta() # dict (key: list, val: double)
+    self.init_theta() # dict (key: list, val: float)
 
-    self.compute_Phat(X) # dict (key: list, val: double)
-    self.compute_etahat(X) # dict (key: list, val: double)
+    self.compute_Phat(X) # dict (key: list, val: float)
+    self.compute_etahat(X) # dict (key: list, val: float)
     
 
   def fit(self, X, n_iter, stepsize=-1, mu = 0, solver="grad"):
@@ -77,6 +77,7 @@ class LLM:
     
   def compute_Phat(self, X):
     self.Phat_ = np.zeros(len(self.S_))
+    denom = 0.0
     for xi in X:
       self.Phat_[self.invS_[xi]] += 1 / len(X)
 
@@ -92,10 +93,10 @@ class LLM:
     """
     self.etahat_ = {}
     for phi in self.B_:
-      denom = 0.0
-      for xi in X:
-        denom += 1 if includes(phi, xi) else 0
-      self.etahat_[phi] = denom / len(X)
+      etahat_phi = 0.0
+      for xi in self.Ssub_[phi]:
+        etahat_phi += self.Phat_[self.invS_[xi]] 
+      self.etahat_[phi] = etahat_phi
 
 
   def set_B(self, B):
@@ -130,7 +131,7 @@ class LLM:
       self.invS_[S[i]] = i
 
 
-  def compute_logP(self, xi):
+  def compute_logP(self, x):
     """
     Computing lopP
     Parameters
@@ -143,8 +144,8 @@ class LLM:
     
     """
     ret = 0.0;
-    for phi in self.B_ :
-      ret +=  self.get_theta(phi) if includes(phi, xi) else 0    
+    for phi in self.Phi_[x]:
+      ret +=  self.get_theta(phi)
     ret += self.theta_perp
     return ret 
 
@@ -226,6 +227,23 @@ class LLM:
 
     return ret
 
+  def compute_hess(self):
+    eta_p1p2 = np.zeros((len(self.B_),len(self.B_)))
+    
+    for p1 in self.B_:
+      for p2 in self.B_:
+        r = 0.0
+        for x in self.Ssub_[p1]:
+          r += self.P_[self.invS_[x]] if includes(p2,x) else 0
+        eta_p1p2[self.invB_[p1],self.invB_[p2]] = r
+
+    hess = np.zeros((len(self.B_),len(self.B_)))
+    for phi1 in self.B_:
+      for phi2 in self.B_:
+        hess[self.invB_[phi1],self.invB_[phi2]] = eta_p1p2[self.invB_[phi1],self.invB_[phi2]] - self.eta_[phi1] * self.eta_[phi2]
+    a,v = np.linalg.eig(hess)
+                                                          
+
 
   def gradient_descent(self, X, n_iter, step):  
     """
@@ -243,6 +261,7 @@ class LLM:
     for iter in range(n_iter):
       self.compute_P()
       self.compute_eta()
+
       kl=self.compute_KL()
       print(iter ,":", "KL divergence: ", f'{kl:.16f}' ," time : %4.2f"% (time.time()-start),flush=True)
       
@@ -257,8 +276,10 @@ class LLM:
     
     if iter == 0:
 
-      self.grad_list = [] # [theta(t) - step*grad( L_D( theta(t)) ), theta_(t-1) - step* ( L_D(theta(t-1)) ) ]
-      self.grad_theta_ = np.zeros(len(self.B_)) # theta^(t-1) - step * grad( L_D( theta^(t-1) ) )
+      self.grad_list = [] 
+      # [theta(t) - step*grad( L_D( theta(t)) ), theta_(t-1) - step* ( L_D(theta(t-1)) ) ]
+      self.grad_theta_ = np.zeros(len(self.B_)) 
+      # theta^(t-1) - step * grad( L_D( theta^(t-1) ) )
       self.lambda_list = [0,1]
       self.lambda_ = 1
       for phi in self.B_:
@@ -274,8 +295,9 @@ class LLM:
       for phi in self.B_:
         grad_new_theta_phi = self.get_theta(phi) + step * (self.etahat_[phi] - self.eta_[phi] )
         self.grad_theta_[self.invB_[phi]] = grad_new_theta_phi
-#        new_theta_phi = (1 + mu) * grad_new_theta_phi - mu * pre_grad_theta_[self.invB_[phi]]
-        new_theta_phi = grad_new_theta_phi
+
+        new_theta_phi = (1 + mu) * grad_new_theta_phi - mu * pre_grad_theta_[self.invB_[phi]]
+#        new_theta_phi = grad_new_theta_phi   #no hyperparameter
         self.set_theta(phi, new_theta_phi)
       self.grad_list = [pre_grad_theta_,self.grad_theta_]
       self.lambda_list = [pre_lambda_,self.lambda_]
@@ -288,8 +310,8 @@ class LLM:
       for phi in self.B_:
         grad_new_theta_phi = self.get_theta(phi) + step * (self.etahat_[phi] - self.eta_[phi])
         self.grad_theta_[self.invB_[phi]] = grad_new_theta_phi
-#        new_theta_phi = (1 + mu) * grad_new_theta_phi - mu * pre_grad_theta_[self.invB_[phi]]
-        new_theta_phi = (1 -self.gamma) * grad_new_theta_phi + self.gamma * pre_grad_theta_[self.invB_[phi]]
+        new_theta_phi = (1 + mu) * grad_new_theta_phi - mu * pre_grad_theta_[self.invB_[phi]]
+#        new_theta_phi = (1 -self.gamma) * grad_new_theta_phi + self.gamma * pre_grad_theta_[self.invB_[phi]]      #no hyperparameter
         self.set_theta(phi, new_theta_phi)
         
       self.grad_list = [pre_grad_theta_,self.grad_theta_]
@@ -340,152 +362,50 @@ class LLM:
       u[x] = 1.0
 
     Z = len(self.S_)
-    self.P_ = np.zeros(len(self.S_))
+
     start = time.time()
     for epoch in range(max_epoch):
 
-      for x in self.S_:         #compute P
-        self.P_[self.invS_[x]] = u[x]/Z
-      
-      kl = self.compute_KL()
+      #compute KL
+      kl = 0.0
+      for x in self.S_:
+        Phatx = self.Phat_[self.invS_[x]]
+        if Phatx != 0.0:
+          kl += Phatx * (np.log(Phatx) - np.log(u[x]/Z))
+
       print(epoch ,":",  "KL divergence:",f'{kl:.16f}' ," time : %4.2f"% (time.time()-start),  flush=True)
 
       index = np.random.RandomState().permutation(range(len(self.B_))) #permutative
 #      index = np.random.randint(0,len(self.B_)-1,len(self.B_))  #random
-#      index = range(len(self.B_))
 
       for iter in range(len(self.B_)):
         phi = self.B_[ index[iter] ] 
         etahat_phi = self.etahat_[phi] 
 
-        if etahat_phi == 1.0 or etahat_phi == 0.0:
+        if etahat_phi >= 1.0 or etahat_phi == 0.0:
           continue
 
+        #compute eta_phi
         eta_phi = 0.0
-        for x in self.Ssub_[phi]: #compute eta_phi
+        for x in self.Ssub_[phi]: 
             eta_phi += u[x]
         eta_phi /= Z
-                
-        exp_delta = (1-eta_phi)/eta_phi * etahat_phi/(1-etahat_phi) #compute exp(delta)
+        
+        #compute exp(delta)
+        exp_delta = (1-eta_phi)/eta_phi * etahat_phi/(1-etahat_phi) 
 
-        self.theta_[self.invB_[phi]] += np.log(exp_delta) #update theta_phi
+        #update theta_phi
+#        self.theta_[self.invB_[phi]] += np.log(exp_delta) 
 
-        Z = np.exp(-self.theta_perp) #update Z
+        #update Z
+#        Z = np.exp(-self.theta_perp) 
         for x in self.Ssub_[phi]:
           Z += u[x] * (exp_delta - 1)
 
-        self.theta_perp = - np.log(Z)
-
-        for x in self.Ssub_[phi]: #update u
-          u[x] *= exp_delta
-      
-
-
-
-  def update_parameters(self,epoch,iter): #update parameters for ACDM
-    n = len(self.B_)
-    if epoch == 0 and iter == 0:
-      
-      self.y = np.zeros(n)
-      self.theta_list = [np.zeros(n),np.zeros(n)]
-
-    else:
-
-      for phi in self.B_:
-        self.y[self.invB_[phi]] = (n-1) / n * self.alphas[n*epoch+iter] / self.alphas[n*epoch+iter-1] * self.y[self.invB_[phi]] - self.alphas[n*epoch+iter] * (1/self.alphas[n*epoch+iter-1] - 1/n) *self.theta_list[0][self.invB_[phi]] + (1 - self.alphas[n*epoch+iter]/n - self.alphas[n*epoch+iter]/n/self.alphas[n*epoch+iter-1])* self.theta_[self.invB_[phi]]
-
-#        self.y[self.invB_[phi]] = self.theta_[self.invB_[phi]]
-    
-
-  def accelerated_coordinate_descent(self, X, max_epoch):
-    """                                                                                                                                   
-                           
-    Actual implementation coodinate_descent                                                                                               
-                        
-    Parameters                                                                                                                            
-                          
-    -----                                                                                                                                 
-                           
-    X : array-like, shape (n_samples,)                                                                                                    
-                           
-            Training vectors, where n_samples is the number of samples and                                                                
-                   
-            each element is a tuple of indices of 1s.                                                                              
-                         
-    max_epoch                                                                                                                             
-                  
-    -----                                                                                                                                                                                       
-    """
-    u = {}
-    for x in self.S_:
-      u[x] = 1.0
-
-    Z = len(self.S_)
-    
-    alphas = []
-    a = 1
-    n = len(self.B_)
-    for _ in range(max_epoch*n):
-      alphas.append(a)
-      a = (- a**2 / n + math.sqrt( a**4 / n**2 + 4 * a**2) )/2
-    self.alphas = alphas
-
-    start = time.time()
-    
-    for epoch in range(max_epoch):
-#      print(self.theta_)
-      self.P_ = np.zeros(len(self.S_))
-      for x in self.S_:
-        self.P_[self.invS_[x]] = u[x]/Z
-      
-      kl = self.compute_KL()
-      print(epoch ,":",  "KL divergence:",f'{kl:.16f}' ," time : %4.2f"% (time.time()-start),  flush=True)
-      index = np.random.RandomState().permutation(range(n)) #permutative
-#      index = np.random.randint(0,n-1, n)  #random
-#      index = range(n)
-      for iter in range(n):
-
-        pre_theta_ = copy.copy(self.theta_)
-#        print(self.theta_)
-        self.update_parameters(epoch,iter)
-        self.theta_ = copy.copy(self.y)
+#        self.theta_perp = - np.log(Z)
         
-
-        self.compute_theta_perp()
-        Z = np.exp(- self.theta_perp)
-
-        
-        for x in self.S_:
-          r = 0.0
-          for phi in self.B_ :
-            r +=  self.get_theta(phi) if includes(phi, x) else 0
-          u[x] = np.exp(r)
-
-
-        phi = self.B_[ index[iter] ]
-        etahat_phi = self.etahat_[phi]
-
-        if etahat_phi == 1.0 or etahat_phi == 0.0:
-          continue
-          
-        eta_phi = 0.0
-        for x in self.Ssub_[phi]: #compute eta_phi                                                                                      
-          eta_phi += u[x]
-        eta_phi /= Z
-        
-
-        exp_delta = (1-eta_phi)/eta_phi * etahat_phi/(1-etahat_phi) #compute exp(delta)                                                 
- 
-        self.theta_[self.invB_[phi]] += np.log(exp_delta) #update theta_phi            
-
-        Z = np.exp(-self.theta_perp) #update Z                                                                                           
-
+        #update u
         for x in self.Ssub_[phi]:
-          Z += u[x] * (exp_delta - 1)
-        self.theta_perp = - np.log(Z)
-        
-        for x in self.Ssub_[phi]: #update u                                                                                             
           u[x] *= exp_delta
-        
-        self.theta_list = [pre_theta_ ,self.theta_]
-#        print(self.theta_list)
+      
+
