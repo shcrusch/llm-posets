@@ -1,4 +1,4 @@
-basedir=/home/hayashi/workspace/tbm-python/experiments2
+basedir=/home/hayashi/workspace/tbm-python/experiments
 
 python $basedir/edit.py kosarak > $basedir/kosarak/kosarak_coor.txt &
 for step in {0.01,0.1,1,10}; do

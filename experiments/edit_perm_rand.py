@@ -7,9 +7,9 @@ datasetname = "mushroom"
 
 save_dir = '/home/hayashi/workspace/tbm-python/experiments2/'+datasetname+'/'
 
-permfiles = glob.glob('/home/hayashi/workspace/tbm-python/experiments2/'+datasetname+'/coor_perm*')
-randfiles = glob.glob('/home/hayashi/workspace/tbm-python/experiments2/'+datasetname+'/coor_rand*')
-starfile = '/home/hayashi/workspace/tbm-python/experiments2/'+datasetname+'/acc_grad_0.txt'
+permfiles = glob.glob('/home/hayashi/workspace/tbm-python/experiments/'+datasetname+'/coor_perm*')
+randfiles = glob.glob('/home/hayashi/workspace/tbm-python/experiments/'+datasetname+'/coor_rand*')
+starfile = '/home/hayashi/workspace/tbm-python/experiments/'+datasetname+'/.txt'
 
 L_star=1000
 with open(starfile) as f:

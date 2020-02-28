@@ -7,8 +7,8 @@ datasetname = args[1]
 method = args[2]
 stepormu = args[3]
 
-mainfile = '/home/hayashi/workspace/tbm-python/experiments2/'+datasetname+'/'+method+'_'+stepormu+'.txt'
-starfile = '/home/hayashi/workspace/tbm-python/experiments2/'+datasetname+'/acc_grad_0.97.txt'
+mainfile = '/home/hayashi/workspace/tbm-python/experiments/'+datasetname+'/'+method+'_'+stepormu+'.txt'
+starfile = '/home/hayashi/workspace/tbm-python/experiments/'+datasetname+'/coor.txt'
 
 L_star=1000
 with open(starfile) as f:                                                                                                                    
