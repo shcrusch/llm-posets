@@ -9,119 +9,101 @@ datasetname = args[1]
 
 save_dir = '/home/hayashi/workspace/tbm-python/experiments/figure/'+datasetname+'/'
 
-gradlist = glob.glob('/home/hayashi/workspace/tbm-python/experiments/'+datasetname+'/grad_*') #update
+gradfiles = glob.glob('/home/hayashi/workspace/tbm-python/experiments/'+datasetname+'/'+datasetname+'_grad_*') #update
+accgradfiles = glob.glob('/home/hayashi/workspace/tbm-python/experiments/'+datasetname+'/'+datasetname+'_acc_grad_*')
+dafiles = glob.glob('/home/hayashi/workspace/tbm-python/experiments/'+datasetname+'/'+datasetname+'_da_*')
+coorfilename = '/home/hayashi/workspace/tbm-python/experiments/'+datasetname+'/'+datasetname+'_coor.txt' #update
 
-coorfilename = '/home/hayashi/workspace/tbm-python/experiments/'+datasetname+'/goor.txt' #update
-
-if args[2]=='kl' and args[3]=='epoch':
-    savefilename = save_dir + datasetname + '_kl_epoch.png'
-elif args[2]=='kl' and args[3]=='time':
-    savefilename = save_dir + datasetname + '_kl_time.png'
-elif args[2]=='sg' and args[3]=='epoch':
-    savefilename = save_dir + datasetname + '_sg_epoch.png'
-elif args[2]=='sg' and args[3]=='time':
-    savefilename = save_dir + datasetname+'_sg_time.png'
+if args[2]=='epoch':
+    savefilename = save_dir + datasetname + '_epoch.png'
+elif args[2]=='time':
+    savefilename = save_dir + datasetname + '_time.png'
 else:
     print("Option Error") 
 
-y_grads=[]
-grad_steps=[]
+
 y_coor=[]
-times_grads=[]
-times_coor=[]
+time_coor = []
+y_grad = {}
+time_grad = {}
+y_accgrad = {}
+time_accgrad = {}
+y_da = {}
+time_da = {}
 
+with open(coorfilename) as f:            
+    for line in f:
+        lin = line.split(' ')
+        y_coor.append(float(lin[1]))
+        time_coor.append(float(lin[2]))
 
-if args[2]=="kl":
-
-    with open(coorfilename) as f:            
-        y_coor=[]
+for gradfilename in gradfiles:
+    with open(gradfilename) as f:
+        step = re.search('grad_(.*).txt',gradfilename).group(1) #update
+        y_list = []
+        time_list = []
         for line in f:
-            lin = line.split(' : KL divergence: ')
-            lin = lin[-1].split('  time : ')
-            y_coor.append(float(lin[0]))
-            y_star = y_coor[-1]
-        y_coor = list(map(lambda y:y-y_star,y_coor))
+            lin = line.split(' ')
+            y_list.append(float(lin[1]))
+            time_list.append(float(lin[2]))
+        y_grad[step] = y_list
+        time_grad[step] = time_list
 
-    for gradfilename in gradlist:
-        with open(gradfilename) as f:
-            step = re.search('Grad_(.*).txt',gradfilename).group(1) #update
-            grad_steps.append(step)
-            y_grad=[]
-            for line in f:
-                lin = line.split(' : KL divergence: ')
-                lin = lin[-1].split('  time : ')
-                y_grad.append(float(lin[0]))
-            y_grad = list(map( lambda y:y - y_star,y_grad))
-            y_grads.append(y_grad)
-
-
-elif args[2]=="sg":
-
-    for gradfilename in gradlist:
-        with open(gradfilename) as f:
-            step = re.search('grad_(.*).txt',gradfilename).group(1)
-            grad_steps.append(step)
-            y_grad=[]
-            for line in f:
-                lin = line.split(' Squared Gradient: ')
-                y_grad.append(float(lin[-1]))
-            y_grads.append(y_grad)
-
-    with open(coorfilename) as f:
-        y_coor=[]
+for accgradfilename in accgradfiles:
+    with open(accgradfilename) as f:
+        mu = re.search('acc_grad_(.*).txt',accgradfilename).group(1) #update
+        y_list = []
+        time_list = []
         for line in f:
-            lin = line.split(' Squared Gradient: ')
-            y_coor.append(float(lin[-1]))
+            lin = line.split(' ')
+            y_list.append(float(lin[1]))
+            time_list.append(float(lin[2]))
+        y_accgrad[mu] = y_list
+        time_accgrad[mu] = time_list
 
-
-if args[3]=="time":
-    
-    for gradfilename in gradlist:
-        with open(gradfilename) as f:
-            step = re.search('Grad_(.*).txt',gradfilename).group(1) #update
-            grad_steps.append(step)
-            time_grad=[]
-            for line in f:
-#                lin = line.split(' Squared Gradient: ')
-                lin = line.split('  time : ') #update lin[0] ->line
-                time_grad.append(float(lin[-1]))
-            times_grads.append(time_grad)
-
-
-    with open(coorfilename) as f:
-        time_coor=[]
+for dafilename in dafiles:
+    with open(dafilename) as f:
+        step = re.search('da_(.*).txt',dafilename).group(1) #update
+        y_list = []
+        time_list = []
         for line in f:
-#            lin = line.split(' Squared Gradient: ')
-            lin = line.split('  time : ') #update lin[0] -> line
-            time_coor.append(float(lin[-1]))
+            lin = line.split(' ')
+            y_list.append(float(lin[1]))
+            time_list.append(float(lin[2]))
+        y_da[step] = y_list
+        time_da[step] = time_list
+
 
 #figure
 fig, ax = plt.subplots()
 
 #plot
-if args[3]=="epoch":
+if args[2]=="epoch":
     
-    for i in range(len(gradlist)):
-        ax.plot(range(len(y_grads[i])), y_grads[i] ,marker='x', markersize = 6, markevery=50, linestyle='--',label=grad_steps[i],linewidth=0.5)
-
-    ax.plot(range(len(y_coor)), y_coor,marker='o', markersize = 5, markevery=50, linestyle=':',label='Proposed',linewidth=0.5)
+    for step in y_grad:
+        ax.plot(range(len(y_grad[step])), y_grad[step] ,marker='x', markersize = 3, markevery=50, linestyle='--',label='GD('+str(step)+')',linewidth=0.5)
+    
+    for mu in y_accgrad:
+        ax.plot(range(len(y_accgrad[mu])), y_accgrad[mu] ,marker=',', markersize = 3, markevery=50, linestyle='--',label='AGD('+str(mu)+')',linewidth=0.5)
+    
+    for step in y_da:
+        ax.plot(range(len(y_da[step])), y_da[step] ,marker='^', markersize = 3, markevery=50, linestyle='--',label='DA('+str(step)+')',linewidth=0.5)
+    
+    ax.plot(range(len(y_coor)), y_coor,marker='o', markersize = 3, markevery=50, linestyle=':',label='Proposed',linewidth=0.5)
 
     ax.legend()
-    plt.xlim([0,len(y_grads[0])])
+    plt.xlim([0,len(y_coor)])
     ax.set_xlabel('epoch')
 
-elif args[3]=="time":
-    if args[2] == "kl":
-        for i in range(len(gradlist)):
-            ax.plot(times_grads[i], y_grads[i] ,marker='x', markersize = 6, markevery=50, linestyle='--',label=grad_steps[i],linewidth=0.5)
+elif args[2]=="time":
+    for step in time_grad:
+        ax.plot(time_grad[step], y_grad[step] ,marker='x', markersize = 3, markevery=50, linestyle='--',label='GD('+str(step)+')',linewidth=0.5)
 
-        ax.plot(time_coor, y_coor ,marker='o', markersize = 5, markevery=50, linestyle=':',label='Proposed',linewidth=0.5)
-    elif args[2] == "sg":
-        for i in range(len(gradlist)):
-            ax.plot(times_grads[i], y_grads[i] ,marker='x', markersize = 6, markevery=50, linestyle='--',label=grad_steps[i],linewidth=0.5)
-
-
-        ax.plot(time_coor, y_coor ,marker='o', markersize = 5, markevery=50, linestyle=':',label='Proposed',linewidth=0.5)
+    for mu in time_accgrad:
+        ax.plot(time_accgrad[mu], y_accgrad[mu] ,marker='s', markersize = 3, markevery=50, linestyle='--',label='AGD('+str(mu)+')',linewidth=0.5)
+    for step in time_da:
+        ax.plot(time_da[step], y_da[step] ,marker='^', markersize = 3, markevery=50, linestyle='--',label='DA('+str(step)+')',linewidth=0.5)
+    ax.plot(time_coor, y_coor ,marker='o', markersize = 3, markevery=50, linestyle=':',label='Proposed',linewidth=0.5)
     
     ax.legend(loc = 'upper right')
     ax.set_xlabel('time[sec]')
@@ -129,10 +111,9 @@ elif args[3]=="time":
 ax.set_yscale("log")
 plt.subplots_adjust(left = 0.15)
 
-if args[2]=='kl':
-    ax.set_ylabel('KL divergence')
-elif args[2]=='sg':
-    ax.set_ylabel('Squared gradient')
+
+ax.set_ylabel('L_D-L_D*')
+
 plt.title(args[1])
 fig.savefig(os.path.join(save_dir,savefilename))
 print("Finished plotting")

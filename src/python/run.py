@@ -1,23 +1,24 @@
 import llm_posets
 import sys
-import os
 import pandas as pd
 args=sys.argv
-
 
 xij_min = 1000
 xij_max = -1
 
 X_arr= []
 
-with open(args[1]) as f:
+dataset_file = '/home/hayashi/workspace/tbm-python/dataset/'+ args[1] + '.dat'
+itemset_file = '/home/hayashi/workspace/tbm-python/dataset/'+ args[1] + '.dat_itemsets'
+
+with open(dataset_file) as f:
     for line in f:
         xi = line.split()
         xi_int = [ int(xij)  for xij in xi ]        
         
         xij_min = min(xi_int) if xij_min > min(xi_int) else xij_min
         xij_max = max(xi_int) if xij_max < max(xi_int) else xij_max
-        
+
         X_arr.append(xi_int)
 
 X =[]
@@ -48,7 +49,7 @@ def get_B_from(filename):
 
   return B
 
-B = get_B_from(args[2])
+B = get_B_from(itemset_file)
 
 S = list(dict.fromkeys(B+X+[()]))
 
@@ -56,14 +57,22 @@ S = list(dict.fromkeys(B+X+[()]))
 
 llm = llm_posets.LLM(n,B,S,X)
 
-if args[3] == "grad":
-    llm.fit(int(args[5]), stepsize = float(args[4]) , solver = "grad")
-elif args[3] == "coor":
-    llm.fit(int(args[4]), solver = "coor")
-elif args[3] == "acc_grad":
-    llm.fit(int(args[5]), stepsize = float(args[4]) , mu = float(args[6]), solver = "acc_grad")
-elif args[3] == "newton":
-    llm.fit(int(args[5]), stepsize = float(args[4]) , solver = "newton")
+if args[2] == "grad":
+    llm.fit(int(args[4]), stepsize = float(args[3]) , solver = "grad")
+elif args[2] == "da":
+    llm.fit(int(args[4]), stepsize = float(args[3]) , solver = "da")
+elif args[2] == "coor":
+    llm.fit(int(args[3]), solver = "coor")
+elif args[2] == "acc_grad":
+    llm.fit(int(args[4]), stepsize = float(args[3]) , mu = float(args[5]), solver = "acc_grad")
+elif args[2] == "newton":
+    llm.fit(int(args[4]), stepsize = float(args[3]) , solver = "newton")
+elif args[2] == "coor_l1":
+    llm.fit(int(args[4]), lambda_ = float(args[3]) , solver = "coor_l1")
+elif args[2] == "prox":
+    llm.fit(int(args[5]), stepsize = float(args[3]) , lambda_ = float(args[4]), solver = "prox")
+elif args[2] == "rda":
+    llm.fit(int(args[5]), stepsize = float(args[3]) , lambda_ = float(args[4]), solver = "rda")
 else:
     print("Error")
 
