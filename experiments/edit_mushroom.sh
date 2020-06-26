@@ -19,5 +19,5 @@ done
 python $basedir/edit_l1.py mushroom coor_l1 > $basedir/mushroom/regularized/mushroom_coor_l1.txt &
 
 for step in {1,2,5,10,20}; do
-    python $basedir/edit_l1.py mushroom rda_$step > $basedir/mushroom/regularized/mushroom_rda_$step.txt &
+   python $basedir/edit_l1.py mushroom rda_$step > $basedir/mushroom/regularized/mushroom_rda_$step.txt &
 done

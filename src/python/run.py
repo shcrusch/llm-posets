@@ -1,6 +1,7 @@
 import llm_posets
 import sys
 import pandas as pd
+import itertools
 args=sys.argv
 
 xij_min = 1000
@@ -50,9 +51,14 @@ def get_B_from(filename):
   return B
 
 B = get_B_from(itemset_file)
+#B = []
+#for i in range(n):
+#    B.append((i,))
+
+#for phi in itertools.combinations(range(n), 2):
+#    B.append(phi)
 
 S = list(dict.fromkeys(B+X+[()]))
-
 #B = list(dict.fromkeys(B+X))
 
 llm = llm_posets.LLM(n,B,S,X)

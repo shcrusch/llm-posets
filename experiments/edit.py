@@ -31,7 +31,7 @@ for filename in allfiles:
 with open(targetfile) as f:
     for line in f:
         li = re.split(' : KL divergence: |  time : ',line)
-        li[1]= str(float(li[1])-L_star)                                                                                                 
+        li[1]= str(float(li[1])-L_star)
         li[2] = li[2].rstrip('\n')
         print(' '.join(li))
 

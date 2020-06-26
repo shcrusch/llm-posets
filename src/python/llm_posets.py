@@ -19,7 +19,7 @@ class LLM:
 
     self.compute_Phat(X) # dict (key: list, val: float)
     self.compute_etahat(X) # dict (key: list, val: float)
-
+    self.X = X
 
   def fit(self, n_iter, stepsize=-1, mu = 0, lambda_ = -1, solver="grad"):
     """Actual implementation of LLM on posets fitting.
@@ -223,9 +223,22 @@ class LLM:
     for x in self.S_:
       Phatx = self.Phat_[self.invS_[x]]
       if Phatx != 0.0:
-        ret += Phatx * (np.log(Phatx) - np.log(self.P_[self.invS_[x]]))
+        ret += Phatx * np.log(Phatx / self.P_[self.invS_[x]] )
 
     return ret
+  
+  def compute_LD(self, lambda_):
+    ret = 0.0
+    for xi in self.X:
+      ret -= np.log(self.P_[self.invS_[xi]])
+    
+    L1_norm = 0.0
+    for phi in self.B_:
+      L1_norm += np.abs(self.theta_[self.invB_[phi]])
+    ret += lambda_ * L1_norm
+
+    return ret
+    
 
   def compute_hess(self):
     eta_p1p2 = np.zeros((len(self.B_),len(self.B_)))
@@ -238,13 +251,18 @@ class LLM:
         eta_p1p2[self.invB_[p1],self.invB_[p2]] = r
 
     hess = np.zeros((len(self.B_),len(self.B_)))
+    trace = []
     for phi1 in self.B_:
       for phi2 in self.B_:
         hess[self.invB_[phi1],self.invB_[phi2]] = eta_p1p2[self.invB_[phi1],self.invB_[phi2]] - self.eta_[phi1] * self.eta_[phi2]
-    #a,v = np.linalg.eig(hess)
-    inv_hess = np.linalg.inv(hess)
+        if phi1 == phi2:
+          trace.append(hess[self.invB_[phi1],self.invB_[phi2]])
+    a,v = np.linalg.eig(hess)
+    #inv_hess = np.linalg.inv(hess)
+    L = max(a)
+    Lmax = max(trace)
 
-    return inv_hess
+    #return inv_hess
 
 
   def gradient_descent(self, n_iter, step):  
@@ -263,7 +281,7 @@ class LLM:
     for iter in range(n_iter):
       self.compute_P()
       self.compute_eta()
-
+      #self.compute_hess()
       kl=self.compute_KL()
       print(iter ,":", "KL divergence: ", f'{kl:.16f}' ," time : %4.2f"% (time.time()-start),flush=True)
 
@@ -292,7 +310,7 @@ class LLM:
       self.compute_P()
       self.compute_eta()
       kl=self.compute_KL()
-      print(iter ,":", "KL divergence: ", f'{kl:.16f}' ," time : %4.2f"% (time.time()-start),flush=True)
+      print(iter,":" , "KL divergence: ", f'{kl:.16f}' ," time : %4.2f"% (time.time()-start),flush=True)
       
       for phi in self.B_:
         grad[self.invB_[phi]] = ( iter * grad[self.invB_[phi]] +self.etahat_[phi] - self.eta_[phi]) / (iter+1)
@@ -414,21 +432,34 @@ class LLM:
       u[x] = 1.0
 
     Z = len(self.S_)
-
+    kl = 0.0
+    for x in self.S_:
+      Phatx = self.Phat_[self.invS_[x]]
+      if Phatx != 0.0:
+        kl += Phatx * np.log(Phatx)
+    kl += np.log(Z)
     start = time.time()
     for epoch in range(max_epoch):
+
       
       #compute KL
-      kl = 0.0
+
+      """
+      pre_kl = copy.copy(self.kl)
       for x in self.S_:
         Phatx = self.Phat_[self.invS_[x]]
         if Phatx != 0.0:
-          kl += Phatx * (np.log(Phatx) - np.log(u[x]/Z))
-
+          self.kl -= Phatx * np.log(u[x]) 
+      self.kl += np.log(Z)
+      if pre_kl < self.kl:
+        break
+      """
+        
       print(epoch ,":",  "KL divergence:",f'{kl:.16f}' ," time : %4.2f"% (time.time()-start),  flush=True)
+      #print(epoch ,":",  "KL divergence:",f'{kl:.16f}' ," time : %4.2f"% (time.time()-start), "exactZ - Z :", sum(u.values())-Z,  flush=True)
       #index = range(len(self.B_))
-      #index = np.random.RandomState().permutation(range(len(self.B_))) #permutative
-      index = np.random.randint(0,len(self.B_)-1,len(self.B_))  #random
+      index = np.random.RandomState().permutation(range(len(self.B_))) #permutative
+      #index = np.random.randint(0,len(self.B_)-1,len(self.B_))  #random
 
       for iter in range(len(self.B_)):
 
@@ -445,21 +476,42 @@ class LLM:
         eta_phi /= Z
         
         #compute exp(delta)
-        exp_delta = (1-eta_phi)/eta_phi * etahat_phi/(1-etahat_phi) 
+        exp_delta = 1 + (etahat_phi - eta_phi) / eta_phi / (1 - etahat_phi)
+        delta = np.log1p( (etahat_phi - eta_phi) / eta_phi / (1 - etahat_phi) )
+        #delta = np.log(1-eta_phi) + np.log(etahat_phi) - np.log(1-etahat_phi) - np.log(eta_phi)
+
 
         #update theta_phi
-        self.theta_[self.invB_[phi]] += np.log(exp_delta) 
+        #self.theta_[self.invB_[phi]] += np.log(exp_delta)
+        self.theta_[self.invB_[phi]] += delta
 
-        #update Z
-
+        #update u,Z
+        pre_Z = Z
         for x in self.Ssub_[phi]:
-          Z += u[x] * (exp_delta - 1)
+          #diff_ux = u[x] * np.expm1(delta)
+          #u[x] += diff_ux
+          #Z += diff_ux
 
-        self.theta_perp = - np.log(Z)
-        
-        #update u
-        for x in self.Ssub_[phi]:
+          Z += u[x]* (etahat_phi - eta_phi) / eta_phi / (1 - etahat_phi)  #u[x]*(exp_delta - 1)
+          #u[x] *= np.exp(delta)
           u[x] *= exp_delta
+          kl -= self.Phat_[self.invS_[x]] * delta
+        #Z = sum(u.values())
+        kl += np.log(Z / pre_Z)
+        
+        """
+        if epoch >= 280:
+          pre_kl = copy.copy(self.kl)
+          self.kl = 0.0
+          for x in self.S_:
+            Phatx = self.Phat_[self.invS_[x]]
+            if Phatx != 0.0:
+              self.kl += Phatx * np.log( Phatx / u[x] )
+          self.kl += np.log(Z)
+          if pre_kl < self.kl:
+            print('phi:',phi,' eta_phi:',eta_phi,' etahat_phi:',etahat_phi)
+            #print('KL',f'{self.kl:.16f}')
+        """
         
 
   def coordinate_descent_l1(self, max_epoch, lambda_):
@@ -482,14 +534,25 @@ class LLM:
 
     start = time.time()
     for epoch in range(max_epoch):
+      """
       #compute KL                                                                                                                         
       kl = 0.0
       for x in self.S_:
         Phatx = self.Phat_[self.invS_[x]]
         if Phatx != 0.0:
           kl += Phatx * (np.log(Phatx) - np.log(u[x]/Z))
+      """
+      LD = 0.0
+      for x in self.X:
+        LD -= np.log(u[x])
+      
+      L1_norm = 0.0
+      for phi in self.B_:
+        L1_norm += np.abs(self.theta_[self.invB_[phi]])
+      
+      LD += len(self.X) * np.log(Z) + lambda_ * L1_norm
 
-      print(epoch ,":",  "KL divergence:",f'{kl:.16f}' ," time : %4.2f"% (time.time()-start),  flush=True)
+      print(epoch ,":",  "L_D:",f'{LD:.16f}' ," time : %4.2f"% (time.time()-start), "Ratio of Non-Zero:", np.count_nonzero(self.theta_)/len(self.theta_) , flush=True)
       
       #index = range(len(self.B_))
       #index = np.random.RandomState().permutation(range(len(self.B_))) #permutative
@@ -533,7 +596,7 @@ class LLM:
         #update u                                                                                                                         
         for x in self.Ssub_[phi]:
           u[x] *= exp_delta
-    print(np.count_nonzero(self.theta_)/len(self.theta_))
+    
 
 
   def proximal_gradient_descent(self, n_iter, step, lambda_):  
@@ -553,8 +616,9 @@ class LLM:
       self.compute_P()
       self.compute_eta()
 
-      kl=self.compute_KL()
-      print(iter ,":", "KL divergence: ", f'{kl:.16f}' ," time : %4.2f"% (time.time()-start),flush=True)
+      #kl=self.compute_KL()
+      LD = self.compute_LD(lambda_)
+      print(iter ,":", "L_D: ", f'{LD:.16f}' ," time : %4.2f"% (time.time()-start), "Ratio of Non-Zero:", np.count_nonzero(self.theta_)/len(self.theta_),flush=True)
 
       for phi in self.B_:
         theta_phi_ = self.get_theta(phi) + step * (self.etahat_[phi] - self.eta_[phi] )
@@ -565,7 +629,7 @@ class LLM:
         self.set_theta(phi, new_theta_phi)
 
       self.compute_theta_perp()
-    print(self.theta_)
+    
 
 
   def regularized_dual_averaging(self, n_iter, step, lambda_):  
@@ -587,8 +651,9 @@ class LLM:
       self.compute_P()
       self.compute_eta()
 
-      kl=self.compute_KL()
-      print(iter ,":", "KL divergence: ", f'{kl:.16f}' ," time : %4.2f"% (time.time()-start),flush=True)
+      #kl=self.compute_KL()
+      LD = self.compute_LD(lambda_)
+      print(iter ,":", "L_D: ", f'{LD:.16f}' ," time : %4.2f"% (time.time()-start), "Ratio of Non-Zero:", np.count_nonzero(self.theta_)/len(self.theta_),flush=True)
 
       for phi in self.B_:
         grad[self.invB_[phi]] = ( iter * grad[self.invB_[phi]] +self.etahat_[phi] - self.eta_[phi]) / (iter+1)
@@ -600,7 +665,7 @@ class LLM:
         self.set_theta(phi, new_theta_phi)
 
       self.compute_theta_perp()
-    print(self.theta_)
+    
     
 
   def accelerated_coordinate_descent(self, max_epoch):

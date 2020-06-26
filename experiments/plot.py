@@ -11,8 +11,11 @@ save_dir = '/home/hayashi/workspace/tbm-python/experiments/figure/'+datasetname+
 
 gradfiles = glob.glob('/home/hayashi/workspace/tbm-python/experiments/'+datasetname+'/'+datasetname+'_grad_*') #update
 accgradfiles = glob.glob('/home/hayashi/workspace/tbm-python/experiments/'+datasetname+'/'+datasetname+'_acc_grad_*')
-dafiles = glob.glob('/home/hayashi/workspace/tbm-python/experiments/'+datasetname+'/'+datasetname+'_da_*')
+#dafiles = glob.glob('/home/hayashi/workspace/tbm-python/experiments/'+datasetname+'/'+datasetname+'_da_*')
+dafiles = []
 coorfilename = '/home/hayashi/workspace/tbm-python/experiments/'+datasetname+'/'+datasetname+'_coor.txt' #update
+
+gradfiles.remove('/home/hayashi/workspace/tbm-python/experiments/'+datasetname+'/'+datasetname+'_grad_10.txt')
 
 if args[2]=='epoch':
     savefilename = save_dir + datasetname + '_epoch.png'
@@ -84,7 +87,7 @@ if args[2]=="epoch":
         ax.plot(range(len(y_grad[step])), y_grad[step] ,marker='x', markersize = 3, markevery=50, linestyle='--',label='GD('+str(step)+')',linewidth=0.5)
     
     for mu in y_accgrad:
-        ax.plot(range(len(y_accgrad[mu])), y_accgrad[mu] ,marker=',', markersize = 3, markevery=50, linestyle='--',label='AGD('+str(mu)+')',linewidth=0.5)
+        ax.plot(range(len(y_accgrad[mu])), y_accgrad[mu] ,marker='s', markersize = 3, markevery=50, linestyle='--',label='AGD('+str(mu)+')',linewidth=0.5)
     
     for step in y_da:
         ax.plot(range(len(y_da[step])), y_da[step] ,marker='^', markersize = 3, markevery=50, linestyle='--',label='DA('+str(step)+')',linewidth=0.5)
