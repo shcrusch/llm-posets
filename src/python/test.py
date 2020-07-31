@@ -37,14 +37,14 @@ class LLM:
     self.theta_ = {}
     if method == 'gen':
       for phi in self.B_:
-        self.theta_[phi] = random.uniform(-100,100)
+        self.theta_[phi] = random.uniform( -1,10)
       self.compute_Z()
     elif method == 'learn':
       for phi in self.B_:
         self.theta_[phi] = 0.0
       self.Z = len(self.S_)
     else:
-      print("Method key Error")
+      print("Method Key Error")
   
   def compute_logP(self, x):
     """
@@ -92,7 +92,7 @@ class LLM:
       self.P_[x] = np.exp( self.compute_logP(x) )
   
   def generate(self):
-    return np.random.choice(self.S_, p = list(self.P_.values()), size = 100)
+    return np.random.choice(self.S_, p = list(self.P_.values()), size = 1000)
   
   def compute_eta(self):
     for phi in self.B_ :
@@ -233,14 +233,16 @@ class LLM:
       self.set_Phi(X, lambda_)
 
 
-n = 10
+n = 20
 
+
+#Setting B_star
 B = []
 for i in range(n):
   if i == 0:
     Bi = []
     for j in range(n-1):
-      if np.random.choice([0,1], p = [0.5, 0.5]):
+      if np.random.choice([0,1], p = [0.6, 0.4]):
         Bi.append((j,))
   else:
     pre_Bi = Bi
@@ -254,7 +256,7 @@ for i in range(n):
           if phi == set(p):
             t = False
             break
-        if t and np.random.choice([0,1], p = [0.7, 0.3]):
+        if t and np.random.choice([0,1], p = [0.8, 0.2]):
           Bi.append(tuple(phi))
     if len(Bi) == 0:
       break
@@ -263,10 +265,37 @@ for i in range(n):
 print(B)
 
 
-
 llm = LLM(n, B, method = 'gen')
 X = llm.generate()
 
+itemset_file = 'test.itemsets'
+dataset_file = 'test.dat'
+
+#Writing itemset file
+B_ = []
+for phi in B:
+  s = ''
+  for i in range(len(phi)):
+    s += str(phi[i]) + ' '
+  B_.append(s)
+B_ = '\n'.join(B_)
+with open(itemset_file, mode = 'w') as f:
+  f.write(B_)
+
+
+#Writing dataset file
+
+X_ = []
+for xi in X:
+  s = ''
+  for i in range(len(xi)):
+    s += str(xi[i]) + ' '
+  X_.append(s)
+X_ = '\n'.join(X_)
+with open(dataset_file, mode = 'w') as f:
+  f.write(X_)
+
+"""
 k = 2
 B_test = []
 for i in range(k):
@@ -296,4 +325,4 @@ K = 5
 epoch = 1000
 llm_test = LLM(n, B_test, method = 'learn')
 llm_test.grab(k, X, lambda_,K, epoch)
-
+"""
