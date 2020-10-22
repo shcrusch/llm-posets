@@ -6,17 +6,16 @@ args = sys.argv
 datasetname = args[1]
 method = args[2]
 
-targetfile = '/home/hayashi/workspace/tbm-python/experiments/'+datasetname+'/'+method+'.txt'
+targetfile = '/home/hayashi/workspace/llm-posets/experiments/'+datasetname+'/'+method+'.txt'
 
-gradfiles = glob.glob('/home/hayashi/workspace/tbm-python/experiments/'+datasetname+'/grad_*') #update
+gradfiles = glob.glob('/home/hayashi/workspace/llm-posets/experiments/'+datasetname+'/grad_*') #update
 
-accgradfiles = glob.glob('/home/hayashi/workspace/tbm-python/experiments/'+datasetname+'/acc_grad_*')
+accgradfiles = glob.glob('/home/hayashi/workspace/llm-posets/experiments/'+datasetname+'/acc_grad_*')
 
-dafiles = glob.glob('/home/hayashi/workspace/tbm-python/experiments/'+datasetname+'/da_*')
 
-coorfile = ['/home/hayashi/workspace/tbm-python/experiments/'+datasetname+'/coor.txt'] #update
+coorfile = ['/home/hayashi/workspace/llm-posets/experiments/'+datasetname+'/coor.txt'] #update
 
-allfiles = gradfiles + accgradfiles + dafiles + coorfile
+allfiles = gradfiles + accgradfiles + coorfile
 
 L_star=1000
 
