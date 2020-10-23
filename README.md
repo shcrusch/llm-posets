@@ -6,7 +6,7 @@
 
 1. Python3
 2. Install Numpy
-3. install matplotlib
+3. Install matplotlib
 
 ## Running the code
 ### For run.py
