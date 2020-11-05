@@ -29,6 +29,20 @@ python run.py {datasetname} grad {stepsize} {number of iterations}
 ```sh
 python run.py {datasetname} acc_grad {stepsize} {momentum} {number of iterations}
 ```
+
+Example:
+```sh
+python run.py mushroom coor 5
+```
+The output is as follows
+```sh
+0 : KL divergence:  0.0030725766189352  time : 0.02
+1 : KL divergence:  0.0025266243106774  time : 0.10
+2 : KL divergence:  0.0022919382698259  time : 0.18
+3 : KL divergence:  0.0021709679956974  time : 0.26
+4 : KL divergence:  0.0020972542120266  time : 0.34
+```
+.
 ### For edit.py
 
 * Coordinate Descent : 
