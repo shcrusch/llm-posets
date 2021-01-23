@@ -7,24 +7,17 @@ xij_min = 1000
 xij_max = -1
 
 X_arr= []
-dataset_file = '/home/hayashi/workspace/tbm-python/dataset/'+ args[1] + '.dat'
-itemset_file = '/home/hayashi/workspace/tbm-python/dataset/'+ args[1] + '.dat_itemsets'
-
+dataset_file = '../../dataset/'+ args[1] + '.dat'
+itemset_file = '../../dataset/'+ args[1] + '.dat_itemsets'
+X = []
 with open(dataset_file) as f:
     for line in f:
         xi = line.split()
         xi_int = [ int(xij)  for xij in xi ]        
-        
-        xij_min = min(xi_int) if xij_min > min(xi_int) else xij_min
-        xij_max = max(xi_int) if xij_max < max(xi_int) else xij_max
+        xi_int.sort()
 
-        X_arr.append(xi_int)
+        X.append(tuple(xi_int))
 
-X =[]
-for xi in X_arr:   
-    X.append(tuple([xij - xij_min for xij in xi]))
-
-n = xij_max-xij_min+1
 
 def get_B_from(filename):
     # generate itemset B with itemset file
@@ -32,8 +25,7 @@ def get_B_from(filename):
     B = []
     with open(filename) as f:
         for line in f:
-            li = line.split()
-            phi = li[:-1]
+            phi = line.split()
             phi_int = [int(x) for x in phi]
             phi_int.sort()
             B.append(tuple(phi_int))
@@ -47,7 +39,7 @@ B = get_B_from(itemset_file)
 S = list(dict.fromkeys(X + B + [()]))
 
 
-llm = llm_posets.LLM(n,B,S)
+llm = llm_posets.LLM(B,S)
 
 
 if args[2] == "grad":

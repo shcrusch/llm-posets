@@ -9,11 +9,10 @@ def includes(phi,x):
   return set(phi).issubset(set(x))
 
 class LLM:
-  def __init__ (self, n, B, S):
+  def __init__ (self, B, S):
 
     self.B_ = B # list of tuples
     self.S_ = S # list of tuples
-    self.n_= n
     self.set_Bsub(self.S_, self.B_) #dict (key: tuple, val: list of tuples)
     self.set_Ssub(self.S_, self.B_)  # dict (key: tuple, val: list of tuples)
     self.init_theta() # dict (key: list, val: float)
