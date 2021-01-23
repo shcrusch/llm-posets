@@ -1,4 +1,8 @@
-/home/hayashi/workspace/tbm-python/src/python/llm_posets.py:226: RuntimeWarning: divide by zero encountered in double_scalars
-  ret += Phatx * np.log(Phatx / self.P_[self.invS_[x]] )
-/home/hayashi/workspace/tbm-python/src/python/llm_posets.py:226: RuntimeWarning: overflow encountered in double_scalars
-  ret += Phatx * np.log(Phatx / self.P_[self.invS_[x]] )
+Traceback (most recent call last):
+  File "/home/hayashi/workspace/llm-posets/src/python/run.py", line 54, in <module>
+    llm.fit(X, n_iter = int(args[4]), stepsize = float(args[3]) , solver = "grad")
+  File "/home/hayashi/workspace/llm-posets/src/python/llm_posets.py", line 42, in fit
+    self.gradient_descent(X, n_iter, stepsize)
+  File "/home/hayashi/workspace/llm-posets/src/python/llm_posets.py", line 204, in gradient_descent
+    new_theta_phi = self.theta_[phi] + step * (self.etahat_[phi] - self.eta_[phi] )
+KeyError: ()

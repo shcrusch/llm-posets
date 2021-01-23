@@ -6,14 +6,14 @@ args = sys.argv
 datasetname = args[1]
 method = args[2]
 
-targetfile = '/home/hayashi/workspace/llm-posets/experiments/'+datasetname+'/'+method+'.txt'
+targetfile = datasetname+'/'+method+'.txt'
 
-gradfiles = glob.glob('/home/hayashi/workspace/llm-posets/experiments/'+datasetname+'/grad_*') #update
+gradfiles = glob.glob(datasetname+'/grad_*') #update
 
-accgradfiles = glob.glob('/home/hayashi/workspace/llm-posets/experiments/'+datasetname+'/acc_grad_*')
+accgradfiles = glob.glob(datasetname+'/acc_grad_*')
 
 
-coorfile = ['/home/hayashi/workspace/llm-posets/experiments/'+datasetname+'/coor.txt'] #update
+coorfile = [datasetname+'/coor.txt'] #update
 
 allfiles = gradfiles + accgradfiles + coorfile
 

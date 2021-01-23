@@ -1,0 +1,10 @@
+/home/hayashi/workspace/llm-posets/src/python/llm_posets.py:334: RuntimeWarning: invalid value encountered in log1p
+  delta = np.log1p( (etahat_phi - eta_phi) / eta_phi / (1 - etahat_phi) )
+Traceback (most recent call last):
+  File "/home/hayashi/workspace/llm-posets/src/python/run.py", line 56, in <module>
+    llm.fit(X, n_iter = int(args[3]), solver = "coor")
+  File "/home/hayashi/workspace/llm-posets/src/python/llm_posets.py", line 44, in fit
+    self.coordinate_descent(X, n_iter)
+  File "/home/hayashi/workspace/llm-posets/src/python/llm_posets.py", line 340, in coordinate_descent
+    self.theta_[phi] += delta
+KeyError: ()

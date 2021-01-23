@@ -7,15 +7,15 @@ import os
 args =sys.argv
 datasetname = args[1]
 
-save_dir = '/home/hayashi/workspace/llm-posets/experiments/figure/'+datasetname+'/'
+save_dir = 'figure/'
 
-gradfiles = glob.glob('/home/hayashi/workspace/llm-posets/experiments/'+datasetname+'/'+datasetname+'_grad_*') #update
+gradfiles = glob.glob(datasetname+'/'+datasetname+'_grad_*') #update
 
-accgradfiles = glob.glob('/home/hayashi/workspace/llm-posets/experiments/'+datasetname+'/'+datasetname+'_acc_grad_*')
+accgradfiles = glob.glob(datasetname+'/'+datasetname+'_acc_grad_*')
 
-coorfilename = '/home/hayashi/workspace/llm-posets/experiments/'+datasetname+'/'+datasetname+'_coor.txt' #update
+coorfilename = datasetname+'/'+datasetname+'_coor.txt' #update
 
-gradfiles.remove('/home/hayashi/workspace/llm-posets/experiments/'+datasetname+'/'+datasetname+'_grad_10.txt')
+gradfiles.remove(datasetname+'/'+datasetname+'_grad_10.txt')
 
 if args[2]=='epoch':
     savefilename = save_dir + datasetname + '_epoch.png'
@@ -31,8 +31,7 @@ y_grad = {}
 time_grad = {}
 y_accgrad = {}
 time_accgrad = {}
-y_da = {}
-time_da = {}
+
 
 with open(coorfilename) as f:            
     for line in f:
@@ -105,4 +104,4 @@ ax.set_ylabel('L_D-L_D*')
 
 plt.title(args[1])
 fig.savefig(os.path.join(save_dir,savefilename))
-print("Finished plotting")
+print("Finished plotting " + datasetname + "_" + args[2] + ".png")

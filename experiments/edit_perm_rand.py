@@ -5,11 +5,11 @@ import os
 import numpy as np
 datasetname = "mushroom"
 
-save_dir = '/home/hayashi/workspace/llm-posets/experiments/'+datasetname+'/'
+save_dir = datasetname+'/'
 
-permfiles = glob.glob('/home/hayashi/workspace/llm-posets/experiments/'+datasetname+'/coor_perm*')
-randfiles = glob.glob('/home/hayashi/workspace/llm-posets/experiments/'+datasetname+'/coor_rand*')
-starfile = '/home/hayashi/workspace/llm-posets/experiments/'+datasetname+'/.txt'
+permfiles = glob.glob(datasetname+'/coor_perm*')
+randfiles = glob.glob(datasetname+'/coor_rand*')
+starfile = datasetname+'/.txt'
 
 L_star=1000
 with open(starfile) as f:
